@@ -1,0 +1,200 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --hover-color: #444444;
+  }
+  
+  .nav-link {
+    display: block;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color) !important;
+  }
+  
+  .navbar-brand,
+  .nav-link {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .ms-auto {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  
+  .container-fluid {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
+  
+  .navbar-toggler .fas {
+    color: #ffffff;
+  }
+  
+  .navbar-toggler i:hover {
+    color: var(--hover-color);
+    background-color: transparent;
+  }
+  
+  .nav-link .fa-question-circle {
+    margin-right: 5px;
+    color: inherit;
+  }
+  
+  .nav-link[href="faq.html"] {
+    color: #ffffff !important;
+    transition: color 0.3s;
+  }
+  
+  .nav-link[href="faq.html"]:hover {
+    color: var(--hover-color) !important;
+    text-decoration: none;
+  }
+  
+  .offcanvas {
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(5px);
+  }
+  
+  .offcanvas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .offcanvas-header img {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .offcanvas-body {
+    text-align: center;
+  }
+  
+  .navbar-logo {
+    height: 60px;
+    width: auto;
+  }
+  
+  .offcanvas-body .nav-link {
+    padding: 25px 0;
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .offcanvas-body .nav-link:hover {
+    color: var(--hover-color);
+  }
+  
+  .custom-close {
+    background: none;
+    border: none;
+    color: #ffffff;
+  }
+  
+  .custom-close::before {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+  
+  .custom-close:hover,
+  .custom-close:focus {
+    color: #ccc;
+    text-decoration: none;
+    background: transparent;
+  }
+  
+  .offcanvas {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  .btn-close.custom-close:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  .btn-close.custom-close {
+    font-size: 1.5em;
+  }
+  
+  /* Media Queries for Responsive Navbar */
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .navbar {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (max-width: 991.98px) {
+    .navbar {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  
+    .navbar-brand,
+    .nav-link {
+      font-size: 1rem;
+    }
+  
+    .navbar-logo {
+      height: 50px;
+    }
+  }
+  
+  /* Small devices (landscape phones, less than 768px) */
+  @media (max-width: 767.98px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  
+    .navbar-brand,
+    .nav-link {
+      font-size: 0.875rem;
+    }
+  
+    .navbar-logo {
+      height: 40px;
+    }
+  
+    .navbar-toggler {
+      align-self: flex-end;
+    }
+  }
+  
+  /* Extra small devices (portrait phones, less than 576px) */
+  @media (max-width: 575.98px) {
+    .navbar-brand,
+    .nav-link {
+      font-size: 0.75rem;
+    }
+  
+    .navbar-logo {
+      height: 30px;
+    }
+  }
+  
