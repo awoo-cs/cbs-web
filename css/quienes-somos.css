@@ -129,13 +129,13 @@ a:hover {
 
 .separator {
     height: 50px;
-    background: #3a5f0b; /* Verde del logo */
+    background: #3a5f0b;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .mission p, .vision p {
     margin-top: 15px;
-    color: #555555; /* Gris oscuro para texto */
+    color: #555555;
 }
 
 .separator-space {
