@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="css/index.css" />
+
+<!--Barra de Navegacion-->
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <!--Logo a la izquierda-->
+      <a class="navbar-brand" href="index.html">
+        <img
+          src="assets/img/logo.svg"
+          alt="logo-ciberseguridad"
+          class="navbar-logo"
+        />
+      </a>
+      <!--Boton de hamburguesa a la derecha junto con el FAQ-->
+      <div class="ms-auto d-flex align-items-center">
+        <a class="nav-link d-lg-inline d-none" href="faq.html">
+          <i class="fas fa-question-circle"></i>FAQ
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!--Offcanvas Menu-->
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <img
+            src="assets/img/logo.svg"
+            alt="logo-ciberseguridad"
+            class="navbar-logo"
+          />
+          <button
+            type="button"
+            class="btn-close custom-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <!--Elementos del menu-->
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" href="quienes-somos.html">QUIENES SOMOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">CONTACTO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="test.html">TEST</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--Elementos del menu-->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="quienes-somos.html">QUIENES SOMOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">CONTACTO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="test.html">TEST</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

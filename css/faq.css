@@ -1,0 +1,13 @@
+.accordion {
+    margin-bottom: 150px;
+  }
+ 
+  .faq-title {
+    color: #ffffff;
+  }
+
+  @media (max-width: 600px) {
+    .accordion {
+      margin-bottom: 100px;
+    }
+  }

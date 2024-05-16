@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS de Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/faq.css" />
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!--Fuente-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- JavaScript y dependencias de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>FAQ - Preguntas Frecuente</title>
+  </head>
+  <body>
+    <!--Barra de Navegacion-->
+    <div id="navbar"></div>
+
+    <!--Contenido-->
+    <div class="container my-5">
+      <h1 class="text-center mb-4 faq-title">Preguntas Frecuentes (FAQ)</h1>
+      <div class="accordion" id="faqAccordion">
+        <!--FAQ 1-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              ¿Qué es la ciberseguridad y por qué es importante?
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              La ciberseguridad es el conjunto de técnicas utilizadas para
+              proteger la integridad de redes, programas y datos de ataques,
+              daños o accesos no autorizados. Es crucial para proteger la
+              información personal y corporativa de amenazas cibernéticas y
+              ataques que pueden llevar a pérdidas financieras y de reputación.
+            </div>
+          </div>
+        </div>
+        <!--FAQ 2-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              ¿Qué básicos de seguridad debo aplicar en todos mis dispositivos?
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Se recomienda instalar un buen antivirus, mantener todos los
+              sistemas y aplicaciones actualizados, usar contraseñas fuertes y
+              únicas, y habilitar la autenticación de dos factores siempre que
+              sea posible para proporcionar una capa adicional de seguridad.
+            </div>
+          </div>
+        </div>
+        <!--FAQ 3-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              ¿Por qué es importante la educación en ciberseguridad?
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              La educación en ciberseguridad es vital para entender los riesgos
+              asociados con las actividades online y aprender cómo protegerse
+              adecuadamente. Educarse en este campo puede prevenir ataques y
+              minimizar los daños de potenciales brechas de seguridad.
+            </div>
+          </div>
+        </div>
+        <!--FAQ 4-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
+              ¿Qué es un test de ciberseguridad y por qué debo realizar uno?
+            </button>
+          </h2>
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFour"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Un test de ciberseguridad evalúa tus conocimientos y habilidades
+              en el ámbito de la seguridad informática. Realizar uno puede
+              ayudarte a identificar áreas de fortaleza y debilidad,
+              permitiéndote enfocarte en mejorar tus habilidades en áreas
+              específicas y aumentar tu conciencia sobre prácticas seguras en
+              línea.
+            </div>
+          </div>
+        </div>
+        <!--FAQ 5-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive"
+            >
+              ¿Cuáles son las amenazas cibernéticas más comunes que debo
+              conocer?
+            </button>
+          </h2>
+          <div
+            id="collapseFive"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFive"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Algunas de las amenazas más comunes incluyen el phishing, donde
+              los atacantes intentan engañarte para que entregues información
+              sensible; ransomware, que puede bloquear el acceso a tus datos
+              hasta que se pague un rescate; y malware, que puede dañar o
+              comprometer tu dispositivo sin tu conocimiento.
+            </div>
+          </div>
+        </div>
+        <!--FAQ 6-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSix">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSix"
+              aria-expanded="false"
+              aria-controls="collapseSix"
+            >
+              ¿Cómo puedo identificar un correo electrónico de phishing?
+            </button>
+          </h2>
+          <div
+            id="collapseSix"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingSix"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Los correos electrónicos de phishing a menudo contienen enlaces
+              sospechosos, errores gramaticales, solicitudes urgentes de
+              información personal y direcciones de correo que no coinciden con
+              las entidades que afirman representar. Siempre verifica la
+              autenticidad de un correo antes de responder o hacer clic en
+              enlaces.
+            </div>
+          </div>
+        </div>
+        <!--FAQ 7-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSeven">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSeven"
+              aria-expanded="false"
+              aria-controls="collapseSeven"
+            >
+              ¿Qué es la autenticación de dos factores y cómo la configuro?
+            </button>
+          </h2>
+          <div
+            id="collapseSeven"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingSeven"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              La autenticación de dos factores (2FA) es un método de seguridad
+              que requiere dos tipos de verificación antes de conceder acceso a
+              una cuenta. Puedes configurarla en la mayoría de los servicios en
+              línea en la sección de seguridad de la configuración de tu cuenta,
+              a menudo con opciones para usar tu teléfono como segundo factor.
+            </div>
+          </div>
+        </div>
+        <!--FAQ 8-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingEight">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseEight"
+              aria-expanded="false"
+              aria-controls="collapseEight"
+            >
+              ¿Cómo puedo mantener seguras mis contraseñas?
+            </button>
+          </h2>
+          <div
+            id="collapseEight"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingEight"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Para mantener tus contraseñas seguras, utiliza una combinación de
+              letras, números y símbolos, nunca reutilices contraseñas en
+              diferentes sitios y considera el uso de un gestor de contraseñas
+              para generar y almacenar contraseñas complejas y únicas para cada
+              cuenta.
+            </div>
+          </div>
+        </div>
+        <!--FAQ 9-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingNine">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseNine"
+              aria-expanded="false"
+              aria-controls="collapseNine"
+            >
+              ¿Qué debo hacer si creo que he sido víctima de un ciberataque?
+            </button>
+          </h2>
+          <div
+            id="collapseNine"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingNine"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Si sospechas que has sido víctima de un ciberataque, cambia
+              inmediatamente tus contraseñas, verifica las transacciones
+              bancarias y alerta a tu banco, ejecuta un escaneo antivirus
+              completo y considera notificar a las autoridades pertinentes,
+              especialmente si la información sensible ha sido comprometida.
+            </div>
+          </div>
+        </div>
+        <!--FAQ 10-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTen">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTen"
+              aria-expanded="false"
+              aria-controls="collapseTen"
+            >
+              ¿Cuáles son los mejores recursos para aprender sobre
+              ciberseguridad?
+            </button>
+          </h2>
+          <div
+            id="collapseTen"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTen"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Algunos de los mejores recursos para aprender sobre ciberseguridad
+              incluyen cursos en línea como los ofrecidos por Cybrary, Coursera
+              y edX, blogs especializados como Krebs on Security, y libros como
+              "The Art of Deception" de Kevin Mitnick. Estos recursos ofrecen
+              una amplia gama de conocimientos, desde conceptos básicos hasta
+              técnicas avanzadas de protección cibernética.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <div id="footer"></div>
+  </body>
+  <!-- JavaScript de Ionicons -->
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+  <script src="js/main.js"></script>
+</html>
