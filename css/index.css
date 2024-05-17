@@ -8,7 +8,7 @@
 
 body {
   font-family: "Montserrat", sans-serif !important;
-  background-color: #333333;
+  background: linear-gradient(135deg, #333333 0%, #000000 100%);
 }
 
 /* Sección Video */
@@ -17,17 +17,6 @@ body {
   width: 100%;
   overflow: hidden;
   height: 100vh;
-}
-
-.video-container::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100px;
-  background: linear-gradient(to bottom, transparent, #333333);
-  z-index: 3;
 }
 
 video {
@@ -93,24 +82,36 @@ video {
 
 /* Sección de Bienvenida */
 .welcome-section {
-  background: linear-gradient(135deg, #333333 0%, #000000 100%);
+  position: relative;
   padding: 60px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
-  position: relative;
   text-align: left;
+}
+
+.welcome-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+  z-index: 1;
 }
 
 .welcome-content {
   flex: 1;
   max-width: 50%;
   padding: 0 100px;
+  position: relative;
+  z-index: 2;
 }
 
 .welcome-section h1 {
-  color: #25d366;
+  color: #03ea82;
   margin-bottom: 20px;
   font-size: 3em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -125,26 +126,28 @@ video {
 }
 
 .welcome-section button {
-  background-color: #25d366;
-  color: #ffffff;
-  border: 2px solid #25d366;
+  background-color: #03ea82;
+  color: #000000;
+  border: 2px solid #03ea82;
   padding: 15px 30px;
   margin-top: 20px;
   font-size: 1.2em;
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
   cursor: pointer;
   border-radius: 50px;
+  font-weight: bold;
 }
 
 .welcome-section button:hover {
   background-color: #ffffff;
-  color: #25d366;
+  color: #000000;
+  border: 2px solid #03ea82;
   transform: scale(1.1);
 }
 
 .welcome-section blockquote {
   color: #e0e0e0;
-  border-left: 4px solid #25d366;
+  border-left: 4px solid #03ea82;
   padding-left: 1rem;
   margin-top: 20px;
   font-style: italic;
@@ -158,6 +161,8 @@ video {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .welcome-image img {
@@ -196,7 +201,6 @@ video {
 
 /* Sección de Navegación */
 .navigation-section {
-  background: linear-gradient(135deg, #333333 0%, #000000 100%);
   padding: 80px 20px;
   text-align: center;
   color: var(--secondary-color);
@@ -236,7 +240,7 @@ video {
   position: relative;
   width: 60px;
   height: 30px;
-  background: #E94B47;
+  background: #e94b47;
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -254,7 +258,7 @@ video {
 }
 
 .toggle-switch input[type="checkbox"]:checked + label.toggle-label {
-  background: #03EA82;
+  background: #03ea82;
 }
 
 .toggle-switch
@@ -310,14 +314,14 @@ video {
   align-items: center;
   width: 80px;
   height: 80px;
-  background-color: #03EA82;
+  background-color: #03ea82;
   border-radius: 50%;
   margin: 0 auto 20px;
   transition: transform 0.3s, background-color 0.3s;
 }
 
 .malware-icon-container {
-  background-color: #E94B47;
+  background-color: #e94b47;
 }
 
 .tip:hover .tip-icon-container,
@@ -489,7 +493,6 @@ video {
 
 /* Sección de Recursos Adicionales */
 .additional-resources-section {
-  background: var(--background-gradient);
   padding: 80px 20px;
   color: var(--secondary-color);
   position: relative;
@@ -521,7 +524,7 @@ video {
 }
 
 .section-title {
-  color: var(--highlight-color);
+  color: #03ea82;
   font-size: 2.5em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   animation: fadeInDown 1s ease-in-out;
