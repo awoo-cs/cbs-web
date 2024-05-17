@@ -225,7 +225,7 @@ video {
   position: relative;
   width: 60px;
   height: 30px;
-  background: #ff4500; 
+  background: #ff4500;
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -255,7 +255,19 @@ video {
 }
 
 #tips-content {
+  display: none;
+}
+
+#malware-content {
   display: block;
+}
+
+#toggle:checked ~ #tips-content {
+  display: block;
+}
+
+#toggle:checked ~ #malware-content {
+  display: none;
 }
 
 .tip, .malware-type {
