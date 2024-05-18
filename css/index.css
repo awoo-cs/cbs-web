@@ -186,12 +186,12 @@ video {
   font-size: 3em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s;
-  text-align: left; 
+  text-align: left;
 }
 
 .welcome-section h1 .highlight-green {
   color: #03ea82;
-  font-size: 2.3em; 
+  font-size: 2.3em;
   font-weight: bold;
 }
 
@@ -200,8 +200,8 @@ video {
   margin-bottom: 20px;
   font-size: 1.2em;
   line-height: 1.6;
-  text-align: justify; 
-  width: 80%; 
+  text-align: justify;
+  width: 80%;
 }
 
 .welcome-section button {
@@ -215,16 +215,16 @@ video {
   cursor: pointer;
   border-radius: 50px;
   font-weight: bold;
-  width: 80%; 
+  width: 80%;
   text-align: left;
   position: relative;
 }
 
 .welcome-section button::after {
-  content: '';
+  content: "";
   display: block;
-  width: 90px; 
-  height: 3px; 
+  width: 90px;
+  height: 3px;
   background-color: #000;
   position: absolute;
   right: 40px;
@@ -234,14 +234,14 @@ video {
 }
 
 .welcome-section button::before {
-  content: '';
+  content: "";
   display: block;
-  width: 13px; 
-  height: 13px; 
-  border-top: 3px solid #000; 
-  border-right: 3px solid #000; 
+  width: 13px;
+  height: 13px;
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
   position: absolute;
-  right: 40px; 
+  right: 40px;
   top: 50%;
   transform: translateY(-50%) rotate(45deg);
 }
@@ -261,7 +261,7 @@ video {
   align-items: center;
   position: relative;
   z-index: 2;
-  margin-left: -120px;
+  margin-left: -140px;
 }
 
 .welcome-image img {
@@ -274,6 +274,47 @@ video {
 
 .welcome-image img:hover {
   transform: scale(1.05);
+}
+
+.overlay-image {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.overlay-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: absolute;
+  top: -30px;
+  right: 60px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 2px solid #ffffff;
+  padding: 10px 20px; /* Ajuste de padding para acercar el borde al texto */
+  border-radius: 25px; /* Ajuste de border-radius para bordes más redondeados */
+  max-width: 430px; /* Ajuste del ancho para que el texto quepa */
+  display: flex;
+  justify-content: center; /* Centrar el texto dentro del contenedor */
+}
+
+.text-overlay p {
+  color: #ffffff;
+  font-style: italic;
+  font-size: 1em;
+  margin: 0;
+  line-height: 1.4;
+  text-align: center; /* Alinear el texto al centro */
+  padding: 10px;
+  width: 100%; /* Estirar el texto para que ocupe todo el ancho del contenedor */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Media Queries */
@@ -291,7 +332,7 @@ video {
 
   .welcome-image {
     margin-top: 20px;
-    margin-left: 0; /* Restablecer el margen izquierdo para dispositivos más pequeños */
+    margin-left: 0;
   }
 
   .welcome-image img {
@@ -302,9 +343,6 @@ video {
     max-width: 100%;
   }
 }
-
-
-
 
 /* Sección de Navegación */
 .navigation-section {
