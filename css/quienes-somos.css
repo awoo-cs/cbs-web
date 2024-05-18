@@ -1,271 +1,369 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #333333 0%, #000000 100%);
-    color: #e0e0e0;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(135deg, #333333 0%, #000000 100%);
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-header, main, footer {
-    width: 100%;
+header,
+main {
+  width: 100%;
 }
 
 header {
-    z-index: 1000;
-    width: 100%;
+  z-index: 1000;
+  width: 100%;
 }
 
 main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
-    flex-direction: column;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  flex-direction: column;
+  margin-top: 45px;
 }
 
 .title-div {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .section-title {
-    color: #ffffff;
-    text-align: center;
-    font-size: 4rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .section-title .highlight {
-    color: #03EA82;
+  color: #03ea82;
 }
 
 .section-title::after {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #03EA82;
-    margin: 10px auto;
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #03ea82;
+  margin: 10px auto;
 }
 
 .paragraph-div p {
-    color: #e0e0e0;
-    text-align: center;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin: 0 auto 20px auto;
-    max-width: 600px;
+  color: #e0e0e0;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0 auto 20px auto;
+  max-width: 600px;
 }
 
 .image-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .image-group .small-img-left {
-    width: 100%;
-    max-width: 150px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin-top: 140px;
+  width: 100%;
+  max-width: 150px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 140px;
 }
 
 .image-group .small-img-right {
-    width: 100%;
-    max-width: 150px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 150px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .image-group .large-img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .icons-div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    padding: 0 20px;
-    margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+  margin-top: 30px;
 }
 
-.icons-div .mission-icon, .icons-div .vision-icon {
-    font-size: 10rem;
-    color: #03EA82;
-    position: absolute;
+.icons-div .mission-icon,
+.icons-div .vision-icon {
+  font-size: 14rem !important;
+  color: #03ea82;
+  position: absolute;
 }
 
 .icons-div .mission-icon {
-    left: -20px; 
-    top: -10px; 
+  left: -20px;
+  top: -10px;
 }
 
 .icons-div .vision-icon {
-    right: -20px; 
-    top: -10px; 
+  right: -20px;
+  top: -10px;
 }
 
 .titles-div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 230px;
-    margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 270px;
+  margin-top: 150px;
 }
 
-.titles-div .mission-title h2, .titles-div .vision-title h2 {
-    font-size: 3.5rem;
-    color: #03EA82;
-    font-weight: bold;
-    left: -80px;
+.titles-div .mission-title h2,
+.titles-div .vision-title h2 {
+  font-size: 3.5rem;
+  color: #03ea82;
+  font-weight: bold;
+  left: -80px;
 }
 
 .descriptions-div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 40px;
-    margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 40px;
+  margin-top: 30px;
 }
 
-.descriptions-div .mission-description, .descriptions-div .vision-description {
-    background: transparent;
-    border: 2px solid #ffffff;
-    border-radius: 30px;
-    padding: 20px;
-    text-align: justify;
-    color: #e0e0e0;
-    max-width: 400px;
+.descriptions-div .mission-description,
+.descriptions-div .vision-description {
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  padding: 20px;
+  text-align: justify;
+  color: #e0e0e0;
+  max-width: 400px;
+  margin: 0 20px;
 }
 
 .descriptions-div .separator-line {
-    width: 4px;
-    height: 100px;
-    background-color: #03EA82;
-    margin: 0 30px;
-    border-radius: 10px;
+  width: 4px;
+  height: 100px;
+  background-color: #03ea82;
+  margin: 0 30px;
+  border-radius: 10px;
 }
 
 a {
-    color: #25d366;
-    text-decoration: none;
+  color: #25d366;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .separator-space {
-    height: 100px;
+  height: 100px;
 }
 
 /* Responsive Design */
 
 /* Large devices (desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    .section-title {
-        font-size: 4rem;
-    }
+  .section-title {
+    font-size: 4rem;
+  }
 
-    .titles-div .mission-title h2, .titles-div .vision-title h2 {
-        font-size: 3.5rem;
-    }
+  .titles-div .mission-title h2,
+  .titles-div .vision-title h2 {
+    font-size: 3.5rem;
+  }
 
-    .icons-div .mission-icon, .icons-div .vision-icon {
-        font-size: 10rem;
-    }
+  .icons-div .mission-icon,
+  .icons-div .vision-icon {
+    font-size: 14rem;
+  }
+
+  .titles-div {
+    padding: 0 270px;
+  }
+
+  .descriptions-div .mission-description,
+  .descriptions-div .vision-description {
+    max-width: 400px;
+  }
+
+  .mobile-mission-vision {
+    display: none;
+  }
 }
 
 /* Medium devices (tablets, 768px to 1199px) */
 @media (min-width: 768px) and (max-width: 1199px) {
-    .section-title {
-        font-size: 3rem;
-    }
+  .section-title {
+    font-size: 3rem;
+  }
 
-    .titles-div .mission-title h2, .titles-div .vision-title h2 {
-        font-size: 2.5rem;
-    }
+  .titles-div .mission-title h2,
+  .titles-div .vision-title h2 {
+    font-size: 2.5rem;
+  }
 
-    .icons-div .mission-icon, .icons-div .vision-icon {
-        font-size: 8rem;
-    }
+  .icons-div .mission-icon,
+  .icons-div .vision-icon {
+    font-size: 10rem !important;
+  }
 
-    .titles-div {
-        padding: 0 150px;
-    }
+  .titles-div {
+    padding: 0 150px;
+  }
+
+  .descriptions-div .mission-description,
+  .descriptions-div .vision-description {
+    max-width: 350px;
+  }
+
+  .image-group {
+    flex-direction: row;
+  }
+
+  .mobile-mission-vision {
+    display: none;
+  }
 }
-
 
 /* Small devices (landscape phones, 576px to 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
-    .section-title {
-        font-size: 2.5rem;
-    }
+  .section-title {
+    font-size: 2.5rem;
+  }
 
-    .titles-div .mission-title h2, .titles-div .vision-title h2 {
-        font-size: 2rem;
-    }
+  .titles-div .mission-title h2,
+  .titles-div .vision-title h2 {
+    font-size: 2rem;
+  }
 
-    .icons-div .mission-icon, .icons-div .vision-icon {
-        font-size: 6rem;
-    }
+  .icons-div .mission-icon,
+  .icons-div .vision-icon {
+    font-size: 8rem;
+  }
 
-    .titles-div {
-        padding: 0 100px;
-    }
+  .titles-div {
+    padding: 0 100px;
+  }
 
-    .descriptions-div .mission-description, .descriptions-div .vision-description {
-        max-width: 300px;
-    }
+  .descriptions-div {
+    flex-direction: column;
+  }
 
-    .descriptions-div .separator-line {
-        height: 70px;
-    }
+  .descriptions-div .mission-description,
+  .descriptions-div .vision-description {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .descriptions-div .separator-line {
+    display: none;
+  }
+
+  .image-group {
+    flex-direction: column;
+  }
+
+  .image-group .small-img-left,
+  .image-group .small-img-right {
+    margin-top: 20px;
+  }
+
+  .mobile-mission-vision {
+    display: none;
+  }
 }
-
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
-    .section-title {
-        font-size: 2rem;
-    }
+  .section-title {
+    font-size: 2rem;
+  }
 
-    .titles-div .mission-title h2, .titles-div .vision-title h2 {
-        font-size: 1.5rem;
-    }
+  .icons-div,
+  .titles-div,
+  .descriptions-div {
+    display: none;
+  }
 
-    .icons-div .mission-icon, .icons-div .vision-icon {
-        font-size: 4rem;
-    }
+  .mobile-mission-vision {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
 
-    .titles-div {
-        padding: 0 50px;
-    }
+  .mobile-mission,
+  .mobile-vision {
+    margin-top: 50px;
+    text-align: center;
+  }
 
-    .descriptions-div .mission-description, .descriptions-div .vision-description {
-        max-width: 250px;
-    }
+  .mobile-mission .mission-icon,
+  .mobile-vision .vision-icon {
+    font-size: 6rem !important;
+    color: #03ea82;
+    margin-bottom: 10px;
+  }
 
-    .descriptions-div .separator-line {
-        height: 50px;
-    }
+  .mobile-mission .mission-title,
+  .mobile-vision .vision-title {
+    margin-bottom: 10px;
+    color: #03ea82;
+  }
+
+  .mobile-mission .mission-title h2,
+  .mobile-vision .vision-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .mobile-mission .mission-description,
+  .mobile-vision .vision-description {
+    max-width: 250px;
+    margin-bottom: 20px;
+    border: 2px solid #ffffff;
+    padding: 20px;
+    border-radius: 30px;
+  }
+
+  .separator-line {
+    width: 100px;
+    height: 4px;
+    background-color: #03ea82;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+  }
+
+  .image-group {
+    flex-direction: column;
+  }
+
+  .image-group .small-img-left,
+  .image-group .small-img-right {
+    margin-top: 20px;
+  }
 }
 
-
 main {
-    z-index: 2;
-    position: relative;
+  z-index: 2;
+  position: relative;
 }
