@@ -644,6 +644,17 @@ video {
   }
 }
 
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Sección de Recursos Adicionales */
 .additional-resources-section {
   padding: 80px 20px;
@@ -870,7 +881,7 @@ video {
 .slide-track {
   display: flex;
   animation: scroll 20s linear infinite;
-  width: calc(250px * 10); /* Ajustar según la cantidad de slides */
+  width: calc(250px * 10);
 }
 
 .slide {
@@ -887,7 +898,7 @@ video {
   height: auto;
   display: block;
   margin: 0 auto;
-  filter: brightness(0) invert(1); /* Filtro para convertir a blanco */
+  filter: brightness(0) invert(1); 
 }
 
 .slide p {
@@ -903,7 +914,7 @@ video {
   100% {
     transform: translateX(
       calc(-250px * 5)
-    ); /* Ajustar según la cantidad de slides visibles */
+    );
   }
 }
 
