@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #2c2c2c;
+    background: linear-gradient(135deg, #333333 0%, #000000 100%);
     color: #e0e0e0;
     margin: 0;
     padding: 0;
@@ -24,96 +24,139 @@ main {
     align-items: center;
     justify-content: center;
     padding: 20px 0;
+    flex-direction: column;
 }
 
-h1, h2 {
-    color: #25d366;
-    font-weight: 700;
-}
-
-h1 {
-    font-size: 2.5rem;
-    text-align: center;
+.title-div {
     margin-bottom: 20px;
+}
+
+.section-title {
+    color: #ffffff;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+.section-title .highlight {
+    color: #03EA82;
 }
 
-.container {
-    padding: 2rem;
-    background-color: #3a3a3a;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    color: #ffffff;
-    margin-bottom: 100px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.section-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #03EA82;
+    margin: 10px auto;
 }
 
-.container:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+.paragraph-div p {
+    color: #e0e0e0;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0 auto 20px auto;
+    max-width: 600px;
 }
 
-.info-section {
-    margin-top: 30px;
-}
-
-.about-us, .mission, .vision {
-    background: #4c4c4c;
-    border-radius: 8px;
-    padding: 40px 20px;
-    color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.img-container {
+.image-group {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 10px;
     margin-top: 20px;
 }
 
-.about-us img {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.image-group .small-img-left {
     width: 100%;
-    max-width: 400px;
-    height: auto;
-    transition: transform 0.3s ease;
+    max-width: 150px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 140px;
 }
 
-.about-us img:hover {
-    transform: scale(1.05);
+.image-group .small-img-right {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.mission-vision {
+.image-group .large-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.icons-div {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.about-us p, .mission p, .vision p {
-    text-align: justify;
-    line-height: 1.6;
-    color: #e0e0e0;
-}
-
-.mission-vision h2 {
-    color: #25d366;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #25d366;
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding-bottom: 5px;
+    position: relative;
+    padding: 0 20px;
+    margin-top: 30px;
 }
 
-.mission-vision h2 i {
-    margin-right: 10px;
+.icons-div .mission-icon, .icons-div .vision-icon {
+    font-size: 10rem;
+    color: #03EA82;
+    position: absolute;
+}
+
+.icons-div .mission-icon {
+    left: -20px; 
+    top: -10px; 
+}
+
+.icons-div .vision-icon {
+    right: -20px; 
+    top: -10px; 
+}
+
+.titles-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 230px;
+    margin-top: 100px;
+}
+
+.titles-div .mission-title h2, .titles-div .vision-title h2 {
+    font-size: 3.5rem;
+    color: #03EA82;
+    font-weight: bold;
+    left: -80px;
+}
+
+.descriptions-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+    margin-top: 30px;
+}
+
+.descriptions-div .mission-description, .descriptions-div .vision-description {
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: justify;
+    color: #e0e0e0;
+    max-width: 400px;
+}
+
+.descriptions-div .separator-line {
+    width: 4px;
+    height: 100px;
+    background-color: #03EA82;
+    margin: 0 30px;
+    border-radius: 10px;
 }
 
 a {
@@ -133,147 +176,94 @@ a:hover {
 
 /* Large devices (desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    h1 {
-        font-size: 3rem;
+    .section-title {
+        font-size: 4rem;
     }
 
-    h2 {
-        font-size: 2.5rem;
+    .titles-div .mission-title h2, .titles-div .vision-title h2 {
+        font-size: 3.5rem;
     }
 
-    .container {
-        padding: 3rem;
-        margin-bottom: 120px;
-    }
-
-    .info-section {
-        flex-direction: row;
-        gap: 40px;
-    }
-
-    .vision {
-        margin-bottom: 0;
-    }
-}
-
-/* Specific adjustment for laptops (1024px) */
-@media (max-width: 1024px) and (min-width: 1024px) {
-    .mission-vision .vision {
-        margin-top: 20px;
+    .icons-div .mission-icon, .icons-div .vision-icon {
+        font-size: 10rem;
     }
 }
 
 /* Medium devices (tablets, 768px to 1199px) */
 @media (min-width: 768px) and (max-width: 1199px) {
-    h1 {
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .titles-div .mission-title h2, .titles-div .vision-title h2 {
         font-size: 2.5rem;
     }
 
-    h2 {
-        font-size: 2rem;
+    .icons-div .mission-icon, .icons-div .vision-icon {
+        font-size: 8rem;
     }
 
-    .container {
-        padding: 2.5rem;
-    }
-
-    .info-section {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .about-us {
-        margin-bottom: 30px;
-    }
-
-    .about-us img {
-        width: 100%;
+    .titles-div {
+        padding: 0 150px;
     }
 }
+
 
 /* Small devices (landscape phones, 576px to 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
-    h1 {
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .titles-div .mission-title h2, .titles-div .vision-title h2 {
         font-size: 2rem;
     }
 
-    h2 {
-        font-size: 1.75rem;
+    .icons-div .mission-icon, .icons-div .vision-icon {
+        font-size: 6rem;
     }
 
-    .container {
-        padding: 2rem;
+    .titles-div {
+        padding: 0 100px;
     }
 
-    .info-section {
-        flex-direction: column;
-        gap: 30px;
+    .descriptions-div .mission-description, .descriptions-div .vision-description {
+        max-width: 300px;
     }
 
-    .about-us {
-        margin-bottom: 30px;
-    }
-
-    .about-us img {
-        width: 100%;
+    .descriptions-div .separator-line {
+        height: 70px;
     }
 }
+
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
-    h1 {
-        font-size: 1.8rem;
+    .section-title {
+        font-size: 2rem;
     }
 
-    h2 {
+    .titles-div .mission-title h2, .titles-div .vision-title h2 {
         font-size: 1.5rem;
     }
 
-    .container {
-        padding: 1.5rem;
+    .icons-div .mission-icon, .icons-div .vision-icon {
+        font-size: 4rem;
     }
 
-    .info-section {
-        flex-direction: column;
-        gap: 30px;
+    .titles-div {
+        padding: 0 50px;
     }
 
-    .about-us {
-        margin-bottom: 30px;
+    .descriptions-div .mission-description, .descriptions-div .vision-description {
+        max-width: 250px;
     }
 
-    .about-us img {
-        width: 100%;
+    .descriptions-div .separator-line {
+        height: 50px;
     }
 }
 
-/* Footer adjustments for all devices */
-footer {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
-}
-
-footer .footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer .footer-content p {
-    margin: 0;
-    font-size: 0.8rem;
-}
-
-footer .waves {
-    position: absolute;
-    top: -50px; 
-    width: 100%;
-    height: auto;
-    z-index: 1;
-}
 
 main {
     z-index: 2;
