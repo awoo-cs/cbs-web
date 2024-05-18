@@ -72,22 +72,22 @@ main {
 
 .image-group .small-img-left {
   width: 100%;
-  max-width: 150px;
+  max-width: 175px;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  margin-top: 140px;
+  margin-top: 180px;
 }
 
 .image-group .small-img-right {
   width: 100%;
-  max-width: 150px;
+  max-width: 175px;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .image-group .large-img {
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
