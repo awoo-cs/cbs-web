@@ -88,7 +88,7 @@ video {
   border-right: none;
   border-bottom: none;
   width: 50px;
-  height: 20px; 
+  height: 20px;
 }
 
 .paragraph-box::after {
@@ -96,16 +96,16 @@ video {
   right: 25px;
   border-left: none;
   border-top: none;
-  width: 50px; 
+  width: 50px;
   height: 20px;
 }
 
 .paragraph-box h2 {
   margin: 0;
   padding: 20px 20px;
-  font-size: 2rem; 
+  font-size: 2rem;
   color: #ffffff;
-  line-height: 1.8; 
+  line-height: 1.8;
   font-weight: lighter;
 }
 
@@ -131,7 +131,7 @@ video {
 
 .scroll-down p {
   animation: none;
-  font-size: 1.5rem;  
+  font-size: 1.5rem;
 }
 
 .scroll-down i {
@@ -161,7 +161,6 @@ video {
   }
 }
 
-
 /* Sección de Bienvenida */
 .welcome-section {
   position: relative;
@@ -182,11 +181,18 @@ video {
 }
 
 .welcome-section h1 {
-  color: #03ea82;
+  color: #ffffff;
   margin-bottom: 20px;
   font-size: 3em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s;
+  text-align: left; 
+}
+
+.welcome-section h1 .highlight-green {
+  color: #03ea82;
+  font-size: 2.3em; 
+  font-weight: bold;
 }
 
 .welcome-section p {
@@ -194,6 +200,8 @@ video {
   margin-bottom: 20px;
   font-size: 1.2em;
   line-height: 1.6;
+  text-align: justify; 
+  width: 80%; 
 }
 
 .welcome-section button {
@@ -207,6 +215,35 @@ video {
   cursor: pointer;
   border-radius: 50px;
   font-weight: bold;
+  width: 80%; 
+  text-align: left;
+  position: relative;
+}
+
+.welcome-section button::after {
+  content: '';
+  display: block;
+  width: 90px; 
+  height: 3px; 
+  background-color: #000;
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 10px;
+}
+
+.welcome-section button::before {
+  content: '';
+  display: block;
+  width: 13px; 
+  height: 13px; 
+  border-top: 3px solid #000; 
+  border-right: 3px solid #000; 
+  position: absolute;
+  right: 40px; 
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .welcome-section button:hover {
@@ -214,16 +251,6 @@ video {
   color: #000000;
   border: 2px solid #03ea82;
   transform: scale(1.1);
-}
-
-.welcome-section blockquote {
-  color: #e0e0e0;
-  border-left: 4px solid #03ea82;
-  padding-left: 1rem;
-  margin-top: 20px;
-  font-style: italic;
-  font-size: 1.3em;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .welcome-image {
@@ -268,7 +295,13 @@ video {
   .welcome-image img {
     max-width: 100%;
   }
+
+  .welcome-section button {
+    max-width: 100%;
+  }
 }
+
+
 
 /* Sección de Navegación */
 .navigation-section {
