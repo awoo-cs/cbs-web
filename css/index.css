@@ -46,10 +46,10 @@ video {
 }
 
 .content-wrapper h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-weight: bold;
+  margin-bottom: -20px;
 }
 
 .content-wrapper h1 .highlight-white {
@@ -83,25 +83,30 @@ video {
 }
 
 .paragraph-box::before {
-  top: -2px;
-  left: -2px;
+  top: 40px;
+  left: 25px;
   border-right: none;
   border-bottom: none;
+  width: 50px;
+  height: 20px; 
 }
 
 .paragraph-box::after {
-  bottom: -2px;
-  right: -2px;
+  bottom: 40px;
+  right: 25px;
   border-left: none;
   border-top: none;
+  width: 50px; 
+  height: 20px;
 }
 
 .paragraph-box h2 {
   margin: 0;
   padding: 20px 20px;
-  font-size: 2rem;
+  font-size: 2rem; 
   color: #ffffff;
-  line-height: 1.4;
+  line-height: 1.8; 
+  font-weight: lighter;
 }
 
 .paragraph-box h2 .highlight-white {
@@ -113,7 +118,7 @@ video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #03ea82;
   z-index: -1;
 }
@@ -121,11 +126,12 @@ video {
 .scroll-down {
   font-size: 2rem;
   color: #03ea82;
-  margin-top: 60px;
+  margin-top: 100px;
 }
 
 .scroll-down p {
   animation: none;
+  font-size: 1.5rem;  
 }
 
 .scroll-down i {
@@ -154,6 +160,7 @@ video {
     transform: translateY(-5px);
   }
 }
+
 
 /* Sección de Bienvenida */
 .welcome-section {
