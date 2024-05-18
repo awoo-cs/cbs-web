@@ -79,3 +79,4 @@ document.getElementById('toggle').addEventListener('change', function () {
     malwareContent.style.display = 'block';
   }
 });
+
