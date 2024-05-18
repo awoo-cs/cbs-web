@@ -261,13 +261,14 @@ video {
   align-items: center;
   position: relative;
   z-index: 2;
+  margin-left: -120px;
 }
 
 .welcome-image img {
   width: 100%;
   max-width: 600px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
   transition: transform 0.3s;
 }
 
@@ -290,6 +291,7 @@ video {
 
   .welcome-image {
     margin-top: 20px;
+    margin-left: 0; /* Restablecer el margen izquierdo para dispositivos más pequeños */
   }
 
   .welcome-image img {
@@ -300,6 +302,7 @@ video {
     max-width: 100%;
   }
 }
+
 
 
 
