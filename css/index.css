@@ -19,17 +19,6 @@ body {
   height: 100vh;
 }
 
-.video-container::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 400px;
-  background: linear-gradient(to bottom, transparent, #000000);
-  z-index: 3;
-}
-
 video {
   width: 100%;
   height: 100%;
@@ -60,18 +49,93 @@ video {
   font-size: 3rem;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+.content-wrapper h1 .highlight-white {
+  color: #ffffff;
+}
+
+.content-wrapper h1 .highlight-green {
+  color: #03ea82;
+}
+
+.paragraph-box {
+  display: inline-block;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.paragraph-box::before,
+.paragraph-box::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #03ea82;
+  z-index: 3;
+}
+
+.paragraph-box::before {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.paragraph-box::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+}
+
+.paragraph-box h2 {
+  margin: 0;
+  padding: 20px 20px;
+  font-size: 2rem;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.paragraph-box h2 .highlight-white {
+  font-weight: bold;
+}
+
+.crosshair-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: #03ea82;
+  z-index: -1;
+}
+
+.scroll-down {
+  font-size: 2rem;
+  color: #03ea82;
+  margin-top: 60px;
+}
+
+.scroll-down p {
+  animation: none;
+}
+
+.scroll-down i {
+  animation: bounce 2s infinite;
 }
 
 .content-wrapper p {
   font-size: 1.5rem;
   margin-bottom: 20px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  color: #03ea82;
-}
-
-.scroll-down {
-  font-size: 2rem;
-  animation: bounce 2s infinite;
   color: #03ea82;
 }
 
@@ -100,17 +164,6 @@ video {
   justify-content: center;
   gap: 40px;
   text-align: left;
-}
-
-.welcome-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(to bottom, #000000, transparent);
-  z-index: 1;
 }
 
 .welcome-content {

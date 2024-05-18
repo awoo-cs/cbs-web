@@ -37,12 +37,12 @@ main {
   color: #ffffff;
   text-align: center;
   font-size: 4rem;
-  font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .section-title .highlight {
   color: #03ea82;
+  font-weight: bold;
 }
 
 .section-title::after {
