@@ -1,275 +1,702 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio - Concientización sobre Ciberseguridad</title>
     <!-- Enlaces a CSS -->
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <!-- Fuente Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Navbar -->
     <div id="navbar"></div>
 
     <!-- Sección de Video (sin la clase 'section') -->
     <div class="video-container" id="video-section">
-        <div class="video-overlay"></div>
-        <div class="content-wrapper">
-            <h1>
-                <span class="highlight-white">Ciber</span><span class="highlight-green">seguridad</span>
-            </h1>
-            <div class="paragraph-box">
-                <div class="crosshair-icon">+</div>
-                <h2>
-                    ¿Estás <span class="highlight-white">preparado</span> ante<br>los
-                    <span class="highlight-white">ciberataques</span>?
-                </h2>
-            </div>
-            <div class="scroll-down">
-                <p>Desplázate hacia abajo para descubrir más</p>
-                <i class="fas fa-chevron-down"></i>
-            </div>
+      <div class="video-overlay"></div>
+      <div class="content-wrapper">
+        <h1>
+          <span class="highlight-white">Ciber</span
+          ><span class="highlight-green">seguridad</span>
+        </h1>
+        <div class="paragraph-box">
+          <div class="crosshair-icon">+</div>
+          <h2>
+            ¿Estás <span class="highlight-white">preparado</span> ante<br />los
+            <span class="highlight-white">ciberataques</span>?
+          </h2>
         </div>
-        <video autoplay loop muted playsinline>
-            <source src="assets/img/videoloop.mp4" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
-        </video>
+        <div class="scroll-down">
+          <p>Desplázate hacia abajo para descubrir más</p>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+      <video autoplay loop muted playsinline>
+        <source src="assets/img/videoloop.mp4" type="video/mp4" />
+        Tu navegador no soporta el elemento de video.
+      </video>
     </div>
 
     <!-- Sección de Bienvenida -->
     <div class="welcome-section section" id="welcome-section">
-        <div class="welcome-content">
-            <h1>
-                Bienvenido a<br>
-                <span class="highlight-green">NutSec</span>
-            </h1>
-            <p>
-                Protege tu vida digital con nuestros recursos y herramientas diseñados
-                para la seguridad de la comunidad estudiantil. Aprende a identificar
-                riesgos y proteger tus datos.
-            </p>
-            <button onclick="location.href='#'">Explora nuestros recursos</button>
+      <div class="welcome-content">
+        <h1>
+          Bienvenido a<br />
+          <span class="highlight-green">NutSec</span>
+        </h1>
+        <p>
+          Protege tu vida digital con nuestros recursos y herramientas diseñados
+          para la seguridad de la comunidad estudiantil. Aprende a identificar
+          riesgos y proteger tus datos.
+        </p>
+        <button onclick="location.href='#'">Explora nuestros recursos</button>
+      </div>
+      <div class="welcome-image">
+        <img src="assets/img/welcome-image.jpg" alt="imagen-bienvenida" />
+        <div class="overlay-image">
+          <img src="assets/img/about-us.jpg" alt="imagen-cuadrada" />
         </div>
-        <div class="welcome-image">
-            <img src="assets/img/welcome-image.jpg" alt="imagen-bienvenida">
-            <div class="overlay-image">
-                <img src="assets/img/about-us.jpg" alt="imagen-cuadrada">
-            </div>
-            <div class="text-overlay">
-                <p>
-                    <em>
-                        "La ciberseguridad es
-                        <span class="highlight-underline">esencial</span> para<br>
-                        todos, no solo para expertos en TI."
-                    </em>
-                </p>
-            </div>
+        <div class="text-overlay">
+          <p>
+            <em>
+              "La ciberseguridad es
+              <span class="highlight-underline">esencial</span> para<br />
+              todos, no solo para expertos en TI."
+            </em>
+          </p>
         </div>
+      </div>
     </div>
 
     <!-- Sección de Navegación -->
     <div class="navigation-section section" id="navigation-section">
-        <div class="container">
-            <div class="toggle-switch">
-                <label for="toggle" class="toggle-text"></label>
-                <input type="checkbox" id="toggle">
-                <label for="toggle" class="toggle-label">
-                    <div class="toggle-ball"></div>
-                </label>
-                <label for="toggle" class="toggle-text"></label>
-            </div>
-            <div id="malware-content" class="content-container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="malware-type">
-                            <div class="malware-icon-container">
-                                <i class="fas fa-virus icon icon-virus"></i>
-                            </div>
-                            <h3>Virus</h3>
-                            <p>
-                                Los virus son programas maliciosos que se adjuntan a otros
-                                archivos y se replican para infectar otros dispositivos.
-                                Mantén tu antivirus actualizado para protegerte.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="malware-type">
-                            <div class="malware-icon-container">
-                                <i class="fas fa-user-secret icon icon-spyware"></i>
-                            </div>
-                            <h3>Spyware</h3>
-                            <p>
-                                El spyware es un software que espía la actividad del usuario
-                                sin su conocimiento. Utiliza herramientas anti-spyware y
-                                mantén tus aplicaciones actualizadas para evitarlo.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="malware-type">
-                            <div class="malware-icon-container">
-                                <i class="fas fa-lock icon icon-ransomware"></i>
-                            </div>
-                            <h3>Ransomware</h3>
-                            <p>
-                                El ransomware es un tipo de malware que bloquea el acceso a
-                                los datos del usuario y exige un rescate para liberarlos.
-                                Realiza copias de seguridad regularmente y evita hacer clic en
-                                enlaces sospechosos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="tips-content" class="content-container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="tip">
-                            <div class="tip-icon-container">
-                                <i class="fas fa-lock icon icon-lock"></i>
-                            </div>
-                            <h3>Utiliza Contraseñas Fuertes</h3>
-                            <p>
-                                Una contraseña fuerte debe contener una combinación de letras,
-                                números y caracteres especiales. Evita usar información
-                                personal.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="tip">
-                            <div class="tip-icon-container">
-                                <i class="fas fa-sync-alt icon icon-sync"></i>
-                            </div>
-                            <h3>Actualiza Regularmente</h3>
-                            <p>
-                                Mantén tu software y aplicaciones actualizados para protegerte
-                                contra las vulnerabilidades más recientes.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="tip">
-                            <div class="tip-icon-container">
-                                <i class="fas fa-user-shield icon icon-shield"></i>
-                            </div>
-                            <h3>Ten Cuidado con los Correos Electrónicos</h3>
-                            <p>
-                                No hagas clic en enlaces sospechosos ni descargues archivos de
-                                remitentes desconocidos para evitar el phishing.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="toggle-switch">
+          <label for="toggle" class="toggle-text"></label>
+          <input type="checkbox" id="toggle" />
+          <label for="toggle" class="toggle-label">
+            <div class="toggle-ball"></div>
+          </label>
+          <label for="toggle" class="toggle-text"></label>
         </div>
+        <div id="malware-content" class="content-container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="malware-type">
+                <div class="malware-icon-container">
+                  <i class="fas fa-virus icon icon-virus"></i>
+                </div>
+                <h3>Virus</h3>
+                <p>
+                  Los virus son programas maliciosos que se adjuntan a otros
+                  archivos y se replican para infectar otros dispositivos.
+                  Mantén tu antivirus actualizado para protegerte.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="malware-type">
+                <div class="malware-icon-container">
+                  <i class="fas fa-user-secret icon icon-spyware"></i>
+                </div>
+                <h3>Spyware</h3>
+                <p>
+                  El spyware es un software que espía la actividad del usuario
+                  sin su conocimiento. Utiliza herramientas anti-spyware y
+                  mantén tus aplicaciones actualizadas para evitarlo.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="malware-type">
+                <div class="malware-icon-container">
+                  <i class="fas fa-lock icon icon-ransomware"></i>
+                </div>
+                <h3>Ransomware</h3>
+                <p>
+                  El ransomware es un tipo de malware que bloquea el acceso a
+                  los datos del usuario y exige un rescate para liberarlos.
+                  Realiza copias de seguridad regularmente y evita hacer clic en
+                  enlaces sospechosos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="tips-content" class="content-container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="tip">
+                <div class="tip-icon-container">
+                  <i class="fas fa-lock icon icon-lock"></i>
+                </div>
+                <h3>Utiliza Contraseñas Fuertes</h3>
+                <p>
+                  Una contraseña fuerte debe contener una combinación de letras,
+                  números y caracteres especiales. Evita usar información
+                  personal.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="tip">
+                <div class="tip-icon-container">
+                  <i class="fas fa-sync-alt icon icon-sync"></i>
+                </div>
+                <h3>Actualiza Regularmente</h3>
+                <p>
+                  Mantén tu software y aplicaciones actualizados para protegerte
+                  contra las vulnerabilidades más recientes.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="tip">
+                <div class="tip-icon-container">
+                  <i class="fas fa-user-shield icon icon-shield"></i>
+                </div>
+                <h3>Ten Cuidado con los Correos Electrónicos</h3>
+                <p>
+                  No hagas clic en enlaces sospechosos ni descargues archivos de
+                  remitentes desconocidos para evitar el phishing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Sección de Recursos Adicionales -->
-    <div class="additional-resources-section section" id="additional-resources-section">
-        <div class="container additional-resources-container">
-            <div class="left-content">
-                <h2 class="section-title">Recursos Adicionales</h2>
-                <p class="section-description">
-                    Explora más sobre ciberseguridad con estos recursos adicionales.
-                </p>
-            </div>
-            <div class="right-content">
-                <div class="resource-icon-container">
-                    <i class="fas fa-book icon"></i>
-                    <div class="resource-description">
-                        <h3>Guías y Tutoriales</h3>
-                        <p>
-                            Accede a guías y tutoriales detallados para mejorar tus
-                            conocimientos en ciberseguridad.
-                        </p>
-                    </div>
-                </div>
-                <div class="resource-icon-container">
-                    <i class="fas fa-video icon"></i>
-                    <div class="resource-description">
-                        <h3>Videos Educativos</h3>
-                        <p>
-                            Visualiza videos educativos sobre las mejores prácticas y
-                            estrategias de ciberseguridad.
-                        </p>
-                    </div>
-                </div>
-                <div class="resource-icon-container">
-                    <i class="fas fa-link icon"></i>
-                    <div class="resource-description">
-                        <h3>Enlaces Útiles</h3>
-                        <p>
-                            Descubre enlaces útiles a herramientas, blogs y comunidades de
-                            ciberseguridad.
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <div
+      class="additional-resources-section section"
+      id="additional-resources-section"
+    >
+      <div class="container additional-resources-container">
+        <div class="left-content">
+          <h2 class="section-title">Recursos Adicionales</h2>
+          <p class="section-description">
+            Explora más sobre ciberseguridad con estos recursos adicionales.
+          </p>
         </div>
+        <div class="right-content">
+          <div class="resource-icon-container">
+            <i class="fas fa-book icon"></i>
+            <div class="resource-description">
+              <h3>Guías y Tutoriales</h3>
+              <p>
+                Accede a guías y tutoriales detallados para mejorar tus
+                conocimientos en ciberseguridad.
+              </p>
+            </div>
+          </div>
+          <div class="resource-icon-container">
+            <i class="fas fa-video icon"></i>
+            <div class="resource-description">
+              <h3>Videos Educativos</h3>
+              <p>
+                Visualiza videos educativos sobre las mejores prácticas y
+                estrategias de ciberseguridad.
+              </p>
+            </div>
+          </div>
+          <div class="resource-icon-container">
+            <i class="fas fa-link icon"></i>
+            <div class="resource-description">
+              <h3>Enlaces Útiles</h3>
+              <p>
+                Descubre enlaces útiles a herramientas, blogs y comunidades de
+                ciberseguridad.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Sección de Sliders -->
     <div class="sliders-section section" id="sliders-section">
-        <div class="slider-title"><h2>Antivirus Recomendados</h2></div>
-        <p class="slider-description">
-            Un antivirus te ayudará a mantener tus dispositivos seguros.
-        </p>
-        <div class="slider" id="slider">
-            <div class="slide-track">
-                <div class="slide">
-                    <img src="assets/img/logonorton.png" alt="Norton">
-                </div>
-                <div class="slide">
-                    <img src="assets/img/logobitdefender.png" alt="Bitdefender">
-                </div>
-                <div class="slide">
-                    <img src="assets/img/logototalav.png" alt="TotalAV">
-                </div>
-                <div class="slide">
-                    <img src="assets/img/logomcafee.png" alt="McAfee">
-                </div>
-                <div class="slide">
-                    <img src="assets/img/logointego.png" alt="Intego">
-                </div>
-                <!-- Duplicar para efecto infinito -->
-                <div class="slide">
-                    <img src="assets/img/logonorton.png" alt="Norton">
-                </div>
-                <div class="slide">
-                    <img src="assets/img/logobitdefender.png" alt="Bitdefender">
-                </div>
-                <div class="slide">
-                    <img src="assets/img/logototalav.png" alt="TotalAV">
-                </div>
-                <div class="slide">
-                    <img src="assets/img/logomcafee.png" alt="McAfee">
-                </div>
-                <div class="slide">
-                    <img src="assets/img/logointego.png" alt="Intego">
-                </div>
-            </div>
+      <div class="slider-title"><h2>Antivirus Recomendados</h2></div>
+      <p class="slider-description">
+        Un antivirus te ayudará a mantener tus dispositivos seguros.
+      </p>
+      <div class="slider" id="slider">
+        <div class="slide-track">
+          <div class="slide">
+            <img src="assets/img/logonorton.png" alt="Norton" />
+          </div>
+          <div class="slide">
+            <img src="assets/img/logobitdefender.png" alt="Bitdefender" />
+          </div>
+          <div class="slide">
+            <img src="assets/img/logototalav.png" alt="TotalAV" />
+          </div>
+          <div class="slide">
+            <img src="assets/img/logomcafee.png" alt="McAfee" />
+          </div>
+          <div class="slide">
+            <img src="assets/img/logointego.png" alt="Intego" />
+          </div>
+          <!-- Duplicar para efecto infinito -->
+          <div class="slide">
+            <img src="assets/img/logonorton.png" alt="Norton" />
+          </div>
+          <div class="slide">
+            <img src="assets/img/logobitdefender.png" alt="Bitdefender" />
+          </div>
+          <div class="slide">
+            <img src="assets/img/logototalav.png" alt="TotalAV" />
+          </div>
+          <div class="slide">
+            <img src="assets/img/logomcafee.png" alt="McAfee" />
+          </div>
+          <div class="slide">
+            <img src="assets/img/logointego.png" alt="Intego" />
+          </div>
         </div>
+      </div>
     </div>
+
+    <!-- Casos de Estudio Section -->
+    <section id="casos-de-estudio" class="my-5">
+      <div class="container">
+        <!-- Título a la derecha -->
+        <div class="row">
+          <div class="col-12 text-right">
+            <h2>Casos de Estudio en Ciberseguridad</h2>
+            <p>
+              Aprende de incidentes reales y descubre cómo se manejaron y qué
+              lecciones podemos sacar de ellos.
+            </p>
+          </div>
+        </div>
+
+        <div class="row mt-4 d-flex align-items-stretch">
+          <!-- Casos de Estudio - Primera Fila -->
+          <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card mb-4 shadow-sm w-100">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                  Ataque de Phishing a una Empresa de Comercio Electrónico
+                </h5>
+                <p class="card-text">
+                  <strong>Descripción:</strong> Empleados recibieron correos
+                  electrónicos de phishing que parecían provenir de un proveedor
+                  legítimo.
+                </p>
+                <button
+                  class="btn btn-primary mt-auto"
+                  data-toggle="modal"
+                  data-target="#caseStudy1"
+                >
+                  Leer más
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card mb-4 shadow-sm w-100">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                  Ransomware en una Institución Educativa
+                </h5>
+                <p class="card-text">
+                  <strong>Descripción:</strong> Un ataque de ransomware cifró
+                  datos críticos de la institución.
+                </p>
+                <button
+                  class="btn btn-primary mt-auto"
+                  data-toggle="modal"
+                  data-target="#caseStudy2"
+                >
+                  Leer más
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card mb-4 shadow-sm w-100">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                  Exfiltración de Datos en una Compañía de Tecnología
+                </h5>
+                <p class="card-text">
+                  <strong>Descripción:</strong> Atacantes exfiltraron datos
+                  sensibles a través de una vulnerabilidad en el software.
+                </p>
+                <button
+                  class="btn btn-primary mt-auto"
+                  data-toggle="modal"
+                  data-target="#caseStudy3"
+                >
+                  Leer más
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4 d-flex align-items-stretch">
+          <!-- Casos de Estudio - Segunda Fila -->
+          <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card mb-4 shadow-sm w-100">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                  Ataque DDoS a un Proveedor de Servicios
+                </h5>
+                <p class="card-text">
+                  <strong>Descripción:</strong> Un proveedor de servicios sufrió
+                  un ataque de denegación de servicio distribuido (DDoS).
+                </p>
+                <button
+                  class="btn btn-primary mt-auto"
+                  data-toggle="modal"
+                  data-target="#caseStudy4"
+                >
+                  Leer más
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card mb-4 shadow-sm w-100">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Inyección SQL en una Aplicación Web</h5>
+                <p class="card-text">
+                  <strong>Descripción:</strong> Una vulnerabilidad de inyección
+                  SQL permitió a los atacantes acceder a la base de datos.
+                </p>
+                <button
+                  class="btn btn-primary mt-auto"
+                  data-toggle="modal"
+                  data-target="#caseStudy5"
+                >
+                  Leer más
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card mb-4 shadow-sm w-100">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                  Brecha de Seguridad en una Red Social
+                </h5>
+                <p class="card-text">
+                  <strong>Descripción:</strong> Un fallo de seguridad en una red
+                  social expuso datos personales de los usuarios.
+                </p>
+                <button
+                  class="btn btn-primary mt-auto"
+                  data-toggle="modal"
+                  data-target="#caseStudy6"
+                >
+                  Leer más
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal for Case Study 1 -->
+      <div
+        class="modal fade"
+        id="caseStudy1"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="caseStudy1Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="caseStudy1Label">
+                Ataque de Phishing a una Empresa de Comercio Electrónico
+              </h5>
+            </div>
+            <div class="modal-body">
+              <p>
+                <strong>Impacto:</strong> Acceso a información sensible de
+                clientes y pérdida financiera significativa.
+              </p>
+              <p>
+                <strong>Resolución:</strong> Campaña de concientización sobre
+                phishing y mejora de filtros de correo.
+              </p>
+              <p>
+                <strong>Lecciones Aprendidas:</strong> Importancia de la
+                capacitación en ciberseguridad y filtros de correo robustos.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal for Case Study 2 -->
+      <div
+        class="modal fade"
+        id="caseStudy2"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="caseStudy2Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="caseStudy2Label">
+                Ransomware en una Institución Educativa
+              </h5>
+            </div>
+            <div class="modal-body">
+              <p>
+                <strong>Impacto:</strong> Interrupción de las operaciones y
+                pérdida de datos importantes.
+              </p>
+              <p>
+                <strong>Resolución:</strong> Restauración de datos desde copias
+                de seguridad y actualización de sistemas de seguridad.
+              </p>
+              <p>
+                <strong>Lecciones Aprendidas:</strong> Importancia de las copias
+                de seguridad y actualizaciones regulares de software.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal for Case Study 3 -->
+      <div
+        class="modal fade"
+        id="caseStudy3"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="caseStudy3Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="caseStudy3Label">
+                Exfiltración de Datos en una Compañía de Tecnología
+              </h5>
+            </div>
+            <div class="modal-body">
+              <p>
+                <strong>Impacto:</strong> Compromiso de información confidencial
+                y daño a la reputación.
+              </p>
+              <p>
+                <strong>Resolución:</strong> Parche de la vulnerabilidad y
+                fortalecimiento de la seguridad de los sistemas.
+              </p>
+              <p>
+                <strong>Lecciones Aprendidas:</strong> Necesidad de monitoreo
+                continuo y gestión de vulnerabilidades.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal for Case Study 4 -->
+      <div
+        class="modal fade"
+        id="caseStudy4"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="caseStudy4Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="caseStudy4Label">
+                Ataque DDoS a un Proveedor de Servicios
+              </h5>
+            </div>
+            <div class="modal-body">
+              <p>
+                <strong>Impacto:</strong> Interrupción del servicio y pérdida de
+                clientes.
+              </p>
+              <p>
+                <strong>Resolución:</strong> Implementación de soluciones de
+                mitigación DDoS y fortalecimiento de la infraestructura.
+              </p>
+              <p>
+                <strong>Lecciones Aprendidas:</strong> Importancia de la
+                preparación y respuesta ante incidentes DDoS.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal for Case Study 5 -->
+      <div
+        class="modal fade"
+        id="caseStudy5"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="caseStudy5Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="caseStudy5Label">
+                Inyección SQL en una Aplicación Web
+              </h5>
+            </div>
+            <div class="modal-body">
+              <p>
+                <strong>Impacto:</strong> Robo de datos sensibles y compromiso
+                de la integridad de la base de datos.
+              </p>
+              <p>
+                <strong>Resolución:</strong> Corrección del código vulnerable y
+                aplicación de prácticas de codificación segura.
+              </p>
+              <p>
+                <strong>Lecciones Aprendidas:</strong> Necesidad de validación y
+                saneamiento de entradas de usuario.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal for Case Study 6 -->
+      <div
+        class="modal fade"
+        id="caseStudy6"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="caseStudy6Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="caseStudy6Label">
+                Brecha de Seguridad en una Red Social
+              </h5>
+            </div>
+            <div class="modal-body">
+              <p>
+                <strong>Impacto:</strong> Pérdida de confianza de los usuarios y
+                daño reputacional significativo.
+              </p>
+              <p>
+                <strong>Resolución:</strong> Parche de la vulnerabilidad y
+                mejora de las políticas de privacidad y seguridad.
+              </p>
+              <p>
+                <strong>Lecciones Aprendidas:</strong> Importancia de la
+                seguridad de los datos y la privacidad de los usuarios.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!--Footer-->
     <div id="footer"></div>
 
     <!-- Bootstrap JavaScript y dependencias -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- Ionicons JavaScript -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <!-- Script principal -->
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

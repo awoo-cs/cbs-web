@@ -870,13 +870,13 @@ video {
 .slider::before {
   left: 0;
   top: 0;
-  background: linear-gradient(to right, #141414 0%, rgba(20, 20, 20, 0) 100%);
+  background: linear-gradient(to right, #181818 0%, rgba(20, 20, 20, 0) 100%);
 }
 
 .slider::after {
   right: 0;
   top: 0;
-  background: linear-gradient(to left, #040404 0%, rgba(4, 4, 4, 0) 100%);
+  background: linear-gradient(to left, #0D0D0D 0%, rgba(4, 4, 4, 0) 100%);
 }
 
 .slide-track {
@@ -899,7 +899,7 @@ video {
   height: auto;
   display: block;
   margin: 0 auto;
-  filter: brightness(0) invert(1); 
+  filter: brightness(0) invert(1);
 }
 
 .slide p {
@@ -913,12 +913,193 @@ video {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(
-      calc(-250px * 5)
-    );
+    transform: translateX(calc(-250px * 5));
   }
 }
 
 .slider.paused .slide-track {
   animation-play-state: paused;
+}
+
+/* Seccion de Casos de Estudio */
+#casos-de-estudio {
+  padding: 60px 0;
+}
+
+#casos-de-estudio .card {
+  background-color: #000;
+  border: 1px solid #343a40; 
+  display: flex;
+  flex-direction: column;
+  position: relative; 
+  overflow: hidden; 
+}
+
+#casos-de-estudio .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-radius: 4px; 
+  box-sizing: border-box;
+  transition: all 0.3s ease; 
+  z-index: 1; 
+}
+
+#casos-de-estudio .card:hover::before {
+  border-color: #03EA82; 
+  animation: borderAnimation 0.5s linear forwards; 
+}
+
+@keyframes borderAnimation {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: #03EA82;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  25% {
+    width: 100%;
+    height: 0;
+    border-top-color: #03EA82;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    width: 100%;
+    height: 100%;
+    border-top-color: #03EA82;
+    border-right-color: #03EA82;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  75% {
+    width: 100%;
+    height: 100%;
+    border-top-color: #03EA82;
+    border-right-color: #03EA82;
+    border-bottom-color: #03EA82;
+    border-left-color: transparent;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: #03EA82;
+    border-right-color: #03EA82;
+    border-bottom-color: #03EA82;
+    border-left-color: #03EA82;
+  }
+}
+
+#casos-de-estudio .card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: #fff; 
+  position: relative; 
+  z-index: 2;
+}
+
+#casos-de-estudio .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff; 
+}
+
+#casos-de-estudio .card-text {
+  font-size: 1rem;
+  color: #dcdcdc; 
+}
+
+#casos-de-estudio h2 {
+  color: #03EA82;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1s ease-in-out;
+}
+
+#casos-de-estudio p {
+  color: #cccccc;
+  font-size: 1.2em;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+#casos-de-estudio .text-right {
+  text-align: right;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+#casos-de-estudio .row.mt-4 {
+  margin-top: 20px !important;
+}
+
+/* Estilo del Botón en las Cards */
+#casos-de-estudio .btn-primary {
+  background-color: #03EA82 !important; 
+  border: none !important;
+  color: #000 !important; 
+  font-weight: bold !important;
+  transition: all 0.3s ease !important; 
+  width: fit-content !important;
+  padding: 10px 20px !important; 
+}
+
+#casos-de-estudio .btn-primary:hover {
+  background-color: #fff !important; 
+  color: #000 !important; 
+  border: 2px solid #03EA82 !important;
+  transform: scale(1.1) !important; 
+  font-weight: bold !important; 
+}
+
+/* Estilo del Modal */
+.modal-content {
+  padding: 20px !important;
+  background-color: #343a40 !important; 
+  color: #cccccc !important; 
+  border: 1px solid #343a40 !important; 
+}
+
+.modal-title {
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  color: #fff !important; 
+}
+
+.modal-body p {
+  font-size: 1rem !important;
+  color: #cccccc !important; 
+}
+
+.modal-footer .btn {
+  background-color: #03EA82 !important; 
+  border: none !important;
+  color: #000 !important; 
+  font-weight: bold !important;
+  transition: all 0.3s ease !important; 
+  width: fit-content !important;
+  padding: 10px 20px !important; 
+}
+
+.modal-footer .btn:hover {
+  background-color: #fff !important; 
+  color: #000 !important; 
+  border: 2px solid #000 !important; 
+  transform: scale(1.1) !important; 
+  font-weight: bold !important; 
+}
+
+.modal-header .close {
+  display: none !important;
 }
