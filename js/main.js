@@ -52,3 +52,20 @@ document.addEventListener('DOMContentLoaded', function() {
     console.error('Element with ID "slider" not found.');
   }
 });
+
+// Selecciona el objeto que quieres animar
+let object = document.querySelector('#casos-de-estudio');
+
+// Crea un nuevo Intersection Observer
+let observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    // Si el objeto está en la vista del usuario
+    if(entry.isIntersecting) {
+      // Añade la clase CSS que activa la animación
+      entry.target.classList.add('fade-in');
+    }
+  });
+});
+
+// Observa el objeto
+observer.observe(object);

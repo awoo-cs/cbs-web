@@ -1103,3 +1103,7 @@ video {
 .modal-header .close {
   display: none !important;
 }
+
+.fade-in {
+  animation: fadeInDown 1s ease-in-out;
+}
