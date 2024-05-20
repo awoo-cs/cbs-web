@@ -1107,3 +1107,76 @@ video {
 .fade-in {
   animation: fadeInDown 1s ease-in-out;
 }
+
+/* Estilos para la sección de Historia de la Ciberseguridad */
+#historia-ciberseguridad {
+  padding: 60px 0;
+}
+
+#historia-ciberseguridad .timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
+  max-width: 800px;
+}
+
+#historia-ciberseguridad .timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #03EA82;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#historia-ciberseguridad .timeline-event {
+  position: relative;
+  margin: 20px 0;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#historia-ciberseguridad .timeline-event:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+#historia-ciberseguridad .timeline-event:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+#historia-ciberseguridad .timeline-date {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #03EA82;
+}
+
+#historia-ciberseguridad .timeline-content {
+  background: #000;
+  padding: 15px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+#historia-ciberseguridad .timeline-content h4 {
+  margin-top: 0;
+}
+
+#historia-ciberseguridad h2 {
+  color: #03EA82;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#historia-ciberseguridad p {
+  color: #cccccc;
+  font-size: 1.2em;
+}
+
+
