@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-let object = document.querySelector('#casos-de-estudio');
+let object = document.querySelector('.casos-de-estudio');
 
 let observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
@@ -63,4 +63,31 @@ let observer = new IntersectionObserver((entries, observer) => {
   });
 });
 
-observer.observe(object);
+if (object) {
+  observer.observe(object);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("Document ready!");
+
+  const timelineEvents = document.querySelectorAll(".historia-ciberseguridad .timeline-event");
+  console.log(`Eventos de la línea de tiempo encontrados: ${timelineEvents.length}`);
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      console.log("Observando entrada:", entry);
+      if (entry.isIntersecting) {
+        console.log("Elemento en vista:", entry.target);
+        entry.target.classList.add("in-view");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  timelineEvents.forEach(event => {
+    console.log("Observando evento:", event);
+    observer.observe(event);
+  });
+});

@@ -9,7 +9,7 @@
 
 body {
   font-family: "Montserrat", sans-serif !important;
-  background: linear-gradient(135deg, #333333 0%, #000000 100%);
+  background: var(--background-gradient);
 }
 
 /* Sección Video */
@@ -48,9 +48,8 @@ video {
 
 .content-wrapper h1 {
   font-size: 4rem;
-  margin-bottom: 20px;
-  font-weight: bold;
   margin-bottom: -20px;
+  font-weight: bold;
 }
 
 .content-wrapper h1 .highlight-white {
@@ -299,11 +298,11 @@ video {
   right: 60px;
   background-color: rgba(0, 0, 0, 0.1);
   border: 2px solid #ffffff;
-  padding: 10px 20px; /* Ajuste de padding para acercar el borde al texto */
-  border-radius: 25px; /* Ajuste de border-radius para bordes más redondeados */
-  max-width: 430px; /* Ajuste del ancho para que el texto quepa */
+  padding: 10px 20px;
+  border-radius: 25px;
+  max-width: 430px;
   display: flex;
-  justify-content: center; /* Centrar el texto dentro del contenedor */
+  justify-content: center;
 }
 
 .text-overlay p {
@@ -312,9 +311,9 @@ video {
   font-size: 1em;
   margin: 0;
   line-height: 1.4;
-  text-align: center; /* Alinear el texto al centro */
+  text-align: center;
   padding: 10px;
-  width: 100%; /* Estirar el texto para que ocupe todo el ancho del contenedor */
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -414,10 +413,7 @@ video {
   background: #03ea82;
 }
 
-.toggle-switch
-  input[type="checkbox"]:checked
-  + label.toggle-label
-  .toggle-ball {
+.toggle-switch input[type="checkbox"]:checked + label.toggle-label .toggle-ball {
   transform: translateX(30px);
 }
 
@@ -818,18 +814,6 @@ video {
   }
 }
 
-/* Animaciones */
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Sección de Sliders */
 .sliders-section {
   padding: 60px 20px;
@@ -1109,11 +1093,11 @@ video {
 }
 
 /* Estilos para la sección de Historia de la Ciberseguridad */
-#historia-ciberseguridad {
+.historia-ciberseguridad {
   padding: 60px 0;
 }
 
-#historia-ciberseguridad .timeline {
+.historia-ciberseguridad .timeline {
   position: relative;
   margin: 0 auto;
   padding: 20px 0;
@@ -1121,7 +1105,7 @@ video {
   max-width: 800px;
 }
 
-#historia-ciberseguridad .timeline::before {
+.historia-ciberseguridad .timeline::before {
   content: '';
   position: absolute;
   top: 0;
@@ -1132,51 +1116,75 @@ video {
   transform: translateX(-50%);
 }
 
-#historia-ciberseguridad .timeline-event {
+.historia-ciberseguridad .timeline-event {
   position: relative;
   margin: 20px 0;
-  width: 50%;
+  width: calc(50% - 20px);
   padding: 20px;
   box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  cursor: default;
+  background: #000;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
 }
 
-#historia-ciberseguridad .timeline-event:nth-child(odd) {
+.historia-ciberseguridad .timeline-event:nth-child(odd) {
   left: 0;
   text-align: right;
 }
 
-#historia-ciberseguridad .timeline-event:nth-child(even) {
-  left: 50%;
+.historia-ciberseguridad .timeline-event:nth-child(even) {
+  left: calc(50% + 20px);
   text-align: left;
 }
 
-#historia-ciberseguridad .timeline-date {
+.historia-ciberseguridad .timeline-date {
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 10px;
   color: #03EA82;
+  transition: color 0.3s ease;
 }
 
-#historia-ciberseguridad .timeline-content {
-  background: #000;
+.historia-ciberseguridad .timeline-content {
   padding: 15px;
-  border-radius: 5px;
   color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-#historia-ciberseguridad .timeline-content h4 {
+.historia-ciberseguridad .timeline-content h4 {
   margin-top: 0;
+  transition: color 0.3s ease;
 }
 
-#historia-ciberseguridad h2 {
+.historia-ciberseguridad h2 {
   color: #03EA82;
   font-size: 2.5em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#historia-ciberseguridad p {
+.historia-ciberseguridad p {
   color: #cccccc;
   font-size: 1.2em;
 }
 
+.timeline-event.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
 
+.timeline-event:hover .timeline-date {
+  color: #ffffff;
+}
+
+.timeline-event:hover .timeline-content h4 {
+  color: #03EA82;
+}
+
+.timeline-event:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Aumenta la sombra en hover */
+}
