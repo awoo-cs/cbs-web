@@ -351,6 +351,70 @@ video {
   }
 }
 
+/* Estilos para la sección de Glosario de Términos */
+.glosario-terminos {
+  padding: 60px 0;
+}
+
+.glosario-terminos h2 {
+  color: #03EA82;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.glosario-terminos p {
+  color: #cccccc;
+  font-size: 1.2em;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.glosario-terminos .alphabet-index {
+  margin: 20px 0;
+}
+
+.glosario-terminos .alphabet-index .btn {
+  margin: 2px;
+  background-color: #000; /* Fondo negro para los botones */
+  color: #03EA82; /* Texto verde para los botones */
+  border: 1px solid #03EA82; /* Borde verde para los botones */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.glosario-terminos .alphabet-index .btn:hover {
+  background-color: #03EA82; /* Fondo verde al pasar el cursor */
+  color: #000; /* Texto negro al pasar el cursor */
+  transform: translateY(-5px); /* Efecto de levantar al pasar el cursor */
+}
+
+#glosario-resultados {
+  display: none;
+  margin-top: 20px;
+}
+
+.glosario-terminos .term {
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #000;
+  border-radius: 5px;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glosario-terminos .term:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.glosario-terminos .term h4 {
+  margin-top: 0;
+  color: #03EA82;
+}
+
+.glosario-terminos .term p {
+  color: #cccccc;
+}
+
 /* Sección de Navegación */
 .navigation-section {
   padding: 80px 20px;
@@ -651,260 +715,6 @@ video {
   transform: translateY(0);
 }
 
-/* Sección de Recursos Adicionales */
-.additional-resources-section {
-  padding: 80px 20px;
-  color: var(--secondary-color);
-  position: relative;
-}
-
-.additional-resources-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.left-content {
-  flex: 1;
-  text-align: left;
-}
-
-.section-title {
-  color: #03ea82;
-  font-size: 2.5em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  animation: fadeInDown 1s ease-in-out;
-}
-
-.section-description {
-  color: #cccccc;
-  font-size: 1.2em;
-  animation: fadeInDown 1s ease-in-out;
-}
-
-.right-content {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  gap: 20px;
-}
-
-.resource-icon-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  background-color: var(--highlight-color);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.resource-icon-container:hover {
-  background-color: #ffffff;
-}
-
-.resource-icon-container .icon {
-  font-size: 2rem;
-  color: #000000;
-  transition: transform 0.3s;
-}
-
-.resource-icon-container:hover .icon {
-  transform: rotate(360deg);
-}
-
-.resource-description {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #ffffff;
-  border: 2px solid #444444;
-  padding: 20px;
-  border-radius: 8px;
-  width: 300px;
-  text-align: center;
-  z-index: 10;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.resource-description h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.resource-description p {
-  font-size: 1rem;
-  color: #cccccc;
-}
-
-.resource-icon-container:hover .resource-description {
-  display: block;
-  opacity: 1;
-}
-
-/* Media Queries */
-@media (max-width: 991.98px) {
-  .additional-resources-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .left-content,
-  .right-content {
-    width: 100%;
-  }
-
-  .right-content {
-    justify-content: space-evenly;
-    margin-top: 20px;
-  }
-
-  .resource-icon-container {
-    margin: 0 10px;
-  }
-
-  .resource-description {
-    width: 250px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .section-title {
-    font-size: 2.25em;
-  }
-
-  .section-description {
-    font-size: 1.1em;
-  }
-
-  .resource-description h3 {
-    font-size: 1.3rem;
-  }
-
-  .resource-description p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .section-title {
-    font-size: 2em;
-  }
-
-  .section-description {
-    font-size: 1rem;
-  }
-
-  .resource-description h3 {
-    font-size: 1.2rem;
-  }
-
-  .resource-description p {
-    font-size: 0.875rem;
-  }
-}
-
-/* Sección de Sliders */
-.sliders-section {
-  padding: 60px 20px;
-  text-align: center;
-  margin-top: 40px;
-}
-
-.slider {
-  height: 150px;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  width: 80%;
-}
-
-.slider-title h2 {
-  color: #03ea82;
-  font-size: 2.5em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  animation: fadeInDown 1s ease-in-out;
-}
-
-.slider-description {
-  color: #cccccc;
-  font-size: 1.2em;
-  animation: fadeInDown 1s ease-in-out;
-}
-
-.slider::before,
-.slider::after {
-  content: "";
-  height: 150px;
-  position: absolute;
-  width: 200px;
-  z-index: 2;
-}
-
-.slider::before {
-  left: 0;
-  top: 0;
-  background: linear-gradient(to right, #181818 0%, rgba(20, 20, 20, 0) 100%);
-}
-
-.slider::after {
-  right: 0;
-  top: 0;
-  background: linear-gradient(to left, #0D0D0D 0%, rgba(4, 4, 4, 0) 100%);
-}
-
-.slide-track {
-  display: flex;
-  animation: scroll 20s linear infinite;
-  width: calc(250px * 10);
-}
-
-.slide {
-  height: 150px;
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.slide img {
-  max-width: 150px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  filter: brightness(0) invert(1);
-}
-
-.slide p {
-  margin-top: 10px;
-  font-size: 0.9em;
-}
-
-/* Animaciones de desplazamiento infinito */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 5));
-  }
-}
-
-.slider.paused .slide-track {
-  animation-play-state: paused;
-}
-
 /* Seccion de Casos de Estudio */
 #casos-de-estudio {
   padding: 60px 0;
@@ -1092,6 +902,158 @@ video {
   animation: fadeInDown 1s ease-in-out;
 }
 
+/* Sección de Sliders */
+.sliders-section {
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.slider {
+  height: 150px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+}
+
+.slider-title h2 {
+  color: #03ea82;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.slider-description {
+  color: #cccccc;
+  font-size: 1.2em;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.slider::before,
+.slider::after {
+  content: "";
+  height: 150px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+  background: linear-gradient(to right, #181818 0%, rgba(20, 20, 20, 0) 100%);
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  background: linear-gradient(to left, #0D0D0D 0%, rgba(4, 4, 4, 0) 100%);
+}
+
+.slide-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  width: calc(250px * 10);
+}
+
+.slide {
+  height: 150px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide img {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: brightness(0) invert(1);
+}
+
+.slide p {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/* Animaciones de desplazamiento infinito */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 5));
+  }
+}
+
+.slider.paused .slide-track {
+  animation-play-state: paused;
+}
+
+/* Estilos para la sección de Mapa de Amenazas Globales */
+.mapa-amenazas-globales {
+  padding: 60px 0;
+}
+
+.mapa-amenazas-globales h2 {
+  color: #03EA82;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.mapa-amenazas-globales p {
+  color: #cccccc;
+  font-size: 1.2em;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.search-bar {
+  width: 50%;
+  padding: 10px;
+  margin: 20px 0;
+  border: 2px solid #03EA82;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 1em;
+  color: #03EA82;
+  background-color: #000;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.search-bar::placeholder {
+  color: #cccccc;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #ffffff;
+  background-color: #111;
+}
+
+.map-container {
+  height: 500px;
+  border: 2px solid #03EA82;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.popup-content h4 {
+  color: #03EA82;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.popup-content p {
+  color: #cccccc;
+  font-size: 1em;
+  margin: 0;
+}
+
 /* Estilos para la sección de Historia de la Ciberseguridad */
 .historia-ciberseguridad {
   padding: 60px 0;
@@ -1189,127 +1151,174 @@ video {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Aumenta la sombra en hover */
 }
 
-/* Estilos para la sección de Glosario de Términos */
-.glosario-terminos {
-  padding: 60px 0;
+/* Sección de Recursos Adicionales */
+.additional-resources-section {
+  padding: 80px 20px;
+  color: var(--secondary-color);
+  position: relative;
 }
 
-.glosario-terminos h2 {
-  color: #03EA82;
+.additional-resources-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left-content {
+  flex: 1;
+  text-align: left;
+}
+
+.section-title {
+  color: #03ea82;
   font-size: 2.5em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   animation: fadeInDown 1s ease-in-out;
 }
 
-.glosario-terminos p {
+.section-description {
   color: #cccccc;
   font-size: 1.2em;
   animation: fadeInDown 1s ease-in-out;
 }
 
-.glosario-terminos .alphabet-index {
-  margin: 20px 0;
+.right-content {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  gap: 20px;
 }
 
-.glosario-terminos .alphabet-index .btn {
-  margin: 2px;
-  background-color: #000; /* Fondo negro para los botones */
-  color: #03EA82; /* Texto verde para los botones */
-  border: 1px solid #03EA82; /* Borde verde para los botones */
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+.resource-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: var(--highlight-color);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.glosario-terminos .alphabet-index .btn:hover {
-  background-color: #03EA82; /* Fondo verde al pasar el cursor */
-  color: #000; /* Texto negro al pasar el cursor */
-  transform: translateY(-5px); /* Efecto de levantar al pasar el cursor */
+.resource-icon-container:hover {
+  background-color: #ffffff;
 }
 
-#glosario-resultados {
+.resource-icon-container .icon {
+  font-size: 2rem;
+  color: #000000;
+  transition: transform 0.3s;
+}
+
+.resource-icon-container:hover .icon {
+  transform: rotate(360deg);
+}
+
+.resource-description {
   display: none;
-  margin-top: 20px;
-}
-
-.glosario-terminos .term {
-  margin-bottom: 15px;
-  padding: 15px;
-  background-color: #000;
-  border-radius: 5px;
-  color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.glosario-terminos .term:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.glosario-terminos .term h4 {
-  margin-top: 0;
-  color: #03EA82;
-}
-
-.glosario-terminos .term p {
-  color: #cccccc;
-}
-
-/* Estilos para la sección de Mapa de Amenazas Globales */
-.mapa-amenazas-globales {
-  padding: 60px 0;
-}
-
-.mapa-amenazas-globales h2 {
-  color: #03EA82;
-  font-size: 2.5em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  animation: fadeInDown 1s ease-in-out;
-}
-
-.mapa-amenazas-globales p {
-  color: #cccccc;
-  font-size: 1.2em;
-  animation: fadeInDown 1s ease-in-out;
-}
-
-.search-bar {
-  width: 50%;
-  padding: 10px;
-  margin: 20px 0;
-  border: 2px solid #03EA82;
-  border-radius: 25px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  border: 2px solid #444444;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
   text-align: center;
-  font-size: 1em;
-  color: #03EA82;
-  background-color: #000;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.search-bar::placeholder {
+.resource-description h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.resource-description p {
+  font-size: 1rem;
   color: #cccccc;
 }
 
-.search-bar:focus {
-  outline: none;
-  border-color: #ffffff;
-  background-color: #111;
+.resource-icon-container:hover .resource-description {
+  display: block;
+  opacity: 1;
 }
 
-.map-container {
-  height: 500px;
-  border: 2px solid #03EA82;
-  border-radius: 15px;
-  margin-top: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+/* Media Queries */
+@media (max-width: 991.98px) {
+  .additional-resources-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-content,
+  .right-content {
+    width: 100%;
+  }
+
+  .right-content {
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+
+  .resource-icon-container {
+    margin: 0 10px;
+  }
+
+  .resource-description {
+    width: 250px;
+  }
 }
 
-.popup-content h4 {
-  color: #03EA82;
-  font-size: 1.5em;
-  margin: 0;
+@media (max-width: 767.98px) {
+  .section-title {
+    font-size: 2.25em;
+  }
+
+  .section-description {
+    font-size: 1.1em;
+  }
+
+  .resource-description h3 {
+    font-size: 1.3rem;
+  }
+
+  .resource-description p {
+    font-size: 1rem;
+  }
 }
 
-.popup-content p {
-  color: #cccccc;
-  font-size: 1em;
-  margin: 0;
+@media (max-width: 575.98px) {
+  .section-title {
+    font-size: 2em;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .resource-description h3 {
+    font-size: 1.2rem;
+  }
+
+  .resource-description p {
+    font-size: 0.875rem;
+  }
 }
+
+
+
+
+
+
+
+
+
