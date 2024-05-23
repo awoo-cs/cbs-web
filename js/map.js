@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   const mapContainer = document.getElementById('map');
   
-  // Crear el flyer
   const flyer = document.createElement('div');
   flyer.id = 'zoom-flyer';
   flyer.innerHTML = 'Pulsa CTRL para hacer Zoom';
@@ -62,7 +61,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const popupContent = `<div class="popup-content"><h4>${threat.title}</h4><p>${threat.description}</p></div>`;
     marker.bindPopup(popupContent);
 
-    return marker;
+    return {
+      marker,
+      title: threat.title,
+      description: threat.description,
+      level: threat.level
+    };
   });
 
   function getColor(level) {
@@ -74,12 +78,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  // Nueva funcionalidad para activar el scroll del mapa solo cuando se presiona la tecla Ctrl
   let isCtrlPressed = false;
 
   document.addEventListener('keydown', function(event) {
     if (event.key === 'Control') {
       isCtrlPressed = true;
+      map.scrollWheelZoom.enable();
       flyer.style.display = 'none';
     }
   });
@@ -87,22 +91,31 @@ document.addEventListener("DOMContentLoaded", function() {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'Control') {
       isCtrlPressed = false;
+      map.scrollWheelZoom.disable();
       flyer.style.display = 'block';
     }
   });
 
   map.scrollWheelZoom.disable();
 
-  map.getContainer().addEventListener('wheel', function(event) {
-    if (isCtrlPressed) {
-      event.preventDefault(); // Evita el comportamiento por defecto del scroll
-      map.scrollWheelZoom.enable();
-    } else {
-      map.scrollWheelZoom.disable();
+  mapContainer.addEventListener('wheel', function(event) {
+    if (!isCtrlPressed) {
+      event.preventDefault(); 
     }
   });
 
-  map.getContainer().addEventListener('mouseleave', function() {
-    map.scrollWheelZoom.disable();
+  const searchBar = document.getElementById('search-bar-map');
+
+  searchBar.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();
+
+    markers.forEach(item => {
+      const matchesSearch = item.title.toLowerCase().includes(searchTerm) || item.description.toLowerCase().includes(searchTerm);
+      if (matchesSearch) {
+        item.marker.addTo(map);
+      } else {
+        map.removeLayer(item.marker);
+      }
+    });
   });
 });
