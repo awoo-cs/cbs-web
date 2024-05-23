@@ -2457,7 +2457,7 @@ video {
   cursor: default;
   background: #000;
   border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .historia-ciberseguridad .timeline-event:nth-child(odd) {
@@ -2515,7 +2515,258 @@ video {
 
 .timeline-event:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Aumenta la sombra en hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Media Queries */
+
+/* 4K - 2560px */
+@media (min-width: 2560px) {
+  .historia-ciberseguridad h2 {
+    font-size: 3em;
+  }
+
+  .historia-ciberseguridad p {
+    font-size: 1.5em;
+  }
+
+  .historia-ciberseguridad .timeline-event {
+    padding: 30px;
+  }
+
+  .historia-ciberseguridad .timeline-date {
+    font-size: 1.5em;
+  }
+
+  .historia-ciberseguridad .timeline-content h4 {
+    font-size: 1.8em;
+  }
+
+  .historia-ciberseguridad .timeline-content {
+    font-size: 1.3em;
+  }
+}
+
+/* LaptopL - 1440px */
+@media (min-width: 1440px) and (max-width: 2559.98px) {
+  .historia-ciberseguridad h2 {
+    font-size: 2.8em;
+  }
+
+  .historia-ciberseguridad p {
+    font-size: 1em;
+  }
+
+  .historia-ciberseguridad .timeline-event {
+    padding: 25px;
+  }
+
+  .historia-ciberseguridad .timeline-date {
+    font-size: 1.4em;
+  }
+
+  .historia-ciberseguridad .timeline-content h4 {
+    font-size: 1.7em;
+  }
+
+  .historia-ciberseguridad .timeline-content {
+    font-size: 1.2em;
+  }
+}
+
+/* Laptop - 1024px */
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+  .historia-ciberseguridad h2 {
+    font-size: 2.5em;
+  }
+
+  .historia-ciberseguridad p {
+    font-size: 1.2em;
+  }
+
+  .historia-ciberseguridad .timeline-event {
+    padding: 20px;
+  }
+
+  .historia-ciberseguridad .timeline-date {
+    font-size: 1.2em;
+  }
+
+  .historia-ciberseguridad .timeline-content h4 {
+    font-size: 1.5em;
+  }
+
+  .historia-ciberseguridad .timeline-content {
+    font-size: 1.1em;
+  }
+}
+
+/* Tablet - 768px */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .historia-ciberseguridad h2 {
+    font-size: 2.3em;
+  }
+
+  .historia-ciberseguridad p {
+    font-size: 1.1em;
+  }
+
+  .historia-ciberseguridad .timeline-event {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .historia-ciberseguridad .timeline-date {
+    font-size: 1.1em;
+  }
+
+  .historia-ciberseguridad .timeline-content h4 {
+    font-size: 1.4em;
+  }
+
+  .historia-ciberseguridad .timeline-content {
+    font-size: 1em;
+  }
+
+  .historia-ciberseguridad .timeline::before {
+    left: 5%;
+    transform: translateX(0);
+  }
+
+  .historia-ciberseguridad .timeline-event:nth-child(odd),
+  .historia-ciberseguridad .timeline-event:nth-child(even) {
+    left: 10%;
+    text-align: left;
+  }
+}
+
+/* Mobile L - 425px */
+@media (min-width: 425px) and (max-width: 767.98px) {
+  .historia-ciberseguridad h2 {
+    font-size: 2em;
+  }
+
+  .historia-ciberseguridad p {
+    font-size: 1em;
+  }
+
+  .historia-ciberseguridad .timeline-event {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .historia-ciberseguridad .timeline-date {
+    font-size: 1em;
+  }
+
+  .historia-ciberseguridad .timeline-content h4 {
+    font-size: 1.3em;
+  }
+
+  .historia-ciberseguridad .timeline-content {
+    font-size: 0.9em;
+  }
+
+  .historia-ciberseguridad .timeline::before {
+    left: 5%;
+    transform: translateX(0);
+  }
+
+  .historia-ciberseguridad .timeline-event:nth-child(odd),
+  .historia-ciberseguridad .timeline-event:nth-child(even) {
+    left: 10%;
+    text-align: left;
+  }
+}
+
+/* Mobile M - 375px */
+@media (min-width: 375px) and (max-width: 424.98px) {
+  .historia-ciberseguridad h2 {
+    font-size: 1.8em;
+  }
+
+  .historia-ciberseguridad p {
+    font-size: 0.9em;
+  }
+
+  .historia-ciberseguridad .timeline-event {
+    width: 95%;
+    margin: 15px auto;
+  }
+
+  .historia-ciberseguridad .timeline-date {
+    font-size: 0.9em;
+  }
+
+  .historia-ciberseguridad .timeline-content h4 {
+    font-size: 1.2em;
+  }
+
+  .historia-ciberseguridad .timeline-content {
+    font-size: 0.8em;
+  }
+
+  .historia-ciberseguridad .timeline::before {
+    left: 5%;
+    transform: translateX(0);
+  }
+
+  .historia-ciberseguridad .timeline-event:nth-child(odd),
+  .historia-ciberseguridad .timeline-event:nth-child(even) {
+    left: 10%;
+    text-align: left;
+  }
+}
+
+/* Mobile S - 320px */
+@media (max-width: 374.98px) {
+  .historia-ciberseguridad h2 {
+    font-size: 1.6em;
+  }
+
+  .historia-ciberseguridad p {
+    font-size: 0.8em;
+  }
+
+  .historia-ciberseguridad .timeline-event {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .historia-ciberseguridad .timeline-date {
+    font-size: 0.8em;
+  }
+
+  .historia-ciberseguridad .timeline-content h4 {
+    font-size: 1.1em;
+  }
+
+  .historia-ciberseguridad .timeline-content {
+    font-size: 0.7em;
+  }
+
+  .historia-ciberseguridad .timeline::before {
+    left: 5%;
+    transform: translateX(0);
+  }
+
+  .historia-ciberseguridad .timeline-event:nth-child(odd),
+  .historia-ciberseguridad .timeline-event:nth-child(even) {
+    left: 10%;
+    text-align: left;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Sección de Recursos Adicionales */
