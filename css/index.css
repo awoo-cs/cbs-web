@@ -1465,18 +1465,18 @@ video {
   transform: translateY(0);
 }
 
-/* Seccion de Casos de Estudio */
+/* Sección de Casos de Estudio */
 #casos-de-estudio {
   padding: 60px 0;
 }
 
 #casos-de-estudio .card {
   background-color: #000;
-  border: 1px solid #343a40; 
+  border: 1px solid #343a40;
   display: flex;
   flex-direction: column;
-  position: relative; 
-  overflow: hidden; 
+  position: relative;
+  overflow: hidden;
 }
 
 #casos-de-estudio .card::before {
@@ -1490,15 +1490,15 @@ video {
   border-right: 2px solid transparent;
   border-bottom: 2px solid transparent;
   border-left: 2px solid transparent;
-  border-radius: 4px; 
+  border-radius: 4px;
   box-sizing: border-box;
-  transition: all 0.3s ease; 
-  z-index: 1; 
+  transition: all 0.3s ease;
+  z-index: 1;
 }
 
 #casos-de-estudio .card:hover::before {
-  border-color: #03EA82; 
-  animation: borderAnimation 0.5s linear forwards; 
+  border-color: #03EA82;
+  animation: borderAnimation 0.5s linear forwards;
 }
 
 @keyframes borderAnimation {
@@ -1549,20 +1549,20 @@ video {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  color: #fff; 
-  position: relative; 
+  color: #fff;
+  position: relative;
   z-index: 2;
 }
 
 #casos-de-estudio .card-title {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #fff; 
+  color: #fff;
 }
 
 #casos-de-estudio .card-text {
   font-size: 1rem;
-  color: #dcdcdc; 
+  color: #dcdcdc;
 }
 
 #casos-de-estudio h2 {
@@ -1586,6 +1586,148 @@ video {
 
 #casos-de-estudio .row.mt-4 {
   margin-top: 20px !important;
+}
+
+/* Media Queries para Responsive Sections */
+
+/* 4K - 2560px */
+@media (min-width: 2560px) {
+  #casos-de-estudio h2 {
+    font-size: 3em;
+  }
+  #casos-de-estudio p {
+    font-size: 1.5em;
+  }
+  #casos-de-estudio .card-title {
+    font-size: 1.5rem;
+  }
+  #casos-de-estudio .card-text {
+    font-size: 1.2rem;
+  }
+}
+
+/* LaptopL - 1440px */
+@media (min-width: 1440px) and (max-width: 2559.98px) {
+  #casos-de-estudio h2 {
+    font-size: 2.8em;
+  }
+  #casos-de-estudio p {
+    font-size: 1.4em;
+  }
+  #casos-de-estudio .card-title {
+    font-size: 1.4rem;
+  }
+  #casos-de-estudio .card-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Laptop - 1024px */
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+  #casos-de-estudio h2 {
+    font-size: 2.5em;
+  }
+  #casos-de-estudio p {
+    font-size: 1.3em;
+  }
+  #casos-de-estudio .card-title {
+    font-size: 1.3rem;
+  }
+  #casos-de-estudio .card-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablet - 768px */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  #casos-de-estudio h2 {
+    font-size: 2.3em;
+  }
+  #casos-de-estudio p {
+    font-size: 1.2em;
+  }
+  #casos-de-estudio .card-title {
+    font-size: 1.2rem;
+  }
+  #casos-de-estudio .card-text {
+    font-size: 1rem;
+  }
+  #casos-de-estudio .card {
+    width: 100%; /* Hacer que las tarjetas ocupen el 100% del ancho */
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile L - 425px */
+@media (min-width: 425px) and (max-width: 767.98px) {
+  #casos-de-estudio h2 {
+    font-size: 2em;
+  }
+  #casos-de-estudio p {
+    font-size: 1.1em;
+  }
+  #casos-de-estudio .card-title {
+    font-size: 1.1rem;
+  }
+  #casos-de-estudio .card-text {
+    font-size: 0.9rem;
+  }
+  #casos-de-estudio .card {
+    width: 100%; /* Hacer que las tarjetas ocupen el 100% del ancho */
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile M - 375px */
+@media (min-width: 375px) and (max-width: 424.98px) {
+  #casos-de-estudio h2 {
+    font-size: 1.8em;
+  }
+  #casos-de-estudio p {
+    font-size: 1em;
+  }
+  #casos-de-estudio .card-title {
+    font-size: 1rem;
+  }
+  #casos-de-estudio .card-text {
+    font-size: 0.9rem;
+  }
+  #casos-de-estudio .card {
+    width: 100%; /* Hacer que las tarjetas ocupen el 100% del ancho */
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile S - 320px */
+@media (max-width: 374.98px) {
+  #casos-de-estudio h2 {
+    font-size: 1.6em;
+  }
+  #casos-de-estudio p {
+    font-size: 0.9em;
+  }
+  #casos-de-estudio .card-title {
+    font-size: 0.9rem;
+  }
+  #casos-de-estudio .card-text {
+    font-size: 0.8rem;
+  }
+  #casos-de-estudio .card {
+    width: 100%; /* Hacer que las tarjetas ocupen el 100% del ancho */
+    margin-bottom: 20px;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Estilo del Botón en las Cards */
