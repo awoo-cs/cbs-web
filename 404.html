@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página no encontrada</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .content {
+            text-align: center;
+            z-index: 1;
+            visibility: hidden; /* Ocultar inicialmente */
+        }
+
+        .error-code {
+            font-size: 6em;
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            animation: glitch 1s linear infinite;
+        }
+
+        .error-code::before,
+        .error-code::after {
+            content: '404';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #03EA82;
+            overflow: hidden;
+            clip: rect(0, 900px, 0, 0);
+        }
+
+        .error-code::before {
+            left: -2px;
+            text-shadow: 2px 0 #ff00ff;
+            animation: glitch-before 1.5s linear infinite;
+        }
+
+        .error-code::after {
+            left: 2px;
+            text-shadow: -2px 0 #00ffff;
+            animation: glitch-after 1.5s linear infinite;
+        }
+
+        @keyframes glitch {
+            0% {
+                transform: translate(0);
+            }
+            20% {
+                transform: translate(-2px, -2px);
+            }
+            40% {
+                transform: translate(2px, 2px);
+            }
+            60% {
+                transform: translate(-2px, 2px);
+            }
+            80% {
+                transform: translate(2px, -2px);
+            }
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        @keyframes glitch-before {
+            0% {
+                clip: rect(42px, 9999px, 44px, 0);
+                transform: skew(0.3deg);
+            }
+            5% {
+                clip: rect(12px, 9999px, 22px, 0);
+                transform: skew(0.2deg);
+            }
+            10% {
+                clip: rect(22px, 9999px, 32px, 0);
+                transform: skew(0.1deg);
+            }
+            15% {
+                clip: rect(32px, 9999px, 42px, 0);
+                transform: skew(0.2deg);
+            }
+            20% {
+                clip: rect(42px, 9999px, 52px, 0);
+                transform: skew(0.3deg);
+            }
+            25% {
+                clip: rect(52px, 9999px, 62px, 0);
+                transform: skew(0.4deg);
+            }
+            30% {
+                clip: rect(62px, 9999px, 72px, 0);
+                transform: skew(0.5deg);
+            }
+            35% {
+                clip: rect(72px, 9999px, 82px, 0);
+                transform: skew(0.4deg);
+            }
+            40% {
+                clip: rect(82px, 9999px, 92px, 0);
+                transform: skew(0.3deg);
+            }
+            45% {
+                clip: rect(92px, 9999px, 102px, 0);
+                transform: skew(0.2deg);
+            }
+            50% {
+                clip: rect(102px, 9999px, 112px, 0);
+                transform: skew(0.1deg);
+            }
+            55% {
+                clip: rect(112px, 9999px, 122px, 0);
+                transform: skew(0.2deg);
+            }
+            60% {
+                clip: rect(122px, 9999px, 132px, 0);
+                transform: skew(0.3deg);
+            }
+            65% {
+                clip: rect(132px, 9999px, 142px, 0);
+                transform: skew(0.4deg);
+            }
+            70% {
+                clip: rect(142px, 9999px, 152px, 0);
+                transform: skew(0.5deg);
+            }
+            75% {
+                clip: rect(152px, 9999px, 162px, 0);
+                transform: skew(0.4deg);
+            }
+            80% {
+                clip: rect(162px, 9999px, 172px, 0);
+                transform: skew(0.3deg);
+            }
+            85% {
+                clip: rect(172px, 9999px, 182px, 0);
+                transform: skew(0.2deg);
+            }
+            90% {
+                clip: rect(182px, 9999px, 192px, 0);
+                transform: skew(0.1deg);
+            }
+            95% {
+                clip: rect(192px, 9999px, 202px, 0);
+                transform: skew(0.2deg);
+            }
+            100% {
+                clip: rect(202px, 9999px, 212px, 0);
+                transform: skew(0.3deg);
+            }
+        }
+
+        @keyframes glitch-after {
+            0% {
+                clip: rect(72px, 9999px, 74px, 0);
+                transform: skew(0.3deg);
+            }
+            5% {
+                clip: rect(22px, 9999px, 32px, 0);
+                transform: skew(0.2deg);
+            }
+            10% {
+                clip: rect(32px, 9999px, 42px, 0);
+                transform: skew(0.1deg);
+            }
+            15% {
+                clip: rect(42px, 9999px, 52px, 0);
+                transform: skew(0.2deg);
+            }
+            20% {
+                clip: rect(52px, 9999px, 62px, 0);
+                transform: skew(0.3deg);
+            }
+            25% {
+                clip: rect(62px, 9999px, 72px, 0);
+                transform: skew(0.4deg);
+            }
+            30% {
+                clip: rect(72px, 9999px, 82px, 0);
+                transform: skew(0.5deg);
+            }
+            35% {
+                clip: rect(82px, 9999px, 92px, 0);
+                transform: skew(0.4deg);
+            }
+            40% {
+                clip: rect(92px, 9999px, 102px, 0);
+                transform: skew(0.3deg);
+            }
+            45% {
+                clip: rect(102px, 9999px, 112px, 0);
+                transform: skew(0.2deg);
+            }
+            50% {
+                clip: rect(112px, 9999px, 122px, 0);
+                transform: skew(0.1deg);
+            }
+            55% {
+                clip: rect(122px, 9999px, 132px, 0);
+                transform: skew(0.2deg);
+            }
+            60% {
+                clip: rect(132px, 9999px, 142px, 0);
+                transform: skew(0.3deg);
+            }
+            65% {
+                clip: rect(142px, 9999px, 152px, 0);
+                transform: skew(0.4deg);
+            }
+            70% {
+                clip: rect(152px, 9999px, 162px, 0);
+                transform: skew(0.5deg);
+            }
+            75% {
+                clip: rect(162px, 9999px, 172px, 0);
+                transform: skew(0.4deg);
+            }
+            80% {
+                clip: rect(172px, 9999px, 182px, 0);
+                transform: skew(0.3deg);
+            }
+            85% {
+                clip: rect(182px, 9999px, 192px, 0);
+                transform: skew(0.2deg);
+            }
+            90% {
+                clip: rect(192px, 9999px, 202px, 0);
+                transform: skew(0.1deg);
+            }
+            95% {
+                clip: rect(202px, 9999px, 212px, 0);
+                transform: skew(0.2deg);
+            }
+            100% {
+                clip: rect(212px, 9999px, 222px, 0);
+                transform: skew(0.3deg);
+            }
+        }
+
+        h2 {
+            color: #03EA82;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: .15em solid #03EA82;
+            animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        p {
+            color: #cccccc;
+            font-size: 1.2em;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: .15em solid #cccccc;
+            visibility: hidden; /* Ocultar inicialmente */
+        }
+
+        .btn {
+            background-color: #03EA82;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            animation: fadeInUp 1s ease-in-out 7s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #02c96e;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #03EA82; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="content" id="content">
+        <div class="error-code">404</div>
+        <h2 id="title">Página no encontrada</h2>
+        <p id="description">Lo sentimos, pero la página que estás buscando no existe.</p>
+        <a href="/" class="btn">Volver al inicio</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#03EA82"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#03EA82",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const content = document.getElementById('content');
+            content.style.visibility = 'visible';
+
+            const title = document.getElementById('title');
+            const description = document.getElementById('description');
+            description.style.visibility = 'hidden';
+
+            setTimeout(() => {
+                title.style.borderRight = 'none';
+                description.style.visibility = 'visible';
+                description.style.animation = 'typing 4s steps(50, end), blink-caret .75s step-end infinite';
+            }, 3000); // Espera 3 segundos antes de mostrar la descripción y quitar el cursor del título
+        });
+    </script>
+</body>
+</html>
