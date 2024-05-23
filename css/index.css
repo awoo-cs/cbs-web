@@ -1834,13 +1834,13 @@ video {
 .slider::before {
   left: 0;
   top: 0;
-  background: linear-gradient(to right, #181818 0%, rgba(20, 20, 20, 0) 100%);
+  background: linear-gradient(to right, #232323 0%, rgba(20, 20, 20, 0) 100%);
 }
 
 .slider::after {
   right: 0;
   top: 0;
-  background: linear-gradient(to left, #0D0D0D 0%, rgba(4, 4, 4, 0) 100%);
+  background: linear-gradient(to left, #1F1F1F 0%, rgba(4, 4, 4, 0) 100%);
 }
 
 .slide-track {
@@ -1883,6 +1883,271 @@ video {
 
 .slider.paused .slide-track {
   animation-play-state: paused;
+}
+
+/* Media Queries para Responsive Sections */
+
+/* 4K - 2560px */
+@media (min-width: 2560px) {
+  .slider{
+    width: 60%;
+  }
+
+  .slider-title h2 {
+    font-size: 3em;
+  }
+
+  .slider-description {
+    font-size: 1.5em;
+  }
+
+  .slide {
+    height: 200px;
+    width: 300px;
+  }
+
+  .slide img {
+    max-width: 200px;
+  }
+
+  .slide p {
+    font-size: 1.1em;
+  }
+
+  .slider::before {
+    left: 0;
+    top: 0;
+    background: linear-gradient(to right, #222222 0%, rgba(20, 20, 20, 0) 100%);
+  }
+  
+  .slider::after {
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left, #1B1B1B 0%, rgba(4, 4, 4, 0) 100%);
+  }
+
+  .slide-track {
+    width: calc(300px * 10); /* Ajusta el ancho del track para reflejar el tamaño de las slides en 4K */
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-300px * 5)); /* Ajusta la animación para reflejar el tamaño de las slides en 4K */
+    }
+  }
+}
+
+/* LaptopL - 1440px */
+@media (min-width: 1440px) and (max-width: 2559.98px) {
+  .slider-title h2 {
+    font-size: 2.8em;
+  }
+
+  .slider-description {
+    font-size: 1.4em;
+  }
+
+  .slide {
+    height: 180px;
+    width: 280px;
+  }
+
+  .slide img {
+    max-width: 180px;
+  }
+
+  .slide p {
+    font-size: 1em;
+  }
+
+  .slider::before {
+    left: 0;
+    top: 0;
+    background: linear-gradient(to right, #232323 0%, rgba(20, 20, 20, 0) 100%);
+  }
+  
+  .slider::after {
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left, #1E1E1E 0%, rgba(4, 4, 4, 0) 100%);
+  }
+}
+
+/* Laptop - 1024px */
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+  .slider-title h2 {
+    font-size: 2.5em;
+  }
+
+  .slider-description {
+    font-size: 1.3em;
+  }
+
+  .slide {
+    height: 160px;
+    width: 260px;
+  }
+
+  .slide img {
+    max-width: 160px;
+  }
+
+  .slide p {
+    font-size: 1em;
+  }
+
+  .slider::before {
+    left: 0;
+    top: 0;
+    background: linear-gradient(to right, #212121 0%, rgba(20, 20, 20, 0) 100%);
+  }
+}
+
+/* Tablet - 768px */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .slider-title h2 {
+    font-size: 2.3em;
+  }
+
+  .slider-description {
+    font-size: 1.2em;
+  }
+
+  .slide {
+    height: 140px;
+    width: 240px;
+  }
+
+  .slide img {
+    max-width: 140px;
+  }
+
+  .slide p {
+    font-size: 0.9em;
+  }
+
+  .slider::before {
+    left: 0;
+    top: 0;
+    background: linear-gradient(to right, #1F1F1F 0%, rgba(20, 20, 20, 0) 100%);
+  }
+  
+  .slider::after {
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left, #1C1C1C 0%, rgba(4, 4, 4, 0) 100%);
+  }
+}
+
+/* Mobile L - 425px */
+@media (min-width: 425px) and (max-width: 767.98px) {
+  .slider-title h2 {
+    font-size: 2em;
+  }
+
+  .slider-description {
+    font-size: 1.1em;
+  }
+
+  .slide {
+    height: 120px;
+    width: 220px;
+  }
+
+  .slide img {
+    max-width: 120px;
+  }
+
+  .slide p {
+    font-size: 0.8em;
+  }
+
+  .slider::before {
+    display: none;
+  }
+  
+  .slider::after {
+    display: none;
+  }
+}
+
+/* Mobile M - 375px */
+@media (min-width: 375px) and (max-width: 424.98px) {
+  .slider-title h2 {
+    font-size: 1.8em;
+  }
+
+  .slider-description {
+    font-size: 1em;
+  }
+
+  .slide {
+    height: 110px;
+    width: 210px;
+  }
+
+  .slide img {
+    max-width: 110px;
+  }
+
+  .slide p {
+    font-size: 0.75em;
+  }
+
+  .slider::before {
+    display: none;
+  }
+  
+  .slider::after {
+    display: none;
+  }
+}
+
+/* Mobile S - 320px */
+@media (max-width: 374.98px) {
+  .slider-title h2 {
+    font-size: 1.6em;
+  }
+
+  .slider-description {
+    font-size: 0.9em;
+  }
+
+  .slide {
+    height: 100px;
+    width: 200px;
+  }
+
+  .slide img {
+    max-width: 100px;
+  }
+
+  .slide p {
+    font-size: 0.7em;
+  }
+
+  .slider::before {
+    display: none;
+  }
+  
+  .slider::after {
+    display: none;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Estilos para la sección de Mapa de Amenazas Globales */
