@@ -161,6 +161,197 @@ video {
   }
 }
 
+/* Media Queries for Responsive Design */
+
+/* 4K - 2560px */
+@media (min-width: 2560px) {
+  .content-wrapper h1 {
+    font-size: 5rem;
+  }
+
+  .content-wrapper p {
+    font-size: 2rem;
+  }
+
+  .scroll-down {
+    font-size: 2.5rem;
+  }
+
+  .scroll-down p {
+    font-size: 2rem;
+  }
+
+  .paragraph-box h2 {
+    font-size: 2.5rem;
+  }
+
+  .crosshair-icon {
+    font-size: 3.5rem;
+  }
+}
+
+/* Laptop L - 1440px */
+@media (min-width: 1440px) and (max-width: 2559.98px) {
+  .content-wrapper h1 {
+    font-size: 4.5rem;
+  }
+
+  .content-wrapper p {
+    font-size: 1.8rem;
+  }
+
+  .scroll-down {
+    font-size: 2.2rem;
+  }
+
+  .scroll-down p {
+    font-size: 1.8rem;
+  }
+
+  .paragraph-box h2 {
+    font-size: 2.3rem;
+  }
+
+  .crosshair-icon {
+    font-size: 3rem;
+  }
+}
+
+/* Laptop - 1024px */
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+  .content-wrapper h1 {
+    font-size: 4rem;
+  }
+
+  .content-wrapper p {
+    font-size: 1.5rem;
+  }
+
+  .scroll-down {
+    font-size: 2rem;
+  }
+
+  .scroll-down p {
+    font-size: 1.5rem;
+  }
+
+  .paragraph-box h2 {
+    font-size: 2rem;
+  }
+
+  .crosshair-icon {
+    font-size: 2.5rem;
+  }
+}
+
+/* Tablet - 768px */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .content-wrapper h1 {
+    font-size: 3rem;
+  }
+
+  .content-wrapper p {
+    font-size: 1.3rem;
+  }
+
+  .scroll-down {
+    font-size: 1.8rem;
+  }
+
+  .scroll-down p {
+    font-size: 1.3rem;
+  }
+
+  .paragraph-box h2 {
+    font-size: 1.6rem;
+  }
+
+  .crosshair-icon {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile L - 425px */
+@media (min-width: 425px) and (max-width: 767.98px) {
+  .content-wrapper h1 {
+    font-size: 2.5rem;
+  }
+
+  .content-wrapper p {
+    font-size: 1.2rem;
+  }
+
+  .scroll-down {
+    font-size: 1.5rem;
+  }
+
+  .scroll-down p {
+    font-size: 1.2rem;
+  }
+
+  .paragraph-box h2 {
+    font-size: 1.3rem;
+  }
+
+  .crosshair-icon {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile M - 375px */
+@media (min-width: 375px) and (max-width: 424.98px) {
+  .content-wrapper h1 {
+    font-size: 2rem;
+  }
+
+  .content-wrapper p {
+    font-size: 1rem;
+  }
+
+  .scroll-down {
+    font-size: 1.3rem;
+  }
+
+  .scroll-down p {
+    font-size: 1rem;
+  }
+
+  .paragraph-box h2 {
+    font-size: 1.3rem;
+  }
+
+  .crosshair-icon {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile S - 320px */
+@media (max-width: 374.98px) {
+  .content-wrapper h1 {
+    font-size: 1.8rem;
+  }
+
+  .content-wrapper p {
+    font-size: 0.9rem;
+  }
+
+  .scroll-down {
+    font-size: 1.2rem;
+  }
+
+  .scroll-down p {
+    font-size: 0.9rem;
+  }
+
+  .paragraph-box h2 {
+    font-size: 1.1rem;
+  }
+
+  .crosshair-icon {
+    font-size: 1.3rem;
+  }
+}
+
 /* Sección de Bienvenida */
 .welcome-section {
   position: relative;
