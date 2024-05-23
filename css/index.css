@@ -2211,6 +2211,216 @@ video {
   margin: 0;
 }
 
+/* Media Queries */
+
+/* 4K - 2560px */
+@media (min-width: 2560px) {
+  .mapa-amenazas-globales h2 {
+    font-size: 3em;
+  }
+
+  .mapa-amenazas-globales p {
+    font-size: 1.5em;
+  }
+
+  .search-bar {
+    width: 40%;
+    font-size: 1.2em;
+  }
+
+  .map-container {
+    height: 700px;
+  }
+
+  .popup-content h4 {
+    font-size: 2em;
+  }
+
+  .popup-content p {
+    font-size: 1.2em;
+  }
+}
+
+/* LaptopL - 1440px */
+@media (min-width: 1440px) and (max-width: 2559.98px) {
+  .mapa-amenazas-globales h2 {
+    font-size: 2.8em;
+  }
+
+  .mapa-amenazas-globales p {
+    font-size: 1.4em;
+  }
+
+  .search-bar {
+    width: 45%;
+    font-size: 1.1em;
+  }
+
+  .map-container {
+    height: 600px;
+  }
+
+  .popup-content h4 {
+    font-size: 1.8em;
+  }
+
+  .popup-content p {
+    font-size: 1.1em;
+  }
+}
+
+/* Laptop - 1024px */
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+  .mapa-amenazas-globales h2 {
+    font-size: 2.5em;
+  }
+
+  .mapa-amenazas-globales p {
+    font-size: 1.2em;
+  }
+
+  .search-bar {
+    width: 50%;
+    font-size: 1em;
+  }
+
+  .map-container {
+    height: 500px;
+  }
+
+  .popup-content h4 {
+    font-size: 1.5em;
+  }
+
+  .popup-content p {
+    font-size: 1em;
+  }
+}
+
+/* Tablet - 768px */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .mapa-amenazas-globales h2 {
+    font-size: 2.3em;
+  }
+
+  .mapa-amenazas-globales p {
+    font-size: 1.1em;
+  }
+
+  .search-bar {
+    width: 60%;
+    font-size: 0.9em;
+  }
+
+  .map-container {
+    height: 400px;
+  }
+
+  .popup-content h4 {
+    font-size: 1.3em;
+  }
+
+  .popup-content p {
+    font-size: 0.9em;
+  }
+}
+
+/* Mobile L - 425px */
+@media (min-width: 425px) and (max-width: 767.98px) {
+  .mapa-amenazas-globales h2 {
+    font-size: 2em;
+  }
+
+  .mapa-amenazas-globales p {
+    font-size: 1em;
+  }
+
+  .search-bar {
+    width: 70%;
+    font-size: 0.8em;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+
+  .popup-content h4 {
+    font-size: 1.2em;
+  }
+
+  .popup-content p {
+    font-size: 0.8em;
+  }
+}
+
+/* Mobile M - 375px */
+@media (min-width: 375px) and (max-width: 424.98px) {
+  .mapa-amenazas-globales h2 {
+    font-size: 1.8em;
+  }
+
+  .mapa-amenazas-globales p {
+    font-size: 0.9em;
+  }
+
+  .search-bar {
+    width: 75%;
+    font-size: 0.7em;
+  }
+
+  .map-container {
+    height: 250px;
+  }
+
+  .popup-content h4 {
+    font-size: 1.1em;
+  }
+
+  .popup-content p {
+    font-size: 0.7em;
+  }
+}
+
+/* Mobile S - 320px */
+@media (max-width: 374.98px) {
+  .mapa-amenazas-globales h2 {
+    font-size: 1.6em;
+  }
+
+  .mapa-amenazas-globales p {
+    font-size: 0.8em;
+  }
+
+  .search-bar {
+    width: 80%;
+    font-size: 0.6em;
+  }
+
+  .map-container {
+    height: 200px;
+  }
+
+  .popup-content h4 {
+    font-size: 1em;
+  }
+
+  .popup-content p {
+    font-size: 0.6em;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Estilos para la sección de Historia de la Ciberseguridad */
 .historia-ciberseguridad {
   padding: 60px 0;
