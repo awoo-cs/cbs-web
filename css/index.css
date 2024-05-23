@@ -1466,6 +1466,19 @@ video {
 }
 
 /* Sección de Casos de Estudio */
+#zoom-flyer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  font-size: 14px;
+  display: block;
+}
+
 #casos-de-estudio {
   padding: 60px 0;
 }
@@ -1551,7 +1564,7 @@ video {
   flex-grow: 1;
   color: #fff;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 #casos-de-estudio .card-title {
@@ -1586,6 +1599,29 @@ video {
 
 #casos-de-estudio .row.mt-4 {
   margin-top: 20px !important;
+}
+
+/* Estilo del Botón en las Cards */
+#casos-de-estudio .btn-primary {
+  background-color: #03EA82 !important;
+  border: none !important;
+  color: #000 !important;
+  font-weight: bold !important;
+  transition: all 0.3s ease !important;
+  width: fit-content !important;
+  padding: 10px 20px !important;
+}
+
+#casos-de-estudio .btn-primary:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 2px solid #03EA82 !important;
+  transform: scale(1.1) !important;
+  font-weight: bold !important;
+}
+
+.fade-in {
+  animation: fadeInDown 1s ease-in-out !important;
 }
 
 /* Media Queries para Responsive Sections */
@@ -1653,8 +1689,11 @@ video {
     font-size: 1rem;
   }
   #casos-de-estudio .card {
-    width: 100%; /* Hacer que las tarjetas ocupen el 100% del ancho */
+    width: 100%;
     margin-bottom: 20px;
+  }
+  #zoom-flyer {
+    display: none;
   }
 }
 
@@ -1673,8 +1712,11 @@ video {
     font-size: 0.9rem;
   }
   #casos-de-estudio .card {
-    width: 100%; /* Hacer que las tarjetas ocupen el 100% del ancho */
+    width: 100%;
     margin-bottom: 20px;
+  }
+  #zoom-flyer {
+    display: none;
   }
 }
 
@@ -1693,8 +1735,11 @@ video {
     font-size: 0.9rem;
   }
   #casos-de-estudio .card {
-    width: 100%; /* Hacer que las tarjetas ocupen el 100% del ancho */
+    width: 100%;
     margin-bottom: 20px;
+  }
+  #zoom-flyer {
+    display: none;
   }
 }
 
@@ -1713,8 +1758,11 @@ video {
     font-size: 0.8rem;
   }
   #casos-de-estudio .card {
-    width: 100%; /* Hacer que las tarjetas ocupen el 100% del ancho */
+    width: 100%;
     margin-bottom: 20px;
+  }
+  #zoom-flyer {
+    display: none;
   }
 }
 
@@ -1730,68 +1778,40 @@ video {
   }
 }
 
-/* Estilo del Botón en las Cards */
-#casos-de-estudio .btn-primary {
-  background-color: #03EA82 !important; 
-  border: none !important;
-  color: #000 !important; 
-  font-weight: bold !important;
-  transition: all 0.3s ease !important; 
-  width: fit-content !important;
-  padding: 10px 20px !important; 
+/* SweetAlert2 Estilos Personalizados */
+.swal2-popup.modal-content {
+  background-color: #343a40 !important;
+  color: #cccccc !important;
+  border: 1px solid #343a40 !important;
 }
 
-#casos-de-estudio .btn-primary:hover {
-  background-color: #fff !important; 
-  color: #000 !important; 
-  border: 2px solid #03EA82 !important;
-  transform: scale(1.1) !important; 
-  font-weight: bold !important; 
-}
-
-/* Estilo del Modal */
-.modal-content {
-  padding: 20px !important;
-  background-color: #343a40 !important; 
-  color: #cccccc !important; 
-  border: 1px solid #343a40 !important; 
-}
-
-.modal-title {
+.swal2-title.modal-title {
   font-size: 1.5rem !important;
   font-weight: bold !important;
-  color: #fff !important; 
+  color: #fff !important;
 }
 
-.modal-body p {
+.swal2-content.modal-body p {
   font-size: 1rem !important;
-  color: #cccccc !important; 
+  color: #cccccc !important;
 }
 
-.modal-footer .btn {
-  background-color: #03EA82 !important; 
+.swal2-confirm.btn-primary {
+  background-color: #03EA82 !important;
   border: none !important;
-  color: #000 !important; 
+  color: #000 !important;
   font-weight: bold !important;
-  transition: all 0.3s ease !important; 
+  transition: all 0.3s ease !important;
   width: fit-content !important;
-  padding: 10px 20px !important; 
+  padding: 10px 20px !important;
 }
 
-.modal-footer .btn:hover {
-  background-color: #fff !important; 
-  color: #000 !important; 
-  border: 2px solid #000 !important; 
-  transform: scale(1.1) !important; 
-  font-weight: bold !important; 
-}
-
-.modal-header .close {
-  display: none !important;
-}
-
-.fade-in {
-  animation: fadeInDown 1s ease-in-out;
+.swal2-confirm.btn-primary:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 2px solid #03EA82 !important;
+  transform: scale(1.1) !important;
+  font-weight: bold !important;
 }
 
 /* Sección de Sliders */

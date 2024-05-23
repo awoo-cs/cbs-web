@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba de Modal</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body .modal-backdrop.show {
+      z-index: 1040 !important; /* Fondo difuminado negro */
+      background-color: rgba(0, 0, 0, 0.5) !important;
+    }
+
+    body .modal.fade .modal-dialog {
+      z-index: 1050 !important; /* Modal */
+    }
+
+    body .modal-content {
+      z-index: 1060 !important; /* Contenido del modal */
+      padding: 20px !important;
+      background-color: #343a40 !important;
+      color: #cccccc !important;
+      border: 1px solid #343a40 !important;
+    }
+
+    .modal-title {
+      font-size: 1.5rem !important;
+      font-weight: bold !important;
+      color: #fff !important;
+    }
+
+    .modal-body p {
+      font-size: 1rem !important;
+      color: #cccccc !important;
+    }
+
+    .modal-footer .btn {
+      background-color: #03EA82 !important;
+      border: none !important;
+      color: #000 !important;
+      font-weight: bold !important;
+      transition: all 0.3s ease !important;
+      width: fit-content !important;
+      padding: 10px 20px !important;
+    }
+
+    .modal-footer .btn:hover {
+      background-color: #fff !important;
+      color: #000 !important;
+      border: 2px solid #000 !important;
+      transform: scale(1.1) !important;
+      font-weight: bold !important;
+    }
+
+    .modal-header .close {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Botón para abrir el modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#caseStudy1">Abrir Modal</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="caseStudy1" tabindex="-1" role="dialog" aria-labelledby="caseStudy1Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="caseStudy1Label">Ataque de Phishing a una Empresa de Comercio Electrónico</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Impacto:</strong> Acceso a información sensible de clientes y pérdida financiera significativa.</p>
+          <p><strong>Resolución:</strong> Campaña de concientización sobre phishing y mejora de filtros de correo.</p>
+          <p><strong>Lecciones Aprendidas:</strong> Importancia de la capacitación en ciberseguridad y filtros de correo robustos.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts de Bootstrap y jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
