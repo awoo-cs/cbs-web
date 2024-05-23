@@ -870,16 +870,16 @@ video {
 
 .glosario-terminos .alphabet-index .btn {
   margin: 2px;
-  background-color: #000; /* Fondo negro para los botones */
-  color: #03EA82; /* Texto verde para los botones */
-  border: 1px solid #03EA82; /* Borde verde para los botones */
+  background-color: #000;
+  color: #03EA82;
+  border: 1px solid #03EA82;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .glosario-terminos .alphabet-index .btn:hover {
-  background-color: #03EA82; /* Fondo verde al pasar el cursor */
-  color: #000; /* Texto negro al pasar el cursor */
-  transform: translateY(-5px); /* Efecto de levantar al pasar el cursor */
+  background-color: #03EA82;
+  color: #000;
+  transform: translateY(-5px);
 }
 
 #glosario-resultados {
@@ -908,6 +908,154 @@ video {
 
 .glosario-terminos .term p {
   color: #cccccc;
+}
+
+/* Media Queries para 4K - 2560px */
+@media (min-width: 2560px) {
+  .glosario-terminos h2 {
+    font-size: 3em;
+  }
+
+  .glosario-terminos p {
+    font-size: 1.5em;
+  }
+
+  .glosario-terminos .term h4 {
+    font-size: 1.8em;
+  }
+
+  .glosario-terminos .term p {
+    font-size: 1.2em;
+  }
+}
+
+/* Media Queries para LaptopL - 1440px */
+@media (min-width: 1440px) and (max-width: 2559.98px) {
+  .glosario-terminos h2 {
+    font-size: 2.8em;
+  }
+
+  .glosario-terminos p {
+    font-size: 1.3em;
+  }
+
+  .glosario-terminos .term h4 {
+    font-size: 1.6em;
+  }
+
+  .glosario-terminos .term p {
+    font-size: 1.1em;
+  }
+}
+
+/* Media Queries para Laptop - 1024px */
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+  .glosario-terminos h2 {
+    font-size: 2.5em;
+  }
+
+  .glosario-terminos p {
+    font-size: 1.2em;
+  }
+
+  .glosario-terminos .term h4 {
+    font-size: 1.5em;
+  }
+
+  .glosario-terminos .term p {
+    font-size: 1em;
+  }
+}
+
+/* Media Queries para Tablet - 768px */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .glosario-terminos h2 {
+    font-size: 2.3em;
+  }
+
+  .glosario-terminos p {
+    font-size: 1.1em;
+  }
+
+  .glosario-terminos .term h4 {
+    font-size: 1.4em;
+  }
+
+  .glosario-terminos .term p {
+    font-size: 1em;
+  }
+}
+
+/* Media Queries para Mobile L - 425px */
+@media (min-width: 425px) and (max-width: 767.98px) {
+  .glosario-terminos h2 {
+    font-size: 2em;
+  }
+
+  .glosario-terminos p {
+    font-size: 1em;
+  }
+
+  .glosario-terminos .term h4 {
+    font-size: 1.3em;
+  }
+
+  .glosario-terminos .term p {
+    font-size: 0.9em;
+  }
+
+  .glosario-terminos .alphabet-index .btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Media Queries para Mobile M - 375px */
+@media (min-width: 375px) and (max-width: 424.98px) {
+  .glosario-terminos h2 {
+    font-size: 1.8em;
+  }
+
+  .glosario-terminos p {
+    font-size: 0.9em;
+  }
+
+  .glosario-terminos .term h4 {
+    font-size: 1.2em;
+  }
+
+  .glosario-terminos .term p {
+    font-size: 0.8em;
+  }
+
+  .glosario-terminos .alphabet-index .btn {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Media Queries para Mobile S - 320px */
+@media (max-width: 374.98px) {
+  .glosario-terminos h2 {
+    font-size: 1.6em;
+  }
+
+  .glosario-terminos p {
+    font-size: 0.8em;
+  }
+
+  .glosario-terminos .term h4 {
+    font-size: 1.1em;
+  }
+
+  .glosario-terminos .term p {
+    font-size: 0.7em;
+  }
+
+  .glosario-terminos .alphabet-index .btn {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 /* Sección de Navegación */
