@@ -49,8 +49,10 @@ h2, h3 {
 }
 
 .form-label {
-  font-weight: 500;
-  color: #25d366;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .options-container {
@@ -65,11 +67,22 @@ h2, h3 {
   border-radius: 8px;
   margin: 10px 0; /* Espacio entre las tarjetas */
   padding: 20px;
-  text-align: center;
+  text-align: left; /* Alinea el texto a la izquierda */
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%; /* Ocupa todo el ancho del contenedor */
   max-width: 600px; /* Tamaño máximo de las tarjetas */
+  display: flex;
+  align-items: center; /* Alinea verticalmente iconos y texto */
+}
+
+.option-icon {
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+.option-icon i {
+  font-size: 1.2em; /* Tamaño del icono */
+  color: #ccc; /* Color del icono */
 }
 
 .option-card:hover {
@@ -84,8 +97,8 @@ h2, h3 {
 
 .next-button {
   position: absolute;
-  right: 20px;
-  bottom: 20px;
+  right: 250px;
+  top: 50%;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -103,7 +116,6 @@ h2, h3 {
 .next-button:hover {
   background-color: #1da955;
   border-color: #1da955;
-  transform: translateY(-2px);
 }
 
 #footer {
@@ -129,4 +141,10 @@ h2, h3 {
   color: #25d366;
   font-size: 1.2rem;
   text-align: center;
+}
+
+#question-title {
+  font-size: 1.2em; 
+  text-align: left; 
+  margin-bottom: 1rem; 
 }

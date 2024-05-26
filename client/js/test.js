@@ -33,10 +33,21 @@ function goBack() {
 async function loadQuestions(difficulty) {
   try {
     const response = await fetch(`http://localhost:3000/questions/${difficulty}`);
+    if (!response.ok) {
+      throw new Error(`Error fetching questions: ${response.statusText}`);
+    }
     const data = await response.json();
+    console.log("Questions loaded:", data);
     return data;
   } catch (error) {
     console.error('Error loading questions:', error);
+  }
+}
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
   }
 }
 
@@ -59,6 +70,15 @@ async function startTest() {
   isTimerEnabled = document.getElementById('timer').checked;
 
   questions = await loadQuestions(selectedDifficulty);
+  console.log("Loaded questions:", questions); // Agregar este log
+
+  if (!questions || questions.length === 0) {
+    alert('No se pudieron cargar las preguntas. Por favor, inténtalo de nuevo.');
+    return;
+  }
+  shuffleArray(questions); // Mezclar preguntas
+
+  questions.forEach(question => shuffleArray(question.options)); // Mezclar opciones de cada pregunta
 
   document.getElementById('confirmation').style.display = 'none';
   document.getElementById('question-container').style.display = 'block';
@@ -103,11 +123,14 @@ function showQuestion() {
   const optionsContainer = document.querySelector('.options-container');
   optionsContainer.innerHTML = '';
 
-  question.options.forEach(option => {
+  question.options.forEach((option, index) => {
     const optionCard = document.createElement('div');
     optionCard.classList.add('option-card');
     optionCard.setAttribute('data-value', option.value);
-    optionCard.innerText = option.text;
+    optionCard.innerHTML = `
+      <span class="option-icon"><i class="fas fa-${index + 1}"></i></span>
+      <span class="option-text">${option.text}</span>
+    `;
     optionCard.onclick = () => selectOption(optionCard);
     optionsContainer.appendChild(optionCard);
   });
@@ -117,7 +140,6 @@ function selectOption(selectedCard) {
   document.querySelectorAll('.option-card').forEach(card => card.classList.remove('selected'));
   if (selectedCard) {
     selectedCard.classList.add('selected');
-    selectedCard.dataset.selected = true; // Marcamos la opción como seleccionada
   } else {
     console.error('Selected card not found');
   }
@@ -148,7 +170,6 @@ async function showResults() {
   resultsContainer.style.display = 'block';
 
   try {
-    console.log('User answers:', userAnswers); // Debugging: print user answers
     const response = await fetch('http://localhost:3000/validate', {
       method: 'POST',
       headers: {
@@ -156,14 +177,9 @@ async function showResults() {
       },
       body: JSON.stringify({ difficulty: selectedDifficulty, answers: userAnswers })
     });
-    const { score, explanations } = await response.json();
+    const { score } = await response.json();
 
-    let resultsHTML = '<h3>Resultados del Test</h3><ul class="list-group">';
-    explanations.forEach((explanation, index) => {
-      const questionId = `Pregunta ${index + 1}`;
-      resultsHTML += `<li class="list-group-item list-group-item-danger">${questionId}: Incorrecto. ${explanation}</li>`;
-    });
-    resultsHTML += `</ul><p class="mt-3">Puntaje total: ${score} / ${questions.length}</p>`;
+    let resultsHTML = `<p class="mt-3">Puntaje total: ${score} / ${questions.length}</p>`;
     resultsContainer.innerHTML = resultsHTML;
 
     if (!document.getElementById('resultsChart')) {
@@ -198,3 +214,22 @@ async function showResults() {
     console.error('Error validating answers:', error);
   }
 }
+
+
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    const selectedOption = document.querySelector('.option-card.selected');
+    if (!selectedOption) {
+      alert('Por favor selecciona una respuesta.');
+      return;
+    }
+    nextQuestion();
+  } else if (event.key === '1' || event.key === '2' || event.key === '3') {
+    const optionIndex = parseInt(event.key) - 1;
+    const options = document.querySelectorAll('.option-card');
+    if (options[optionIndex]) {
+      selectOption(options[optionIndex]);
+    }
+  }
+});
