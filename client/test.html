@@ -72,20 +72,18 @@
             <button class="btn btn-secondary btn-lg" onclick="goBackToDifficulty()">No, regresar</button>
         </div>
     </div>
-    <div class="container mt-5" id="question-container" style="display: none;">
+    <div class="container mt-5" id="question-container" style="display: none; position: relative;">
         <h2 id="question-title" class="text-center">Pregunta 1</h2>
         <form id="question-form">
-            <label class="form-label">Pregunta</label> <!-- Asegurándonos de que la clase form-label esté presente -->
+            <label class="form-label">Pregunta</label>
             <div class="options-container">
                 <!-- Las opciones se generarán dinámicamente aquí -->
-            </div>
-            <div class="d-grid gap-2 mt-4">
-                <button type="button" class="btn btn-primary" onclick="nextQuestion()">Siguiente Pregunta</button>
             </div>
         </form>
         <div id="timer-container" style="display: none;">
             <p>Tiempo restante: <span id="timer-display">20:00</span></p>
         </div>
+        <button type="button" class="btn btn-primary next-button" onclick="nextQuestion()"><i class="fas fa-arrow-right"></i></button>
     </div>
     <div class="container mt-5" id="results-container" style="display: none;">
         <h3 class="text-center">Resultados del Test</h3>
@@ -95,7 +93,6 @@
     <div id="footer" class="mt-auto"></div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/main.js"></script>
     <script src="js/test.js"></script>

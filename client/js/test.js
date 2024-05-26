@@ -89,7 +89,6 @@ function startTimer() {
 
 function showQuestion() {
   const question = questions[currentQuestionIndex];
-
   const questionTitle = document.getElementById('question-title');
   const formLabel = document.querySelector('.form-label');
 
@@ -107,17 +106,21 @@ function showQuestion() {
   question.options.forEach(option => {
     const optionCard = document.createElement('div');
     optionCard.classList.add('option-card');
+    optionCard.setAttribute('data-value', option.value);
     optionCard.innerText = option.text;
-    optionCard.onclick = () => selectOption(option.value, optionCard); // Pasa la tarjeta de opción como parámetro
+    optionCard.onclick = () => selectOption(optionCard);
     optionsContainer.appendChild(optionCard);
   });
 }
 
-function selectOption(value, cardElement) {
+function selectOption(selectedCard) {
   document.querySelectorAll('.option-card').forEach(card => card.classList.remove('selected'));
-  cardElement.classList.add('selected');
-  // Almacena la respuesta seleccionada en la pregunta actual
-  questions[currentQuestionIndex].selectedAnswer = value;
+  if (selectedCard) {
+    selectedCard.classList.add('selected');
+    selectedCard.dataset.selected = true; // Marcamos la opción como seleccionada
+  } else {
+    console.error('Selected card not found');
+  }
 }
 
 function nextQuestion() {
@@ -126,7 +129,8 @@ function nextQuestion() {
     alert('Por favor selecciona una respuesta.');
     return;
   }
-  userAnswers.push(selectedOption.innerText);
+  const answer = selectedOption.getAttribute('data-value');
+  userAnswers.push(answer);
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
     showQuestion();
@@ -144,6 +148,7 @@ async function showResults() {
   resultsContainer.style.display = 'block';
 
   try {
+    console.log('User answers:', userAnswers); // Debugging: print user answers
     const response = await fetch('http://localhost:3000/validate', {
       method: 'POST',
       headers: {
@@ -188,13 +193,6 @@ async function showResults() {
         responsive: true
       }
     });
-
-    let feedback = '<h4>Áreas a mejorar:</h4><ul>';
-    explanations.forEach(answer => {
-      feedback += `<li>${answer}</li>`;
-    });
-    feedback += '</ul>';
-    resultsContainer.innerHTML += feedback;
 
   } catch (error) {
     console.error('Error validating answers:', error);
