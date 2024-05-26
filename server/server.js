@@ -18,22 +18,20 @@ app.post('/validate', (req, res) => {
   const questions = JSON.parse(fs.readFileSync('questions.json', 'utf8'))[difficulty];
   let score = 0;
   const explanations = [];
+  const correctQuestions = [];
+  const incorrectQuestions = [];
 
   answers.forEach((answer, index) => {
-    console.log(`Evaluating answer ${index + 1}:`);
-    console.log(`User answer: ${answer}`);
-    console.log(`Correct answer: ${questions[index].correctAnswer}`);
-
     if (questions[index].correctAnswer === answer) {
       score++;
-      console.log('Answer is correct.');
+      correctQuestions.push(questions[index]);
     } else {
       explanations.push(questions[index].explanation);
-      console.log('Answer is incorrect.');
+      incorrectQuestions.push(questions[index]);
     }
   });
 
-  res.json({ score, explanations });
+  res.json({ score, explanations, correctQuestions, incorrectQuestions });
 });
 
 app.listen(port, () => {

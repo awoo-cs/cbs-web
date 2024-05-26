@@ -1,103 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/test.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/test.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Test - Concientización de Ciberseguridad</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="navbar"></div>
     <div class="container mt-5" id="introduction">
-        <h2 class="text-center">Bienvenido al Test de Ciberseguridad</h2>
-        <p class="text-center">Este test evaluará tus conocimientos sobre ciberseguridad. ¡Buena suerte!</p>
-        <div class="d-flex justify-content-center mt-4">
-            <div class="card m-3" onclick="selectTest('preguntas')">
-                <div class="card-body text-center">
-                    <i class="fas fa-question-circle fa-3x mb-3"></i>
-                    <h5 class="card-title">Test de Preguntas</h5>
-                    <p class="card-text">Evalúa tus conocimientos con preguntas de distintas dificultades.</p>
-                </div>
-            </div>
-            <div class="card m-3" onclick="selectTest('casos')">
-                <div class="card-body text-center">
-                    <i class="fas fa-laptop-code fa-3x mb-3"></i>
-                    <h5 class="card-title">Test de Situaciones Reales</h5>
-                    <p class="card-text">Próximamente: Simulaciones de situaciones reales.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container mt-5" id="difficulty-selection" style="display: none;">
-        <h2 class="text-center">Selecciona la Dificultad</h2>
-        <div class="d-flex justify-content-center">
-            <div class="card m-3 difficulty-card" onclick="selectDifficulty('novato')">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Novato</h5>
-                    <p class="card-text">Preguntas básicas de ciberseguridad.</p>
-                </div>
-            </div>
-            <div class="card m-3 difficulty-card" onclick="selectDifficulty('intermedio')">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Intermedio</h5>
-                    <p class="card-text">Preguntas con conceptos y términos más avanzados.</p>
-                </div>
-            </div>
-            <div class="card m-3 difficulty-card" onclick="selectDifficulty('experto')">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Experto</h5>
-                    <p class="card-text">Preguntas complejas de pentesting y seguridad avanzada.</p>
-                </div>
-            </div>
-        </div>
-        <div class="form-group mt-4 text-center">
-            <input type="checkbox" id="timer" />
-            <label for="timer">Tomar test contrarreloj (20 minutos)</label>
-        </div>
-        <div class="d-grid gap-2 mt-4">
-            <button class="btn btn-primary btn-lg" id="start-test-button" onclick="confirmStart()" disabled>Comenzar Test</button>
-            <button class="btn btn-secondary btn-lg" onclick="goBack()">Volver</button>
-        </div>
-    </div>
-    <div class="container mt-5" id="confirmation" style="display: none;">
-        <h2 class="text-center">¿Estás listo para comenzar el test?</h2>
-        <div class="d-grid gap-2 mt-4">
-            <button class="btn btn-primary btn-lg" onclick="startTest()">Sí, estoy listo</button>
-            <button class="btn btn-secondary btn-lg" onclick="goBackToDifficulty()">No, regresar</button>
-        </div>
-    </div>
-    <div class="container mt-5" id="question-container" style="display: none; position: relative;">
-        <h2 id="question-title">Pregunta 1</h2>
-        <form id="question-form">
-            <label class="form-label">Pregunta</label>
-            <div class="options-container">
-                <!-- Las opciones se generarán dinámicamente aquí -->
-            </div>
-        </form>
-        <div id="timer-container" style="display: none;">
-            <p>Tiempo restante: <span id="timer-display">20:00</span></p>
-        </div>
-        <button type="button" class="btn btn-primary next-button" onclick="nextQuestion()">
-            <i class="fas fa-arrow-right"></i>
+      <h2 class="text-center">
+        Test de Concientización sobre la Ciberseguridad
+      </h2>
+      <p class="text-center">
+        Este test evaluará tus conocimientos sobre ciberseguridad. ¡Buena
+        suerte!
+      </p>
+      <div class="d-flex justify-content-center mt-4">
+        <button class="btn btn-custom" onclick="startTest()">
+          Iniciar Test
         </button>
+      </div>
+      <div class="text-center mt-4">
+        <p>Paso 1 de 5</p>
+      </div>
     </div>
-    <div class="container mt-5" id="results-container" style="display: none;">
-        <h3 class="text-center">Resultados del Test</h3>
-        <canvas id="resultsChart" class="mt-5" width="400" height="200"></canvas>
-        <div id="feedback" class="mt-5"></div>
+    <div class="container mt-5" id="difficulty-selection" style="display: none">
+      <h2 class="text-center">Selecciona tu Nivel de Dificultad</h2>
+      <div class="d-flex justify-content-center">
+        <div
+          class="card m-3 difficulty-card"
+          onclick="selectDifficulty('novato')"
+        >
+          <div class="card-body text-center">
+            <h5 class="card-title">Novato</h5>
+            <p class="card-text">Preguntas básicas de ciberseguridad.</p>
+          </div>
+        </div>
+        <div
+          class="card m-3 difficulty-card"
+          onclick="selectDifficulty('intermedio')"
+        >
+          <div class="card-body text-center">
+            <h5 class="card-title">Intermedio</h5>
+            <p class="card-text">
+              Preguntas con conceptos y términos más avanzados.
+            </p>
+          </div>
+        </div>
+        <div
+          class="card m-3 difficulty-card"
+          onclick="selectDifficulty('experto')"
+        >
+          <div class="card-body text-center">
+            <h5 class="card-title">Experto</h5>
+            <p class="card-text">
+              Preguntas complejas de pentesting y seguridad avanzada.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="form-group mt-4 text-center">
+        <input type="checkbox" id="timer" />
+        <label for="timer">Tomar test contrarreloj (20 minutos)</label>
+      </div>
+      <div class="d-grid gap-2 mt-4">
+        <button
+          class="btn btn-custom"
+          id="start-test-button"
+          onclick="confirmInstructions()"
+          disabled
+        >
+          Continuar
+        </button>
+        <button class="btn btn-secondary btn-lg" onclick="goBack()">
+          Volver
+        </button>
+      </div>
+      <div class="text-center mt-4">
+        <p>Paso 2 de 5</p>
+      </div>
     </div>
+    <div class="container mt-5" id="instructions" style="display: none">
+      <h2 class="text-center">Instrucciones del Test</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item bg-transparent text-white">
+          El test consta de 20 preguntas.
+        </li>
+        <li class="list-group-item bg-transparent text-white">
+          Tienes 20 minutos para completar el test si seleccionaste la opción de
+          contrarreloj.
+        </li>
+        <li class="list-group-item bg-transparent text-white">
+          Para cada pregunta, selecciona la opción correcta y presiona "Enter"
+          para pasar a la siguiente.
+        </li>
+        <li class="list-group-item bg-transparent text-white">
+          Puedes usar las teclas 1, 2 y 3 o el mouse para seleccionar tus
+          respuestas.
+        </li>
+        <li class="list-group-item bg-transparent text-white">
+          Al final del test, verás tu puntuación y un gráfico con tus
+          resultados.
+        </li>
+      </ul>
+      <div class="d-grid gap-2 mt-4">
+        <button
+          class="btn btn-custom"
+          onclick="startTestFromInstructions()"
+        >
+          Empezar
+        </button>
+        <button class="btn btn-secondary btn-lg" onclick="goBackToDifficulty()">
+          Volver
+        </button>
+      </div>
+      <div class="text-center mt-4">
+        <p>Paso 3 de 5</p>
+      </div>
+    </div>
+    <div
+      class="container mt-5"
+      id="question-container"
+      style="display: none; position: relative"
+    >
+      <div class="d-flex justify-content-between align-items-center">
+        <h2 id="question-title" class="text-left">Pregunta 1</h2>
+        <span id="progress-indicator" class="text-right">Pregunta 1 de 20</span>
+      </div>
+      <form id="question-form">
+        <label class="form-label text-center">Pregunta</label>
+        <div class="options-container">
+          <!-- Opciones -->
+        </div>
+      </form>
+      <div id="timer-container" style="display: none">
+        <p>Tiempo restante: <span id="timer-display">20:00</span></p>
+      </div>
+      <button
+        type="button"
+        class="btn btn-primary next-button"
+        onclick="nextQuestion()"
+      >
+        <i class="fas fa-arrow-right"></i>
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary prev-button"
+        onclick="prevQuestion()"
+        style="display: none"
+      >
+        <i class="fas fa-arrow-left"></i>
+      </button>
+    </div>
+    <div class="container mt-5" id="results-container" style="display: none">
+      <h3 class="text-center">Resultados del Test</h3>
+      <p id="score-display" class="text-center"></p>
+      <div class="text-center">
+        <canvas
+          id="resultsChart"
+          class="mt-5"
+          width="400"
+          height="200"
+        ></canvas>
+      </div>
+      <div id="feedback" class="mt-5 text-center"></div>
+      <div class="d-flex justify-content-center mt-4">
+        <button class="btn btn-custom" onclick="restartTest()">
+          Volver a intentar
+        </button>
+        <button class="btn btn-secondary ml-3" onclick="exploreResources()">
+          Explorar recursos adicionales
+        </button>
+      </div>
+    </div>
+
+          
+
+    <div class="footer-spacing"></div>
+
     <div id="footer" class="mt-auto"></div>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <div class="modal fade" id="questionsModal" tabindex="-1" aria-labelledby="questionsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="questionsModalLabel">Preguntas Correctas/Incorrectas</h5>
+            </div>
+            <div class="modal-body">
+              <ul class="list-group" id="questionsList">
+                <!-- Preguntas-->
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>   
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/main.js"></script>
     <script src="js/test.js"></script>
-</body>
+  </body>
 </html>

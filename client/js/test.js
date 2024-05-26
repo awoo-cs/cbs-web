@@ -1,28 +1,23 @@
 let questions = [];
 let timer;
-let timeRemaining = 20 * 60; // 20 minutos en segundos
+let timeRemaining = 20 * 60; 
 
 let currentQuestionIndex = 0;
 let userAnswers = [];
 let isTimerEnabled = false;
-let selectedDifficulty = ''; // Variable global para almacenar la dificultad seleccionada
-let selectedTest = ''; // Variable global para almacenar el test seleccionado
+let selectedDifficulty = ''; 
+let selectedTest = ''; 
 
-function selectTest(test) {
-  selectedTest = test;
-  if (test === 'preguntas') {
-    document.getElementById('introduction').style.display = 'none';
-    document.getElementById('difficulty-selection').style.display = 'block';
-  } else {
-    alert('Próximamente disponible');
-  }
+function startTest() {
+  document.getElementById('introduction').style.display = 'none';
+  document.getElementById('difficulty-selection').style.display = 'block';
 }
 
 function selectDifficulty(difficulty) {
-  selectedDifficulty = difficulty; // Almacena la dificultad seleccionada en la variable global
+  selectedDifficulty = difficulty; 
   document.querySelectorAll('.difficulty-card').forEach(card => card.classList.remove('selected'));
   document.querySelector(`.difficulty-card[onclick="selectDifficulty('${difficulty}')"]`).classList.add('selected');
-  document.getElementById('start-test-button').disabled = false; // Habilita el botón "Comenzar Test"
+  document.getElementById('start-test-button').disabled = false; 
 }
 
 function goBack() {
@@ -33,62 +28,41 @@ function goBack() {
 async function loadQuestions(difficulty) {
   try {
     const response = await fetch(`http://localhost:3000/questions/${difficulty}`);
-    if (!response.ok) {
-      throw new Error(`Error fetching questions: ${response.statusText}`);
-    }
     const data = await response.json();
-    console.log("Questions loaded:", data);
     return data;
   } catch (error) {
-    console.error('Error loading questions:', error);
   }
 }
 
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-}
-
-async function confirmStart() {
+async function confirmInstructions() {
   if (!selectedDifficulty) {
     alert('Por favor selecciona una dificultad.');
     return;
   }
 
   document.getElementById('difficulty-selection').style.display = 'none';
-  document.getElementById('confirmation').style.display = 'block';
+  document.getElementById('instructions').style.display = 'block';
 }
 
-async function startTest() {
+function startTestFromInstructions() {
   if (!selectedDifficulty) {
     alert('Por favor selecciona una dificultad.');
     return;
   }
 
-  isTimerEnabled = document.getElementById('timer').checked;
-
-  questions = await loadQuestions(selectedDifficulty);
-  console.log("Loaded questions:", questions); // Agregar este log
-
-  if (!questions || questions.length === 0) {
-    alert('No se pudieron cargar las preguntas. Por favor, inténtalo de nuevo.');
-    return;
-  }
-  shuffleArray(questions); // Mezclar preguntas
-
-  questions.forEach(question => shuffleArray(question.options)); // Mezclar opciones de cada pregunta
-
-  document.getElementById('confirmation').style.display = 'none';
+  document.getElementById('instructions').style.display = 'none';
   document.getElementById('question-container').style.display = 'block';
 
-  if (isTimerEnabled) {
-    document.getElementById('timer-container').style.display = 'block';
-    startTimer();
-  }
+  isTimerEnabled = document.getElementById('timer').checked;
 
-  showQuestion();
+  loadQuestions(selectedDifficulty).then(data => {
+    questions = data;
+    if (isTimerEnabled) {
+      document.getElementById('timer-container').style.display = 'block';
+      startTimer();
+    }
+    showQuestion();
+  });
 }
 
 function startTimer() {
@@ -119,6 +93,7 @@ function showQuestion() {
 
   questionTitle.innerText = `Pregunta ${currentQuestionIndex + 1}`;
   formLabel.innerText = question.text;
+  document.getElementById('progress-indicator').innerText = `Pregunta ${currentQuestionIndex + 1} de ${questions.length}`;
 
   const optionsContainer = document.querySelector('.options-container');
   optionsContainer.innerHTML = '';
@@ -128,12 +103,17 @@ function showQuestion() {
     optionCard.classList.add('option-card');
     optionCard.setAttribute('data-value', option.value);
     optionCard.innerHTML = `
-      <span class="option-icon"><i class="fas fa-${index + 1}"></i></span>
+      <span class="option-icon">${index + 1}</span>
       <span class="option-text">${option.text}</span>
     `;
     optionCard.onclick = () => selectOption(optionCard);
     optionsContainer.appendChild(optionCard);
   });
+
+  const nextButton = document.querySelector('.next-button');
+  nextButton.style.top = `${optionsContainer.clientHeight / 2}px`;
+
+  document.querySelector('.prev-button').style.display = currentQuestionIndex > 0 ? 'block' : 'none';
 }
 
 function selectOption(selectedCard) {
@@ -144,6 +124,19 @@ function selectOption(selectedCard) {
     console.error('Selected card not found');
   }
 }
+
+document.addEventListener('keydown', function(event) {
+  if (event.key >= '1' && event.key <= '3') {
+    const optionCards = document.querySelectorAll('.option-card');
+    const selectedIndex = parseInt(event.key) - 1;
+    if (selectedIndex >= 0 && selectedIndex < optionCards.length) {
+      selectOption(optionCards[selectedIndex]);
+    }
+  }
+  if (event.key === 'Enter') {
+    nextQuestion();
+  }
+});
 
 function nextQuestion() {
   const selectedOption = document.querySelector('.option-card.selected');
@@ -158,6 +151,13 @@ function nextQuestion() {
     showQuestion();
   } else {
     showResults();
+  }
+}
+
+function prevQuestion() {
+  if (currentQuestionIndex > 0) {
+    currentQuestionIndex--;
+    showQuestion();
   }
 }
 
@@ -177,59 +177,128 @@ async function showResults() {
       },
       body: JSON.stringify({ difficulty: selectedDifficulty, answers: userAnswers })
     });
-    const { score } = await response.json();
 
-    let resultsHTML = `<p class="mt-3">Puntaje total: ${score} / ${questions.length}</p>`;
-    resultsContainer.innerHTML = resultsHTML;
-
-    if (!document.getElementById('resultsChart')) {
-      const canvas = document.createElement('canvas');
-      canvas.id = 'resultsChart';
-      canvas.width = 400;
-      canvas.height = 200;
-      resultsContainer.appendChild(canvas);
+    if (!response.ok) {
+      throw new Error(`Server error: ${response.status}`);
     }
+
+    const resultData = await response.json();
+    const { score, explanations, correctQuestions, incorrectQuestions } = resultData;
+
+    document.getElementById('score-display').innerText = `Puntaje total: ${score} / ${questions.length}`;
+    document.getElementById('feedback').innerText = getFeedback(score);
 
     const canvas = document.getElementById('resultsChart');
     const ctx = canvas.getContext('2d');
 
-    new Chart(ctx, {
-      type: 'pie',
+    const chart = new Chart(ctx, {
+      type: 'doughnut',
       data: {
         labels: ['Correctas', 'Incorrectas'],
         datasets: [{
-          label: 'Resultados del Test',
           data: [score, questions.length - score],
           backgroundColor: ['#28a745', '#dc3545'],
-          borderColor: ['#28a745', '#dc3545'],
-          borderWidth: 1
+          borderColor: '#2c2c2c',
+          borderWidth: 3,
+          hoverBackgroundColor: ['#218838', '#c82333'],
+          hoverBorderColor: '#1e1e1e',
+          hoverBorderWidth: 5
         }]
       },
       options: {
-        responsive: true
+        responsive: true,
+        cutout: '70%',
+        plugins: {
+          legend: {
+            display: true,
+            position: 'bottom',
+            labels: {
+              color: '#e0e0e0',
+              font: {
+                size: 14
+              }
+            }
+          },
+          tooltip: {
+            enabled: true,
+            backgroundColor: '#2c2c2c',
+            titleColor: '#e0e0e0',
+            bodyColor: '#e0e0e0',
+            borderColor: '#28a745',
+            borderWidth: 1,
+            cornerRadius: 4,
+            padding: 10
+          }
+        },
+        layout: {
+          padding: {
+            left: 10,
+            right: 10,
+            top: 10,
+            bottom: 10
+          }
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        },
+        onClick: (evt, item) => {
+          if (item.length > 0) {
+            const index = item[0].index;
+            if (index === 0) {
+              showQuestionsModal(correctQuestions, 'Correctas');
+            } else if (index === 1) {
+              showQuestionsModal(incorrectQuestions, 'Incorrectas');
+            }
+          }
+        }
       }
     });
 
   } catch (error) {
     console.error('Error validating answers:', error);
+    alert('No se pudieron cargar las preguntas, intentalo de nuevo.');
   }
 }
 
+function showQuestionsModal(questions, type) {
+  const questionsModalLabel = document.getElementById('questionsModalLabel');
+  const questionsList = document.getElementById('questionsList');
+  questionsModalLabel.innerText = `Preguntas ${type}`;
+  questionsList.innerHTML = '';
 
-
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
-    const selectedOption = document.querySelector('.option-card.selected');
-    if (!selectedOption) {
-      alert('Por favor selecciona una respuesta.');
-      return;
-    }
-    nextQuestion();
-  } else if (event.key === '1' || event.key === '2' || event.key === '3') {
-    const optionIndex = parseInt(event.key) - 1;
-    const options = document.querySelectorAll('.option-card');
-    if (options[optionIndex]) {
-      selectOption(options[optionIndex]);
-    }
+  if (!questions || questions.length === 0) {
+    const noQuestionsItem = document.createElement('li');
+    noQuestionsItem.classList.add('list-group-item');
+    noQuestionsItem.innerText = `No hay preguntas ${type.toLowerCase()} disponibles.`;
+    questionsList.appendChild(noQuestionsItem);
+  } else {
+    questions.forEach((question, index) => {
+      const questionItem = document.createElement('li');
+      questionItem.classList.add('list-group-item');
+      questionItem.innerText = `${index + 1}. ${question.text}`;
+      questionsList.appendChild(questionItem);
+    });
   }
-});
+
+  const questionsModal = new bootstrap.Modal(document.getElementById('questionsModal'));
+  questionsModal.show();
+}
+
+function restartTest() {
+  window.location.reload();
+}
+
+function exploreResources() {
+  window.location.href = 'index.html'
+}
+
+function getFeedback(score) {
+  if (score >= 16) { 
+    return '¡Excelente! Estás en el nivel Experto.';
+  } else if (score >= 10) { 
+    return '¡Buen trabajo! Estás en el nivel Intermedio.';
+  } else { 
+    return 'Necesitas mejorar. Estás en el nivel Novato.';
+  }
+}
