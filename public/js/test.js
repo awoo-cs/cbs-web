@@ -8,6 +8,8 @@ let isTimerEnabled = false;
 let selectedDifficulty = ''; 
 let selectedTest = ''; 
 
+const baseURL = window.location.hostname === 'localhost' ? 'http://localhost:3000' : '';
+
 function startTest() {
   document.getElementById('introduction').style.display = 'none';
   document.getElementById('difficulty-selection').style.display = 'block';
@@ -27,16 +29,15 @@ function goBack() {
 
 async function loadQuestions(difficulty) {
   try {
-    const response = await fetch(`/api/questions/${difficulty}`);
+    const response = await fetch(`${baseURL}/api/questions/${difficulty}`);
     if (!response.ok) {
       throw new Error(`Server error: ${response.status}`);
     }
     const data = await response.json();
-    console.log('Questions loaded:', data); // Depuración
     return data;
   } catch (error) {
     console.error('Error loading questions:', error);
-    alert('No se pudieron cargar las preguntas, intentalo de nuevo.');
+    throw error;
   }
 }
 
@@ -176,7 +177,7 @@ async function showResults() {
   resultsContainer.style.display = 'block';
 
   try {
-    const response = await fetch('/api/validate', {
+    const response = await fetch(`${baseURL}/api/validate`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -293,7 +294,7 @@ function showQuestionsModal(questions, type) {
 
 async function validateAnswers(payload) {
   try {
-    const response = await fetch('/api/validate', {
+    const response = await fetch('${baseURL}/api/validate', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -306,7 +307,6 @@ async function validateAnswers(payload) {
     }
 
     const data = await response.json();
-    console.log('Validation response:', data); // Depuración
     return data;
   } catch (error) {
     console.error('Error validating answers:', error);

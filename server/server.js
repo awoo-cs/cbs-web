@@ -1,48 +1,43 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 3000;
+
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
 
-const questions = require('./questions.json');
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.get('/api/questions/:difficulty', (req, res) => {
   const difficulty = req.params.difficulty;
-  const selectedQuestions = questions[difficulty];
-  if (selectedQuestions) {
-    res.json(selectedQuestions);
-  } else {
-    res.status(404).json({ error: 'Difficulty not found' });
-  }
+  const questions = require('./questions.json');
+  res.json(questions[difficulty]);
 });
 
 app.post('/api/validate', (req, res) => {
   const { difficulty, answers } = req.body;
-  const correctAnswers = questions[difficulty].map(q => q.correctAnswer);
+  const questions = require('./questions.json')[difficulty];
   let score = 0;
-  let correctQuestions = [];
-  let incorrectQuestions = [];
+  const explanations = [];
+  const correctQuestions = [];
+  const incorrectQuestions = [];
 
   answers.forEach((answer, index) => {
-    if (answer === correctAnswers[index]) {
+    if (questions[index].correctAnswer === answer) {
       score++;
-      correctQuestions.push(questions[difficulty][index]);
+      correctQuestions.push(questions[index]);
     } else {
-      incorrectQuestions.push(questions[difficulty][index]);
+      explanations.push(questions[index].explanation);
+      incorrectQuestions.push(questions[index]);
     }
   });
 
-  res.json({
-    score,
-    correctQuestions,
-    incorrectQuestions
-  });
+  res.json({ score, explanations, correctQuestions, incorrectQuestions });
 });
 
-app.use(express.static('public'));
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
 });
