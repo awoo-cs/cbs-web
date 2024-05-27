@@ -1,23 +1,27 @@
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
+const path = require('path');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
 
+app.use(express.static(path.join(__dirname, '..', 'public')));
+
 app.get('/questions/:difficulty', (req, res) => {
   const difficulty = req.params.difficulty;
-  const questions = JSON.parse(fs.readFileSync('questions.json', 'utf8'));
+  const questions = JSON.parse(fs.readFileSync('server/questions.json', 'utf8'));
   res.json(questions[difficulty]);
 });
 
 app.post('/validate', (req, res) => {
   const { difficulty, answers } = req.body;
-  const questions = JSON.parse(fs.readFileSync('questions.json', 'utf8'))[difficulty];
+  const questions = JSON.parse(fs.readFileSync('server/questions.json', 'utf8'))[difficulty];
   let score = 0;
   const explanations = [];
+
   const correctQuestions = [];
   const incorrectQuestions = [];
 
