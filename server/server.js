@@ -51,6 +51,41 @@ app.post('/api/validate', (req, res) => {
   res.json({ score, explanations, correctQuestions, incorrectQuestions });
 });
 
+app.use((req, res, next) => {
+  res.status(404).sendFile(path.join(__dirname, '..', 'public', '404.html'));
+});
+
+const nodemailer = require('nodemailer');
+
+app.post('/api/feedback', (req, res) => {
+  const { feedback } = req.body;
+
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS
+    }
+  });
+
+  const mailOptions = {
+    from: process.env.EMAIL_USER,
+    to: process.env.FEEDBACK_EMAIL,
+    subject: 'Nuevo Feedback del Proyecto',
+    text: feedback
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error('Error sending email:', error);
+      res.status(500).send('Error sending email');
+    } else {
+      console.log('Email sent:', info.response);
+      res.status(200).send('Feedback sent');
+    }
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });

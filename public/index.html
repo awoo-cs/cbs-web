@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/feedback.css">
     <!-- Enlaces a Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
@@ -706,6 +707,23 @@
       </div>
     </div>
 
+    <!-- Feedback Button -->
+<div id="feedback-button" class="feedback-button">
+  <span>Feedback</span>
+</div>
+
+<!-- Feedback Modal -->
+<div id="feedback-modal" class="feedback-modal">
+  <div class="feedback-modal-content">
+    <span class="feedback-close">&times;</span>
+    <h2>Feedback</h2>
+    <form id="feedback-form">
+      <textarea id="feedback-text" placeholder="Escribe tus recomendaciones aquí..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
+
     <!-- Footer -->
     <div id="footer"></div>
 
@@ -735,5 +753,6 @@
     <script src="js/slider.js"></script>
     <script src="js/toggle.js"></script>
     <script src="js/studycases.js"></script>
+    <script src="js/feedback.js"></script>
   </body>
 </html>
