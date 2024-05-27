@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const nodemailer = require('nodemailer');
 const app = express();
 
 const port = process.env.PORT || 3000;
@@ -11,79 +12,63 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-const questions = require('./questions.json');
-
 app.get('/api/questions/:difficulty', (req, res) => {
   const difficulty = req.params.difficulty;
-  if (questions[difficulty]) {
-    res.json(questions[difficulty]);
-  } else {
-    res.status(404).send('Questions not found');
-  }
+  const questions = require('./questions.json');
+  res.json(questions[difficulty]);
 });
 
 app.post('/api/validate', (req, res) => {
   const { difficulty, answers } = req.body;
-  if (!difficulty || !answers) {
-    return res.status(400).send('Invalid request');
-  }
-
-  const selectedQuestions = questions[difficulty];
-  if (!selectedQuestions) {
-    return res.status(404).send('Questions not found');
-  }
-
+  const questions = require('./questions.json')[difficulty];
   let score = 0;
   const explanations = [];
   const correctQuestions = [];
   const incorrectQuestions = [];
 
   answers.forEach((answer, index) => {
-    if (selectedQuestions[index].correctAnswer === answer) {
+    if (questions[index].correctAnswer === answer) {
       score++;
-      correctQuestions.push(selectedQuestions[index]);
+      correctQuestions.push(questions[index]);
     } else {
-      explanations.push(selectedQuestions[index].explanation);
-      incorrectQuestions.push(selectedQuestions[index]);
+      explanations.push(questions[index].explanation);
+      incorrectQuestions.push(questions[index]);
     }
   });
 
   res.json({ score, explanations, correctQuestions, incorrectQuestions });
 });
 
-app.use((req, res, next) => {
-  res.status(404).sendFile(path.join(__dirname, '..', 'public', '404.html'));
-});
-
-const nodemailer = require('nodemailer');
-
-app.post('/api/feedback', (req, res) => {
+app.post('/api/feedback', async (req, res) => {
   const { feedback } = req.body;
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS
+      user: process.env.EMAIL,
+      pass: process.env.EMAIL_PASSWORD
     }
   });
 
   const mailOptions = {
-    from: process.env.EMAIL_USER,
+    from: process.env.EMAIL,
     to: process.env.FEEDBACK_EMAIL,
-    subject: 'Nuevo Feedback del Proyecto',
+    subject: 'Nuevo Feedback del Usuario',
     text: feedback
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error('Error sending email:', error);
-      res.status(500).send('Error sending email');
-    } else {
-      console.log('Email sent:', info.response);
-      res.status(200).send('Feedback sent');
-    }
-  });
+  try {
+    const info = await transporter.sendMail(mailOptions);
+    console.log('Correo enviado: ', info.response);
+    res.status(200).json({ message: 'Feedback enviado correctamente.' });
+  } catch (error) {
+    console.error('Error al enviar el correo:', error);
+    res.status(500).json({ message: 'Error al enviar el feedback.' });
+  }
+});
+
+app.use((req, res, next) => {
+  res.status(404).sendFile(path.join(__dirname, '..', 'public', '404.html'));
 });
 
 app.listen(port, () => {
