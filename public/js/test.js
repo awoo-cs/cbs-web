@@ -28,11 +28,15 @@ function goBack() {
 async function loadQuestions(difficulty) {
   try {
     const response = await fetch(`/api/questions/${difficulty}`);
+    if (!response.ok) {
+      throw new Error(`Server error: ${response.status}`);
+    }
     const data = await response.json();
     console.log('Questions loaded:', data); // Depuración
     return data;
   } catch (error) {
     console.error('Error loading questions:', error);
+    alert('No se pudieron cargar las preguntas, intentalo de nuevo.');
   }
 }
 

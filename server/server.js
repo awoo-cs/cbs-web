@@ -1,43 +1,48 @@
 const express = require('express');
 const cors = require('cors');
-const fs = require('fs');
-const path = require('path');
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, '..', 'public')));
+const questions = require('./questions.json');
 
 app.get('/api/questions/:difficulty', (req, res) => {
   const difficulty = req.params.difficulty;
-  const questions = JSON.parse(fs.readFileSync('server/questions.json', 'utf8'));
-  res.json(questions[difficulty]);
+  const selectedQuestions = questions[difficulty];
+  if (selectedQuestions) {
+    res.json(selectedQuestions);
+  } else {
+    res.status(404).json({ error: 'Difficulty not found' });
+  }
 });
 
 app.post('/api/validate', (req, res) => {
   const { difficulty, answers } = req.body;
-  const questions = JSON.parse(fs.readFileSync('server/questions.json', 'utf8'))[difficulty];
+  const correctAnswers = questions[difficulty].map(q => q.correctAnswer);
   let score = 0;
-  const explanations = [];
-
-  const correctQuestions = [];
-  const incorrectQuestions = [];
+  let correctQuestions = [];
+  let incorrectQuestions = [];
 
   answers.forEach((answer, index) => {
-    if (questions[index].correctAnswer === answer) {
+    if (answer === correctAnswers[index]) {
       score++;
-      correctQuestions.push(questions[index]);
+      correctQuestions.push(questions[difficulty][index]);
     } else {
-      explanations.push(questions[index].explanation);
-      incorrectQuestions.push(questions[index]);
+      incorrectQuestions.push(questions[difficulty][index]);
     }
   });
 
-  res.json({ score, explanations, correctQuestions, incorrectQuestions });
+  res.json({
+    score,
+    correctQuestions,
+    incorrectQuestions
+  });
 });
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+app.use(express.static('public'));
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
