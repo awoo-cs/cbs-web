@@ -1,4 +1,3 @@
-/* Feedback Button */
 .feedback-button {
     position: fixed;
     bottom: 50%;
@@ -25,7 +24,6 @@
     right: 0px;
   }
   
-  /* Feedback Modal */
   .feedback-modal {
     display: none;
     position: fixed;
