@@ -4,7 +4,6 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo 'This is where your build script goes'",
     "start": "node server/server.js"
   },
   "keywords": [],
