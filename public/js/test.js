@@ -27,7 +27,7 @@ function goBack() {
 
 async function loadQuestions(difficulty) {
   try {
-    const response = await fetch(`http://localhost:3000/questions/${difficulty}`);
+    const response = await fetch(`/api/questions/${difficulty}`);
     const data = await response.json();
     return data;
   } catch (error) {
@@ -170,7 +170,7 @@ async function showResults() {
   resultsContainer.style.display = 'block';
 
   try {
-    const response = await fetch('http://localhost:3000/validate', {
+    const response = await fetch('/api/validate', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
