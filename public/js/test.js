@@ -29,8 +29,10 @@ async function loadQuestions(difficulty) {
   try {
     const response = await fetch(`/api/questions/${difficulty}`);
     const data = await response.json();
+    console.log('Questions loaded:', data); // Depuración
     return data;
   } catch (error) {
+    console.error('Error loading questions:', error);
   }
 }
 
@@ -283,6 +285,29 @@ function showQuestionsModal(questions, type) {
 
   const questionsModal = new bootstrap.Modal(document.getElementById('questionsModal'));
   questionsModal.show();
+}
+
+async function validateAnswers(payload) {
+  try {
+    const response = await fetch('/api/validate', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (!response.ok) {
+      throw new Error(`Server error: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log('Validation response:', data); // Depuración
+    return data;
+  } catch (error) {
+    console.error('Error validating answers:', error);
+    alert('No se pudieron cargar las preguntas, intentalo de nuevo.');
+  }
 }
 
 function restartTest() {

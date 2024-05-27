@@ -10,13 +10,13 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-app.get('/questions/:difficulty', (req, res) => {
+app.get('/api/questions/:difficulty', (req, res) => {
   const difficulty = req.params.difficulty;
   const questions = JSON.parse(fs.readFileSync('server/questions.json', 'utf8'));
   res.json(questions[difficulty]);
 });
 
-app.post('/validate', (req, res) => {
+app.post('/api/validate', (req, res) => {
   const { difficulty, answers } = req.body;
   const questions = JSON.parse(fs.readFileSync('server/questions.json', 'utf8'))[difficulty];
   let score = 0;
