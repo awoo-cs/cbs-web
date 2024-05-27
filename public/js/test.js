@@ -1,12 +1,12 @@
 let questions = [];
 let timer;
-let timeRemaining = 20 * 60; 
+let timeRemaining = 20 * 60;
 
 let currentQuestionIndex = 0;
 let userAnswers = [];
 let isTimerEnabled = false;
-let selectedDifficulty = ''; 
-let selectedTest = ''; 
+let selectedDifficulty = '';
+let selectedTest = '';
 
 const baseURL = window.location.hostname === 'localhost' ? 'http://localhost:3000' : '';
 
@@ -16,10 +16,10 @@ function startTest() {
 }
 
 function selectDifficulty(difficulty) {
-  selectedDifficulty = difficulty; 
+  selectedDifficulty = difficulty;
   document.querySelectorAll('.difficulty-card').forEach(card => card.classList.remove('selected'));
   document.querySelector(`.difficulty-card[onclick="selectDifficulty('${difficulty}')"]`).classList.add('selected');
-  document.getElementById('start-test-button').disabled = false; 
+  document.getElementById('start-test-button').disabled = false;
 }
 
 function goBack() {
@@ -27,17 +27,22 @@ function goBack() {
   document.getElementById('introduction').style.display = 'block';
 }
 
+function goBackToDifficulty() {
+  document.getElementById('instructions').style.display = 'none';
+  document.getElementById('difficulty-selection').style.display = 'block';
+}
+
+function shuffle(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
+
 async function loadQuestions(difficulty) {
   try {
     const response = await fetch(`${baseURL}/api/questions/${difficulty}`);
-    if (!response.ok) {
-      throw new Error(`Server error: ${response.status}`);
-    }
     const data = await response.json();
-    return data;
+    return shuffle(data);
   } catch (error) {
     console.error('Error loading questions:', error);
-    throw error;
   }
 }
 
@@ -105,7 +110,9 @@ function showQuestion() {
   const optionsContainer = document.querySelector('.options-container');
   optionsContainer.innerHTML = '';
 
-  question.options.forEach((option, index) => {
+  const shuffledOptions = shuffle(question.options);
+
+  shuffledOptions.forEach((option, index) => {
     const optionCard = document.createElement('div');
     optionCard.classList.add('option-card');
     optionCard.setAttribute('data-value', option.value);
@@ -133,15 +140,19 @@ function selectOption(selectedCard) {
 }
 
 document.addEventListener('keydown', function(event) {
-  if (event.key >= '1' && event.key <= '3') {
-    const optionCards = document.querySelectorAll('.option-card');
-    const selectedIndex = parseInt(event.key) - 1;
-    if (selectedIndex >= 0 && selectedIndex < optionCards.length) {
-      selectOption(optionCards[selectedIndex]);
+  const currentPhase = document.querySelector('.container:not([style*="display: none"])');
+
+  if (currentPhase && currentPhase.id === 'question-container') {
+    if (event.key >= '1' && event.key <= '3') {
+      const optionCards = document.querySelectorAll('.option-card');
+      const selectedIndex = parseInt(event.key) - 1;
+      if (selectedIndex >= 0 && selectedIndex < optionCards.length) {
+        selectOption(optionCards[selectedIndex]);
+      }
     }
-  }
-  if (event.key === 'Enter') {
-    nextQuestion();
+    if (event.key === 'Enter') {
+      nextQuestion();
+    }
   }
 });
 
@@ -294,7 +305,7 @@ function showQuestionsModal(questions, type) {
 
 async function validateAnswers(payload) {
   try {
-    const response = await fetch('${baseURL}/api/validate', {
+    const response = await fetch(`${baseURL}/api/validate`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -323,11 +334,11 @@ function exploreResources() {
 }
 
 function getFeedback(score) {
-  if (score >= 16) { 
+  if (score >= 16) {
     return '¡Excelente! Estás en el nivel Experto.';
-  } else if (score >= 10) { 
+  } else if (score >= 10) {
     return '¡Buen trabajo! Estás en el nivel Intermedio.';
-  } else { 
+  } else {
     return 'Necesitas mejorar. Estás en el nivel Novato.';
   }
 }

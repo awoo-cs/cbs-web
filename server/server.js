@@ -11,27 +11,40 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
+const questions = require('./questions.json');
+
 app.get('/api/questions/:difficulty', (req, res) => {
   const difficulty = req.params.difficulty;
-  const questions = require('./questions.json');
-  res.json(questions[difficulty]);
+  if (questions[difficulty]) {
+    res.json(questions[difficulty]);
+  } else {
+    res.status(404).send('Questions not found');
+  }
 });
 
 app.post('/api/validate', (req, res) => {
   const { difficulty, answers } = req.body;
-  const questions = require('./questions.json')[difficulty];
+  if (!difficulty || !answers) {
+    return res.status(400).send('Invalid request');
+  }
+
+  const selectedQuestions = questions[difficulty];
+  if (!selectedQuestions) {
+    return res.status(404).send('Questions not found');
+  }
+
   let score = 0;
   const explanations = [];
   const correctQuestions = [];
   const incorrectQuestions = [];
 
   answers.forEach((answer, index) => {
-    if (questions[index].correctAnswer === answer) {
+    if (selectedQuestions[index].correctAnswer === answer) {
       score++;
-      correctQuestions.push(questions[index]);
+      correctQuestions.push(selectedQuestions[index]);
     } else {
-      explanations.push(questions[index].explanation);
-      incorrectQuestions.push(questions[index]);
+      explanations.push(selectedQuestions[index].explanation);
+      incorrectQuestions.push(selectedQuestions[index]);
     }
   });
 
