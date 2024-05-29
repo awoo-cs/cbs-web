@@ -2,629 +2,1159 @@
   "novato": [
     {
       "id": "novato1",
-      "text": "¿Cuál es el propósito principal de un firewall?",
-      "options": [
-        { "value": "1", "text": "Bloquear todo el tráfico de red." },
-        { "value": "2", "text": "Detectar y eliminar virus." },
-        {
-          "value": "3",
-          "text": "Controlar el tráfico de red entrante y saliente."
-        }
-      ],
-      "correctAnswer": "3",
-      "explanation": "El firewall controla el tráfico de red entrante y saliente."
-    },
-    {
-      "id": "novato2",
-      "text": "¿Qué significa la abreviatura URL?",
-      "options": [
-        { "value": "1", "text": "Universal Resource Locator" },
-        { "value": "2", "text": "Uniform Resource Locator" },
-        { "value": "3", "text": "Unified Resource Locator" }
-      ],
-      "correctAnswer": "2",
-      "explanation": "URL significa Uniform Resource Locator."
-    },
-    {
-      "id": "novato3",
-      "text": "¿Cuál de los siguientes es un navegador web?",
-      "options": [
-        { "value": "1", "text": "Windows" },
-        { "value": "2", "text": "Google Chrome" },
-        { "value": "3", "text": "Microsoft Office" }
-      ],
-      "correctAnswer": "2",
-      "explanation": "Google Chrome es un navegador web."
-    },
-    {
-      "id": "novato4",
-      "text": "¿Qué es una contraseña segura?",
-      "options": [
-        { "value": "1", "text": "Una que contiene solo números." },
-        {
-          "value": "2",
-          "text": "Una que contiene una combinación de letras, números y símbolos."
-        },
-        { "value": "3", "text": "Una que es el nombre de tu mascota." }
-      ],
-      "correctAnswer": "2",
-      "explanation": "Una contraseña segura contiene una combinación de letras, números y símbolos."
-    },
-    {
-      "id": "novato5",
-      "text": "¿Qué es phishing?",
+      "text": "¿Cuál de las siguientes opciones es una práctica segura al crear contraseñas?",
       "options": [
         {
           "value": "1",
-          "text": "Una técnica para enviar correos no deseados."
+          "text": "Usar tu nombre y fecha de nacimiento."
         },
         {
           "value": "2",
-          "text": "Un método para obtener información confidencial mediante engaño."
+          "text": "Crear una contraseña larga con una combinación de letras, números y símbolos."
         },
-        { "value": "3", "text": "Una técnica para proteger datos en tránsito." }
+        {
+          "value": "3",
+          "text": "Usar contraseña123 porque es fácil de recordar."
+        }
       ],
       "correctAnswer": "2",
-      "explanation": "El phishing es un método para obtener información confidencial mediante engaño."
+      "explanation": "Las contraseñas seguras deben ser largas y complejas, utilizando una combinación de caracteres diferentes para dificultar que sean adivinadas o hackeadas. Usar información personal o contraseñas comunes hace que sean fáciles de romper."
     },
     {
-      "id": "novato6",
-      "text": "¿Qué debes hacer si recibes un correo electrónico sospechoso?",
+      "id": "novato2",
+      "text": "¿Qué es el phishing?",
       "options": [
-        { "value": "1", "text": "Abrirlo y hacer clic en los enlaces." },
-        { "value": "2", "text": "Responder al remitente." },
-        { "value": "3", "text": "Eliminarlo sin abrirlo." }
-      ],
-      "correctAnswer": "3",
-      "explanation": "Si recibes un correo electrónico sospechoso, debes eliminarlo sin abrirlo."
-    },
-    {
-      "id": "novato7",
-      "text": "¿Qué es una VPN?",
-      "options": [
-        { "value": "1", "text": "Una red privada virtual." },
-        { "value": "2", "text": "Un programa antivirus." },
-        { "value": "3", "text": "Un tipo de malware." }
+        {
+          "value": "1",
+          "text": "Una técnica para pescar datos personales y financieros a través de correos electrónicos fraudulentos."
+        },
+        {
+          "value": "2",
+          "text": "Un software para proteger tu computadora de virus."
+        },
+        {
+          "value": "3",
+          "text": "Un tipo de firewall que protege redes internas."
+        }
       ],
       "correctAnswer": "1",
-      "explanation": "VPN significa una red privada virtual."
+      "explanation": "El phishing es una táctica usada por ciberdelincuentes para engañar a las personas y hacer que revelen información personal, como contraseñas y números de tarjetas de crédito, haciéndose pasar por entidades confiables a través de correos electrónicos o mensajes."
     },
     {
-      "id": "novato8",
-      "text": "¿Qué es el spam?",
+      "id": "novato3",
+      "text": "¿Qué debes hacer si recibes un correo electrónico sospechoso de tu banco?",
       "options": [
-        { "value": "1", "text": "Un tipo de malware." },
-        { "value": "2", "text": "Correos electrónicos no solicitados." },
-        { "value": "3", "text": "Un programa de seguridad." }
+        {
+          "value": "1",
+          "text": "Responder al correo con tu información personal para confirmar tu identidad."
+        },
+        {
+          "value": "2",
+          "text": "Ignorar el correo y eliminarlo."
+        },
+        {
+          "value": "3",
+          "text": "Contactar directamente a tu banco utilizando un número de teléfono o sitio web oficial.          "
+        }
+      ],
+      "correctAnswer": "3",
+      "explanation": "Si recibes un correo sospechoso, lo más seguro es contactar a tu banco directamente usando métodos oficiales. Responder al correo puede exponer tu información a los ciberdelincuentes, y simplemente ignorarlo no resuelve el potencial problema."
+    },
+    {
+      "id": "novato4",
+      "text": "Una red Wi-Fi pública es segura para realizar transacciones bancarias.",
+      "options": [
+        {
+          "value": "1",
+          "text": "Verdadero"
+        },
+        {
+          "value": "2",
+          "text": "Falso"
+        }
       ],
       "correctAnswer": "2",
-      "explanation": "El spam son correos electrónicos no solicitados."
+      "explanation": "Las redes Wi-Fi públicas son generalmente inseguras porque pueden ser fácilmente interceptadas por terceros. Es recomendable evitar realizar transacciones bancarias o manejar información sensible en redes públicas."
     },
     {
-      "id": "novato9",
+      "id": "novato5",
       "text": "¿Qué es un antivirus?",
       "options": [
         {
           "value": "1",
-          "text": "Un software diseñado para detectar y eliminar virus informáticos."
-        },
-        { "value": "2", "text": "Un tipo de virus informático." },
-        { "value": "3", "text": "Un dispositivo de red." }
-      ],
-      "correctAnswer": "1",
-      "explanation": "Un antivirus es un software diseñado para detectar y eliminar virus informáticos."
-    },
-    {
-      "id": "novato10",
-      "text": "¿Cuál de las siguientes es una buena práctica de seguridad?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Usar la misma contraseña para todas tus cuentas."
-        },
-        { "value": "2", "text": "Compartir tu contraseña con amigos." },
-        { "value": "3", "text": "Cambiar tu contraseña regularmente." }
-      ],
-      "correctAnswer": "3",
-      "explanation": "Cambiar tu contraseña regularmente es una buena práctica de seguridad."
-    },
-    {
-      "id": "novato11",
-      "text": "¿Qué es una actualización de software?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Una nueva versión de un software que corrige errores y mejora la seguridad."
-        },
-        { "value": "2", "text": "Un tipo de virus." },
-        { "value": "3", "text": "Un programa que elimina virus." }
-      ],
-      "correctAnswer": "1",
-      "explanation": "Una actualización de software es una nueva versión de un software que corrige errores y mejora la seguridad."
-    },
-    {
-      "id": "novato12",
-      "text": "¿Qué debes hacer antes de descargar un archivo adjunto de un correo electrónico?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Asegurarte de que conoces y confías en el remitente."
-        },
-        { "value": "2", "text": "Descargarlo inmediatamente." },
-        { "value": "3", "text": "Compartirlo con amigos." }
-      ],
-      "correctAnswer": "1",
-      "explanation": "Antes de descargar un archivo adjunto de un correo electrónico, asegúrate de que conoces y confías en el remitente."
-    },
-    {
-      "id": "novato13",
-      "text": "¿Qué es una contraseña de dos factores (2FA)?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Una contraseña que debes cambiar cada dos días."
+          "text": "Un programa que detecta y elimina software malicioso de tu computadora."
         },
         {
           "value": "2",
-          "text": "Un método de autenticación que requiere dos formas de verificación."
+          "text": "Una aplicación para realizar copias de seguridad de tus datos."
         },
         {
           "value": "3",
-          "text": "Una contraseña que solo contiene dos caracteres."
+          "text": "Un método de encriptación para proteger archivos."
         }
       ],
-      "correctAnswer": "2",
-      "explanation": "La autenticación de dos factores (2FA) requiere dos formas de verificación."
+      "correctAnswer": "1",
+      "explanation": "Un antivirus es un software diseñado para detectar, prevenir y eliminar virus y otros tipos de malware de los sistemas informáticos, protegiendo así los datos y la integridad del sistema."
     },
     {
-      "id": "novato14",
-      "text": "¿Qué es un navegador web?",
+      "id": "novato6",
+      "text": "¿Cuál de las siguientes prácticas puede ayudar a mantener tu computadora segura?",
       "options": [
         {
           "value": "1",
-          "text": "Un software para acceder a sitios web en Internet."
+          "text": "Desactivar actualizaciones automáticas."
         },
-        { "value": "2", "text": "Un programa para escribir documentos." },
-        { "value": "3", "text": "Un tipo de hardware." }
-      ],
-      "correctAnswer": "1",
-      "explanation": "Un navegador web es un software para acceder a sitios web en Internet."
-    },
-    {
-      "id": "novato15",
-      "text": "¿Qué es una red Wi-Fi segura?",
-      "options": [
-        { "value": "1", "text": "Una red que no requiere contraseña." },
         {
           "value": "2",
-          "text": "Una red protegida por una contraseña fuerte y cifrada."
+          "text": "Descargar software de sitios web desconocidos."
         },
-        { "value": "3", "text": "Una red abierta y accesible para todos." }
+        {
+          "value": "3",
+          "text": "Mantener tu sistema operativo y software actualizados."
+        }
       ],
-      "correctAnswer": "2",
-      "explanation": "Una red Wi-Fi segura está protegida por una contraseña fuerte y cifrada."
+      "correctAnswer": "3",
+      "explanation": "Mantener tu sistema operativo y software actualizados es crucial para la seguridad, ya que las actualizaciones a menudo incluyen parches de seguridad que corrigen vulnerabilidades conocidas."
     },
     {
-      "id": "novato16",
+      "id": "novato7",
+      "text": "¿Qué es un firewall?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un programa que almacena contraseñas de manera segura."
+        },
+        {
+          "value": "2",
+          "text": "Un sistema de seguridad que monitorea y controla el tráfico de red entrante y saliente basado en reglas de seguridad predeterminadas."
+        },
+        {
+          "value": "3",
+          "text": "Una herramienta para eliminar archivos duplicados en tu computadora."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Un firewall actúa como una barrera entre tu red interna y redes externas (como Internet), permitiendo o bloqueando tráfico según un conjunto de reglas de seguridad para proteger tu sistema de accesos no autorizados."
+    },
+    {
+      "id": "novato8",
+      "text": "Es seguro abrir archivos adjuntos de correos electrónicos de remitentes desconocidos.",
+      "options": [
+        {
+          "value": "1",
+          "text": "Verdadero"
+        },
+        {
+          "value": "2",
+          "text": "Falso"
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Abrir archivos adjuntos de correos electrónicos de remitentes desconocidos es una práctica peligrosa, ya que pueden contener malware o virus que pueden comprometer la seguridad de tu computadora."
+    },
+    {
+      "id": "novato9",
+      "text": "¿Cuál es el propósito principal del cifrado de datos?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Acelerar la velocidad de la computadora."
+        },
+        {
+          "value": "2",
+          "text": "Proteger la información convirtiéndola en un formato ilegible para personas no autorizadas."
+        },
+        {
+          "value": "3",
+          "text": "Eliminar archivos antiguos del sistema."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "El cifrado de datos asegura que solo las personas autorizadas puedan acceder a la información, convirtiendo los datos en un formato que no puede ser leído sin una clave de descifrado."
+    },
+    {
+      "id": "novato10",
+      "text": "¿Qué debes hacer si tu computadora se infecta con malware?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Ignorar la infección y continuar usando la computadora normalmente."
+        },
+        {
+          "value": "2",
+          "text": "Desconectar la computadora de Internet y utilizar un programa antivirus para eliminar el malware."
+        },
+        {
+          "value": "3",
+          "text": "Reiniciar la computadora varias veces hasta que el malware desaparezca."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Si tu computadora se infecta con malware, es importante desconectarla de Internet para evitar la propagación del malware y utilizar un programa antivirus para detectar y eliminar la amenaza."
+    },
+    {
+      "id": "novato11",
+      "text": "¿Qué es un ataque de fuerza bruta?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un intento de hackear un sistema mediante el uso de múltiples combinaciones de contraseñas hasta encontrar la correcta."
+        },
+        {
+          "value": "2",
+          "text": "Un método para proteger datos utilizando cifrado fuerte."
+        },
+        {
+          "value": "3",
+          "text": "Una técnica para crear contraseñas seguras."
+        }
+      ],
+      "correctAnswer": "1",
+      "explanation": "Un ataque de fuerza bruta implica probar sistemáticamente todas las combinaciones posibles de contraseñas hasta encontrar la correcta, lo que puede ser efectivo si las contraseñas son cortas o débiles."
+    },
+    {
+      "id": "novato12",
+      "text": "¿Cuál es el propósito de una política de contraseñas en una organización?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Facilitar el acceso a los sistemas para todos los empleados."
+        },
+        {
+          "value": "2",
+          "text": "Asegurar que las contraseñas sean lo suficientemente fuertes para proteger los sistemas y datos."
+        },
+        {
+          "value": "3",
+          "text": "Permitir que los empleados usen la misma contraseña en todos los sistemas."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Las políticas de contraseñas están diseñadas para garantizar que las contraseñas utilizadas en una organización sean suficientemente seguras y complejas, reduciendo el riesgo de accesos no autorizados."
+    },
+    {
+      "id": "novato13",
+      "text": "Es seguro utilizar la misma contraseña para múltiples cuentas si es compleja.",
+      "options": [
+        {
+          "value": "1",
+          "text": "Verdadero"
+        },
+        {
+          "value": "2",
+          "text": "Falso"
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Aunque una contraseña pueda ser compleja, utilizar la misma para múltiples cuentas es arriesgado. Si una cuenta se ve comprometida, todas las demás que usan la misma contraseña también estarán en peligro."
+    },
+    {
+      "id": "novato14",
       "text": "¿Qué es el malware?",
       "options": [
         {
           "value": "1",
-          "text": "Software diseñado para dañar o explotar cualquier dispositivo, servicio o red programable."
-        },
-        { "value": "2", "text": "Una herramienta para proteger la red." },
-        { "value": "3", "text": "Un tipo de hardware." }
-      ],
-      "correctAnswer": "1",
-      "explanation": "El malware es software diseñado para dañar o explotar cualquier dispositivo, servicio o red programable."
-    },
-    {
-      "id": "novato17",
-      "text": "¿Qué es el cifrado de datos?",
-      "options": [
-        {
-          "value": "1",
-          "text": "El proceso de convertir datos en un formato ilegible para protegerlos."
-        },
-        { "value": "2", "text": "El proceso de eliminar datos antiguos." },
-        { "value": "3", "text": "El proceso de copiar datos." }
-      ],
-      "correctAnswer": "1",
-      "explanation": "El cifrado de datos es el proceso de convertir datos en un formato ilegible para protegerlos."
-    },
-    {
-      "id": "novato18",
-      "text": "¿Qué es una red social?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Un sitio web o aplicación donde los usuarios pueden interactuar y compartir contenido."
-        },
-        { "value": "2", "text": "Un tipo de antivirus." },
-        { "value": "3", "text": "Un programa para editar fotos." }
-      ],
-      "correctAnswer": "1",
-      "explanation": "Una red social es un sitio web o aplicación donde los usuarios pueden interactuar y compartir contenido."
-    },
-    {
-      "id": "novato19",
-      "text": "¿Qué es el historial de navegación?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Una lista de los sitios web que has visitado."
-        },
-        { "value": "2", "text": "Una lista de tus contactos." },
-        { "value": "3", "text": "Una lista de tus correos electrónicos." }
-      ],
-      "correctAnswer": "1",
-      "explanation": "El historial de navegación es una lista de los sitios web que has visitado."
-    },
-    {
-      "id": "novato20",
-      "text": "¿Qué es un sitio web seguro?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Un sitio web que tiene una dirección que comienza con 'http://'."
+          "text": "Un tipo de hardware que mejora el rendimiento de la computadora."
         },
         {
           "value": "2",
-          "text": "Un sitio web que tiene una dirección que comienza con 'https://' y muestra un candado en la barra de direcciones."
+          "text": "Un software diseñado para dañar o realizar acciones no deseadas en un sistema informático."
         },
         {
           "value": "3",
-          "text": "Un sitio web que no solicita ninguna información."
+          "text": "Un programa que limpia archivos temporales de la computadora."
         }
       ],
       "correctAnswer": "2",
-      "explanation": "Un sitio web seguro tiene una dirección que comienza con 'https://' y muestra un candado en la barra de direcciones."
-    }
-  ],
-  "intermedio": [],
-  "experto": [
-    {
-      "id": "experto1",
-      "text": "¿Qué es un ataque de inyección SQL?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Un ataque que inserta código malicioso en una base de datos."
-        },
-        { "value": "2", "text": "Un ataque que modifica las direcciones IP." },
-        {
-          "value": "3",
-          "text": "Un ataque que interfiere con la comunicación de red."
-        }
-      ],
-      "correctAnswer": "1",
-      "explanation": "Un ataque de inyección SQL inserta código malicioso en una base de datos."
+      "explanation": "Malware es un término general para referirse a cualquier software malicioso diseñado para dañar, explotar o ejecutar actividades no autorizadas en dispositivos informáticos."
     },
     {
-      "id": "experto2",
-      "text": "¿Qué es un ataque de Cross-Site Scripting (XSS)?",
+      "id": "novato15",
+      "text": "¿Qué es una VPN (Red Privada Virtual)?",
       "options": [
         {
           "value": "1",
-          "text": "Un ataque que permite a los atacantes inyectar scripts en las páginas web vistas por otros usuarios."
+          "text": "Un tipo de red inalámbrica de alta velocidad."
         },
         {
           "value": "2",
-          "text": "Un ataque que bloquea el acceso a un sitio web."
+          "text": "Una herramienta que crea una conexión segura y encriptada a través de una red menos segura, como Internet."
         },
         {
           "value": "3",
-          "text": "Un ataque que envía spam a través de un sitio web."
+          "text": "Un software que elimina virus y malware de tu computadora."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Una VPN permite a los usuarios enviar y recibir datos de forma segura y privada a través de Internet, ocultando su dirección IP y encriptando sus datos para proteger su privacidad y seguridad."
+    },
+    {
+      "id": "novato16",
+      "text": "¿Qué es una copia de seguridad (backup)?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un archivo temporal que se crea automáticamente por el sistema operativo."
+        },
+        {
+          "value": "2",
+          "text": "Un duplicado de archivos y datos importantes que se almacena en una ubicación diferente para su recuperación en caso de pérdida de datos."
+        },
+        {
+          "value": "3",
+          "text": "Un programa que acelera el rendimiento del disco duro."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Las copias de seguridad son esenciales para proteger los datos contra pérdida debido a fallos de hardware, ataques de malware o errores humanos, permitiendo la recuperación de información importante."
+    },
+    {
+      "id": "novato17",
+      "text": "¿Cuál de las siguientes opciones describe mejor el término spyware?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un software que ayuda a eliminar virus de una computadora."
+        },
+        {
+          "value": "2",
+          "text": "Un programa que monitorea y recoge información sobre el usuario sin su conocimiento."
+        },
+        {
+          "value": "3",
+          "text": "Un sistema operativo seguro desarrollado por agencias de inteligencia."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "El spyware es un tipo de software malicioso que se instala en el dispositivo del usuario sin su consentimiento y recopila información sobre sus actividades y datos personales, generalmente con fines malintencionados."
+    },
+    {
+      "id": "novato18",
+      "text": "Es seguro descargar aplicaciones de cualquier sitio web porque todos los sitios son confiables.",
+      "options": [
+        {
+          "value": "1",
+          "text": "Verdadero"
+        },
+        {
+          "value": "2",
+          "text": "Falso"
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "No todos los sitios web son confiables. Descargar aplicaciones de sitios web no oficiales puede aumentar el riesgo de infectar tu dispositivo con malware o software no deseado."
+    },
+    {
+      "id": "novato19",
+      "text": "¿Qué es la autenticación de dos factores (2FA)?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Una técnica para mejorar la velocidad de la red."
+        },
+        {
+          "value": "2",
+          "text": "Un método de seguridad que requiere dos formas de identificación antes de otorgar acceso a una cuenta."
+        },
+        {
+          "value": "3",
+          "text": "Un tipo de encriptación avanzada utilizada en correos electrónicos."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "La autenticación de dos factores (2FA) añade una capa adicional de seguridad al requerir no solo una contraseña, sino también un segundo factor de verificación, como un código enviado a tu teléfono, para acceder a una cuenta."
+    },
+    {
+      "id": "novato20",
+      "text": "¿Qué es el ransomware?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un tipo de malware que encripta los archivos del usuario y exige un rescate para desbloquearlos."
+        },
+        {
+          "value": "2",
+          "text": "Un software de protección que bloquea anuncios en línea."
+        },
+        {
+          "value": "3",
+          "text": "Un sistema de respaldo que guarda automáticamente tus archivos."
         }
       ],
       "correctAnswer": "1",
-      "explanation": "Un ataque de Cross-Site Scripting (XSS) permite a los atacantes inyectar scripts en las páginas web vistas por otros usuarios."
+      "explanation": "El ransomware es una forma de malware que bloquea el acceso a los archivos del usuario mediante encriptación y exige un pago (rescate) para restaurar el acceso a los datos afectados."
+    }
+  ],
+  "intermedio": [
+    {
+      "id": "intermedio1",
+      "text": "¿Qué es una suplantación de identidad (spoofing)?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un ataque que redirige la navegación a sitios web falsos."
+        },
+        {
+          "value": "2",
+          "text": "Una técnica en la que un atacante se hace pasar por otra persona o dispositivo para engañar a las víctimas."
+        },
+        {
+          "value": "3",
+          "text": "Un método para proteger las contraseñas mediante el cifrado."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "La suplantación de identidad es una técnica utilizada por los atacantes para hacerse pasar por una entidad confiable (persona, dispositivo o servidor) con el fin de engañar y obtener acceso a información o sistemas."
     },
     {
-      "id": "experto3",
+      "id": "intermedio2",
+      "text": "¿Cuál de los siguientes es un método eficaz para proteger tu red doméstica?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Desactivar el firewall del router para mejorar la velocidad."
+        },
+        {
+          "value": "2",
+          "text": "Cambiar el nombre de usuario y la contraseña predeterminados del router."
+        },
+        {
+          "value": "3",
+          "text": "Usar una red Wi-Fi abierta sin contraseña para facilitar el acceso."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Cambiar el nombre de usuario y la contraseña predeterminados del router es una medida de seguridad esencial, ya que las credenciales predeterminadas son conocidas y pueden ser explotadas por atacantes."
+    },
+    {
+      "id": "intermedio3",
+      "text": "Utilizar software pirata es seguro si tienes un buen antivirus.",
+      "options": [
+        {
+          "value": "1",
+          "text": "Verdadero"
+        },
+        {
+          "value": "2",
+          "text": "Falso"
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "El software pirata a menudo contiene malware y otras vulnerabilidades. Incluso con un buen antivirus, el uso de software pirata es arriesgado y puede comprometer la seguridad de tu sistema."
+    },
+    {
+      "id": "intermedio4",
+      "text": "¿Qué es una red de bots (botnet)?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Una red de servidores que proporciona almacenamiento en la nube."
+        },
+        {
+          "value": "2",
+          "text": "Una colección de dispositivos infectados que son controlados remotamente por un atacante."
+        },
+        {
+          "value": "3",
+          "text": "Un tipo de red social utilizada por bots."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Una botnet es una red de dispositivos comprometidos que están controlados por un atacante. Estos dispositivos pueden ser utilizados para lanzar ataques distribuidos, enviar spam o realizar otras actividades maliciosas."
+    },
+    {
+      "id": "intermedio5",
+      "text": "¿Qué es el principio de privilegio mínimo?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Otorgar a los usuarios los privilegios máximos posibles para evitar restricciones."
+        },
+        {
+          "value": "2",
+          "text": "Otorgar a los usuarios únicamente los privilegios necesarios para realizar sus tareas."
+        },
+        {
+          "value": "3",
+          "text": "Permitir a todos los usuarios acceso ilimitado a todos los sistemas."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "El principio de privilegio mínimo implica dar a los usuarios solo los permisos esenciales necesarios para realizar sus funciones, reduciendo el riesgo de abuso o compromiso de seguridad."
+    },
+    {
+      "id": "intermedio6",
+      "text": "¿Qué es la ingeniería social en el contexto de la ciberseguridad?",
+      "options": [
+        {
+          "value": "1",
+          "text": "El uso de algoritmos avanzados para proteger datos."
+        },
+        {
+          "value": "2",
+          "text": "La manipulación de personas para obtener información confidencial o acceso no autorizado."
+        },
+        {
+          "value": "3",
+          "text": "Un proceso de cifrado de extremo a extremo."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "La ingeniería social es una técnica utilizada por atacantes para manipular a las personas y obtener información confidencial o acceso a sistemas mediante engaños y tácticas psicológicas."
+    },
+    {
+      "id": "intermedio7",
+      "text": "¿Cuál es el propósito de un honeypot en ciberseguridad?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Atraer a los atacantes y desviar sus actividades lejos de los sistemas reales."
+        },
+        {
+          "value": "2",
+          "text": "Un método para almacenar contraseñas de forma segura."
+        },
+        {
+          "value": "3",
+          "text": "Un sistema de copia de seguridad automatizado."
+        }
+      ],
+      "correctAnswer": "1",
+      "explanation": "Un honeypot es un sistema de señuelo diseñado para atraer a los atacantes y desviar sus esfuerzos, permitiendo a los administradores de seguridad estudiar sus técnicas y mejorar las defensas."
+    },
+    {
+      "id": "intermedio8",
+      "text": "El cifrado de datos garantiza que los datos sean completamente seguros y no puedan ser comprometidos.",
+      "options": [
+        {
+          "value": "1",
+          "text": "Verdadero"
+        },
+        {
+          "value": "2",
+          "text": "Falso"
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Aunque el cifrado de datos es una medida de seguridad muy efectiva, no garantiza una seguridad completa. Los datos cifrados pueden ser vulnerables si las claves de cifrado son comprometidas o si existen fallos en la implementación del cifrado."
+    },
+    {
+      "id": "intermedio9",
+      "text": "¿Qué es una evaluación de vulnerabilidades?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un proceso para mejorar la velocidad de la red."
+        },
+        {
+          "value": "2",
+          "text": "Un análisis detallado de un sistema para identificar y clasificar las vulnerabilidades de seguridad."
+        },
+        {
+          "value": "3",
+          "text": "Un método para hacer copias de seguridad de los datos."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Una evaluación de vulnerabilidades es un proceso utilizado para identificar, clasificar y priorizar las vulnerabilidades de seguridad en un sistema, permitiendo a las organizaciones tomar medidas para mitigarlas."
+    },
+    {
+      "id": "intermedio10",
+      "text": "¿Qué es el protocolo HTTPS y por qué es importante?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un protocolo de red utilizado para enviar correos electrónicos de forma segura."
+        },
+        {
+          "value": "2",
+          "text": "Un protocolo de comunicación segura en la web que cifra los datos entre el navegador y el servidor, protegiendo la privacidad y la integridad de los datos."
+        },
+        {
+          "value": "3",
+          "text": "Un método para acelerar la carga de las páginas web."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "HTTPS (Hypertext Transfer Protocol Secure) es una versión segura de HTTP que utiliza cifrado para proteger los datos intercambiados entre el navegador del usuario y el servidor web, asegurando la confidencialidad e integridad de la información."
+    },
+    {
+      "id": "intermedio11",
       "text": "¿Qué es un ataque de denegación de servicio (DoS)?",
       "options": [
         {
           "value": "1",
-          "text": "Un ataque que intenta hacer que un servicio o recurso sea inaccesible para los usuarios legítimos."
+          "text": "Un intento de interceptar comunicaciones en una red."
         },
-        { "value": "2", "text": "Un ataque que roba datos de un servidor." },
+        {
+          "value": "2",
+          "text": "Un ataque que sobrecarga un sistema con tráfico para que no pueda responder a usuarios legítimos."
+        },
         {
           "value": "3",
-          "text": "Un ataque que modifica los archivos de un servidor."
+          "text": "Un método para mejorar la seguridad de una red."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Un ataque de denegación de servicio (DoS) intenta hacer que un sistema o red sea inaccesible para los usuarios legítimos al inundarlo con una cantidad excesiva de tráfico, agotando sus recursos."
+    },
+    {
+      "id": "intermedio12",
+      "text": "¿Qué es el secuestro de sesión (session hijacking)?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un ataque donde un hacker toma el control de una sesión activa entre un usuario y un servidor."
+        },
+        {
+          "value": "2",
+          "text": "Un proceso de cifrado de datos durante la transmisión."
+        },
+        {
+          "value": "3",
+          "text": "Una técnica para restaurar datos perdidos."
         }
       ],
       "correctAnswer": "1",
-      "explanation": "Un ataque de denegación de servicio (DoS) intenta hacer que un servicio o recurso sea inaccesible para los usuarios legítimos."
+      "explanation": "El secuestro de sesión ocurre cuando un atacante intercepta y toma el control de una sesión activa, permitiéndole actuar como si fuera el usuario legítimo y acceder a información o servicios."
+    },
+    {
+      "id": "intermedio13",
+      "text": "Es seguro compartir información sensible a través de mensajes de texto (SMS) si se utiliza un teléfono inteligente.",
+      "options": [
+        {
+          "value": "1",
+          "text": "Verdadero"
+        },
+        {
+          "value": "2",
+          "text": "Falso"
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Los mensajes de texto (SMS) no son un medio seguro para compartir información sensible, ya que pueden ser interceptados fácilmente. Es mejor usar aplicaciones de mensajería cifrada para este tipo de información."
+    },
+    {
+      "id": "intermedio14",
+      "text": "¿Qué es la autenticación multifactor (MFA)?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un proceso que requiere solo una contraseña para acceder a una cuenta."
+        },
+        {
+          "value": "2",
+          "text": "Un método de autenticación que requiere dos o más formas de verificación para acceder a una cuenta."
+        },
+        {
+          "value": "3",
+          "text": "Un sistema de copia de seguridad en la nube."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "La autenticación multifactor (MFA) añade una capa adicional de seguridad al requerir múltiples formas de verificación (como una contraseña y un código enviado al teléfono) antes de permitir el acceso a una cuenta."
+    },
+    {
+      "id": "intermedio15",
+      "text": "¿Qué es la suplantación de direcciones IP (IP spoofing)?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un ataque que implica cambiar la dirección IP de origen en un paquete de red para parecer que proviene de una fuente confiable."
+        },
+        {
+          "value": "2",
+          "text": "Un método para mejorar la velocidad de la red."
+        },
+        {
+          "value": "3",
+          "text": "Una técnica de cifrado avanzada."
+        }
+      ],
+      "correctAnswer": "1",
+      "explanation": "La suplantación de direcciones IP (IP spoofing) es una técnica utilizada por los atacantes para falsificar la dirección IP de origen en los paquetes de red, haciendo que parezcan provenir de una fuente confiable y permitiéndoles eludir medidas de seguridad."
+    },
+    {
+      "id": "intermedio16",
+      "text": "¿Qué es un ataque de inyección SQL (SQL Injection)?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un método para cifrar bases de datos."
+        },
+        {
+          "value": "2",
+          "text": "Una técnica utilizada para insertar código malicioso en consultas SQL a través de formularios web."
+        },
+        {
+          "value": "3",
+          "text": "Un sistema de respaldo de datos."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Un ataque de inyección SQL explota vulnerabilidades en una aplicación web para ejecutar comandos SQL no autorizados, permitiendo a los atacantes acceder, modificar o eliminar datos en la base de datos."
+    },
+    {
+      "id": "intermedio17",
+      "text": "¿Qué es el cifrado de extremo a extremo?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un método de cifrado que protege los datos durante su transmisión, asegurando que solo el remitente y el receptor puedan leerlos."
+        },
+        {
+          "value": "2",
+          "text": "Un proceso para eliminar virus de los correos electrónicos."
+        },
+        {
+          "value": "3",
+          "text": "Una técnica para hacer copias de seguridad de los datos."
+        }
+      ],
+      "correctAnswer": "1",
+      "explanation": "El cifrado de extremo a extremo garantiza que los datos se cifran en el dispositivo del remitente y solo se descifran en el dispositivo del receptor, protegiéndolos de accesos no autorizados durante la transmisión."
+    },
+    {
+      "id": "intermedio18",
+      "text": "El uso de una contraseña compleja elimina la necesidad de otras medidas de seguridad.",
+      "options": [
+        {
+          "value": "1",
+          "text": "Verdadero"
+        },
+        {
+          "value": "2",
+          "text": "Falso"
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Aunque las contraseñas complejas son importantes, no eliminan la necesidad de otras medidas de seguridad como el uso de autenticación multifactor, firewalls, y actualizaciones regulares de software."
+    },
+    {
+      "id": "intermedio19",
+      "text": "¿Qué es un certificado digital?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un documento que certifica la compra de un software."
+        },
+        {
+          "value": "2",
+          "text": "Un archivo electrónico que utiliza criptografía para verificar la identidad de un usuario o dispositivo y establecer una conexión segura."
+        },
+        {
+          "value": "3",
+          "text": "Una herramienta para escanear en busca de malware en una red."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Un certificado digital es un archivo que utiliza criptografía para autenticar la identidad de una entidad y facilitar conexiones seguras en internet, como las conexiones HTTPS."
+    },
+    {
+      "id": "intermedio20",
+      "text": "¿Qué es la privacidad diferencial?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Una técnica de cifrado utilizada en comunicaciones seguras."
+        },
+        {
+          "value": "2",
+          "text": "Un método para agregar ruido a los datos, protegiendo la privacidad individual mientras se permite el análisis de datos agregados."
+        },
+        {
+          "value": "3",
+          "text": "Un tipo de firewall avanzado."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "La privacidad diferencial añade ruido a los datos de tal manera que los detalles individuales se protegen, pero los datos agregados aún pueden ser analizados de forma útil, balanceando privacidad y utilidad."
+    }
+  ],
+  "experto": [
+    {
+      "id": "experto1",
+      "text": "¿Qué es un ataque de día cero (zero-day attack)?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un ataque que se lleva a cabo el primer día del mes."
+        },
+        {
+          "value": "2",
+          "text": "Un ataque que explota una vulnerabilidad desconocida para los desarrolladores del software y sin parches disponibles."
+        },
+        {
+          "value": "3",
+          "text": "Un tipo de ataque de fuerza bruta."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Un ataque de día cero aprovecha vulnerabilidades en el software que aún no han sido descubiertas o parcheadas por los desarrolladores, lo que las hace especialmente peligrosas porque no hay defensas disponibles."
+    },
+    {
+      "id": "experto2",
+      "text": "¿Qué es el cross-site scripting (XSS)?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un método para aumentar la velocidad de carga de un sitio web."
+        },
+        {
+          "value": "2",
+          "text": "Una vulnerabilidad que permite a los atacantes inyectar scripts maliciosos en páginas web vistas por otros usuarios."
+        },
+        {
+          "value": "3",
+          "text": "Una técnica de autenticación multifactor."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "El cross-site scripting (XSS) es una vulnerabilidad en la seguridad de aplicaciones web que permite a los atacantes inyectar código malicioso en el contenido que otros usuarios verán, potencialmente robando datos de sesión o redirigiendo a los usuarios a sitios maliciosos."
+    },
+    {
+      "id": "experto3",
+      "text": "Los sistemas de detección de intrusos (IDS) pueden prevenir todos los ataques de red.",
+      "options": [
+        {
+          "value": "1",
+          "text": "Verdadero"
+        },
+        {
+          "value": "2",
+          "text": "Falso"
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Los sistemas de detección de intrusos (IDS) están diseñados para detectar y alertar sobre actividades sospechosas en una red, pero no pueden prevenir todos los ataques. Necesitan ser complementados con otras medidas de seguridad."
     },
     {
       "id": "experto4",
-      "text": "¿Qué es el escaneo de puertos?",
+      "text": "¿Qué es la criptografía asimétrica?",
       "options": [
         {
           "value": "1",
-          "text": "Una técnica utilizada para identificar puertos abiertos en una máquina."
+          "text": "Un método de cifrado que utiliza la misma clave para cifrar y descifrar datos."
         },
         {
           "value": "2",
-          "text": "Una técnica para bloquear puertos no utilizados."
+          "text": "Un método de cifrado que utiliza un par de claves, una pública y una privada, para cifrar y descifrar datos."
         },
-        { "value": "3", "text": "Una técnica para cifrar datos en tránsito." }
+        {
+          "value": "3",
+          "text": "Una técnica para comprimir datos antes de transmitirlos."
+        }
       ],
-      "correctAnswer": "1",
-      "explanation": "El escaneo de puertos es una técnica utilizada para identificar puertos abiertos en una máquina."
+      "correctAnswer": "2",
+      "explanation": "La criptografía asimétrica utiliza dos claves diferentes pero matemáticamente relacionadas: una pública para cifrar los datos y otra privada para descifrarlos, proporcionando un alto nivel de seguridad en las comunicaciones."
     },
     {
       "id": "experto5",
-      "text": "¿Qué es LFI (Local File Inclusion)?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Una vulnerabilidad que permite a los atacantes incluir archivos locales en el servidor."
-        },
-        { "value": "2", "text": "Una técnica para proteger archivos locales." },
-        { "value": "3", "text": "Un método para cifrar archivos locales." }
-      ],
-      "correctAnswer": "1",
-      "explanation": "LFI (Local File Inclusion) es una vulnerabilidad que permite a los atacantes incluir archivos locales en el servidor."
-    },
-    {
-      "id": "experto6",
-      "text": "¿Qué es la técnica de fuerza bruta?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Un método de prueba y error utilizado para descifrar contraseñas."
-        },
-        { "value": "2", "text": "Un método para proteger datos sensibles." },
-        { "value": "3", "text": "Un método para cifrar contraseñas." }
-      ],
-      "correctAnswer": "1",
-      "explanation": "La técnica de fuerza bruta es un método de prueba y error utilizado para descifrar contraseñas."
-    },
-    {
-      "id": "experto7",
-      "text": "¿Qué es un ataque Man-in-the-Middle (MitM)?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Un ataque donde el atacante intercepta y altera la comunicación entre dos partes."
-        },
-        {
-          "value": "2",
-          "text": "Un ataque donde el atacante envía correos no deseados."
-        },
-        {
-          "value": "3",
-          "text": "Un ataque donde el atacante borra todos los datos de una máquina."
-        }
-      ],
-      "correctAnswer": "1",
-      "explanation": "Un ataque Man-in-the-Middle (MitM) es un ataque donde el atacante intercepta y altera la comunicación entre dos partes."
-    },
-    {
-      "id": "experto8",
-      "text": "¿Qué es un ataque de día cero (Zero-Day)?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Un ataque que explota una vulnerabilidad desconocida para el fabricante."
-        },
-        {
-          "value": "2",
-          "text": "Un ataque que solo ocurre los primeros días del mes."
-        },
-        {
-          "value": "3",
-          "text": "Un ataque que solo afecta a sistemas operativos antiguos."
-        }
-      ],
-      "correctAnswer": "1",
-      "explanation": "Un ataque de día cero (Zero-Day) explota una vulnerabilidad desconocida para el fabricante."
-    },
-    {
-      "id": "experto9",
-      "text": "¿Qué es un shell reverso?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Un shell que se conecta desde la máquina víctima al atacante."
-        },
-        {
-          "value": "2",
-          "text": "Un shell que se conecta desde el atacante a la máquina víctima."
-        },
-        {
-          "value": "3",
-          "text": "Un shell que se utiliza para cifrar comunicaciones."
-        }
-      ],
-      "correctAnswer": "1",
-      "explanation": "Un shell reverso es un shell que se conecta desde la máquina víctima al atacante."
-    },
-    {
-      "id": "experto10",
-      "text": "¿Qué es un ataque de escalada de privilegios?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Un ataque que intenta obtener mayores privilegios en un sistema."
-        },
-        {
-          "value": "2",
-          "text": "Un ataque que intenta reducir los privilegios de un usuario."
-        },
-        {
-          "value": "3",
-          "text": "Un ataque que intenta bloquear los privilegios de un usuario."
-        }
-      ],
-      "correctAnswer": "1",
-      "explanation": "Un ataque de escalada de privilegios intenta obtener mayores privilegios en un sistema."
-    },
-    {
-      "id": "experto11",
-      "text": "¿Qué es el hashing?",
-      "options": [
-        {
-          "value": "1",
-          "text": "El proceso de transformar datos en una cadena de longitud fija."
-        },
-        {
-          "value": "2",
-          "text": "El proceso de cifrar datos para protegerlos."
-        },
-        { "value": "3", "text": "El proceso de borrar datos de forma segura." }
-      ],
-      "correctAnswer": "1",
-      "explanation": "El hashing es el proceso de transformar datos en una cadena de longitud fija."
-    },
-    {
-      "id": "experto12",
-      "text": "¿Qué es un ataque de diccionario?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Un ataque que utiliza una lista de palabras para descifrar contraseñas."
-        },
-        {
-          "value": "2",
-          "text": "Un ataque que modifica el contenido de un diccionario."
-        },
-        {
-          "value": "3",
-          "text": "Un ataque que cifra datos usando un diccionario."
-        }
-      ],
-      "correctAnswer": "1",
-      "explanation": "Un ataque de diccionario utiliza una lista de palabras para descifrar contraseñas."
-    },
-    {
-      "id": "experto13",
-      "text": "¿Qué es un honeypot?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Un sistema diseñado para atraer y analizar ataques."
-        },
-        { "value": "2", "text": "Un tipo de malware." },
-        { "value": "3", "text": "Un método para cifrar datos." }
-      ],
-      "correctAnswer": "1",
-      "explanation": "Un honeypot es un sistema diseñado para atraer y analizar ataques."
-    },
-    {
-      "id": "experto14",
-      "text": "¿Qué es el pentesting?",
-      "options": [
-        {
-          "value": "1",
-          "text": "La práctica de probar un sistema en busca de vulnerabilidades de seguridad."
-        },
-        { "value": "2", "text": "El proceso de eliminar virus de un sistema." },
-        {
-          "value": "3",
-          "text": "La práctica de bloquear puertos no utilizados."
-        }
-      ],
-      "correctAnswer": "1",
-      "explanation": "El pentesting es la práctica de probar un sistema en busca de vulnerabilidades de seguridad."
-    },
-    {
-      "id": "experto15",
-      "text": "¿Qué es Active Directory?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Un servicio de Microsoft utilizado para gestionar y organizar redes."
-        },
-        { "value": "2", "text": "Un tipo de firewall." },
-        { "value": "3", "text": "Un protocolo de transferencia de archivos." }
-      ],
-      "correctAnswer": "1",
-      "explanation": "Active Directory es un servicio de Microsoft utilizado para gestionar y organizar redes."
-    },
-    {
-      "id": "experto16",
-      "text": "¿Qué es la ofuscación de código?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Una técnica para hacer el código más difícil de entender."
-        },
-        { "value": "2", "text": "Un método para cifrar datos." },
-        {
-          "value": "3",
-          "text": "Una técnica para hacer el código más eficiente."
-        }
-      ],
-      "correctAnswer": "1",
-      "explanation": "La ofuscación de código es una técnica para hacer el código más difícil de entender."
-    },
-    {
-      "id": "experto17",
-      "text": "¿Qué es el fingerprinting de un sistema?",
-      "options": [
-        {
-          "value": "1",
-          "text": "El proceso de identificar el sistema operativo y servicios de una máquina."
-        },
-        {
-          "value": "2",
-          "text": "El proceso de eliminar archivos no utilizados."
-        },
-        { "value": "3", "text": "El proceso de cifrar datos sensibles." }
-      ],
-      "correctAnswer": "1",
-      "explanation": "El fingerprinting de un sistema es el proceso de identificar el sistema operativo y servicios de una máquina."
-    },
-    {
-      "id": "experto18",
-      "text": "¿Qué es un ataque de suplantación de identidad (spoofing)?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Un ataque donde el atacante se hace pasar por otra entidad."
-        },
-        {
-          "value": "2",
-          "text": "Un ataque que envía spam a múltiples usuarios."
-        },
-        { "value": "3", "text": "Un ataque que borra datos de un servidor." }
-      ],
-      "correctAnswer": "1",
-      "explanation": "Un ataque de suplantación de identidad (spoofing) es un ataque donde el atacante se hace pasar por otra entidad."
-    },
-    {
-      "id": "experto19",
-      "text": "¿Qué es la criptografía de clave pública?",
-      "options": [
-        {
-          "value": "1",
-          "text": "Un sistema criptográfico que utiliza un par de claves, una pública y una privada."
-        },
-        {
-          "value": "2",
-          "text": "Un sistema criptográfico que utiliza una sola clave para cifrar y descifrar."
-        },
-        { "value": "3", "text": "Un método para cifrar datos usando hashes." }
-      ],
-      "correctAnswer": "1",
-      "explanation": "La criptografía de clave pública es un sistema criptográfico que utiliza un par de claves, una pública y una privada."
-    },
-    {
-      "id": "experto20",
       "text": "¿Qué es el análisis forense digital?",
       "options": [
         {
           "value": "1",
-          "text": "El proceso de examinar dispositivos electrónicos para encontrar evidencia digital."
+          "text": "El proceso de crear copias de seguridad de datos en dispositivos digitales."
         },
-        { "value": "2", "text": "El proceso de cifrar datos en tránsito." },
-        { "value": "3", "text": "El proceso de eliminar virus de un sistema." }
+        {
+          "value": "2",
+          "text": "La práctica de recolectar, analizar y preservar evidencia digital para investigaciones legales."
+        },
+        {
+          "value": "3",
+          "text": "Un método de cifrado de extremo a extremo."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "El análisis forense digital implica la recopilación y análisis de datos de dispositivos digitales para investigar y resolver casos legales, asegurando que la evidencia sea preservada de manera que sea admisible en un tribunal."
+    },
+    {
+      "id": "experto6",
+      "text": "¿Qué es un ataque de red man-in-the-middle (MitM)?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un ataque donde el atacante intercepta y potencialmente altera la comunicación entre dos partes sin que ellas lo sepan."
+        },
+        {
+          "value": "2",
+          "text": "Un método de redirección del tráfico de una red a través de un servidor proxy."
+        },
+        {
+          "value": "3",
+          "text": "Un ataque que utiliza un virus para infectar múltiples dispositivos en una red."
+        }
       ],
       "correctAnswer": "1",
-      "explanation": "El análisis forense digital es el proceso de examinar dispositivos electrónicos para encontrar evidencia digital."
+      "explanation": "Un ataque MitM ocurre cuando un atacante intercepta la comunicación entre dos partes, pudiendo leer o alterar los datos transmitidos sin que las partes involucradas se den cuenta."
+    },
+    {
+      "id": "experto7",
+      "text": "¿Qué es el hashing en ciberseguridad?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un método de cifrado que utiliza una clave pública y una clave privada."
+        },
+        {
+          "value": "2",
+          "text": "Un proceso que transforma datos en una secuencia de caracteres de longitud fija, que representa los datos originales de forma única."
+        },
+        {
+          "value": "3",
+          "text": "Una técnica para dividir datos en fragmentos y distribuirlos a través de múltiples servidores."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "El hashing convierte datos de cualquier longitud en una cadena fija de caracteres. Esto se utiliza para asegurar la integridad de los datos y para la gestión de contraseñas."
+    },
+    {
+      "id": "experto8",
+      "text": "Una VPN garantiza que todos tus datos en Internet estén completamente seguros.",
+      "options": [
+        {
+          "value": "1",
+          "text": "Verdadero"
+        },
+        {
+          "value": "2",
+          "text": "Falso"
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Aunque una VPN proporciona una capa adicional de seguridad al encriptar tus datos y ocultar tu dirección IP, no puede protegerte contra todas las amenazas en Internet, como malware o phishing."
+    },
+    {
+      "id": "experto9",
+      "text": "¿Qué es un sistema de prevención de intrusos (IPS)?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un software que elimina virus y malware del sistema."
+        },
+        {
+          "value": "2",
+          "text": "Un dispositivo o software que monitorea la red o los sistemas para detectar actividades maliciosas y tomar medidas para prevenirlas."
+        },
+        {
+          "value": "3",
+          "text": "Una herramienta para cifrar datos almacenados en discos duros."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Un IPS no solo detecta actividades maliciosas como un IDS, sino que también toma medidas para prevenirlas, como bloquear el tráfico sospechoso o cerrar conexiones maliciosas."
+    },
+    {
+      "id": "experto10",
+      "text": "¿Qué es un certificado SSL y para qué se utiliza?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un archivo que contiene una clave pública y se utiliza para cifrar comunicaciones entre un servidor web y un navegador."
+        },
+        {
+          "value": "2",
+          "text": "Un programa que analiza la red en busca de vulnerabilidades."
+        },
+        {
+          "value": "3",
+          "text": "Un protocolo de transmisión de datos utilizado en redes locales."
+        }
+      ],
+      "correctAnswer": "1",
+      "explanation": "Un certificado SSL (Secure Sockets Layer) asegura que los datos transmitidos entre un servidor web y un navegador sean cifrados y seguros, protegiendo la información contra intercepciones y ataques."
+    },
+    {
+      "id": "experto11",
+      "text": "¿Qué es la técnica de 'buffer overflow'?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un método para aumentar la capacidad de almacenamiento de un sistema."
+        },
+        {
+          "value": "2",
+          "text": "Una vulnerabilidad donde un programa escribe más datos en un bloque de memoria del que este puede manejar, lo que puede permitir la ejecución de código malicioso."
+        },
+        {
+          "value": "3",
+          "text": "Un proceso para asegurar que las contraseñas sean lo suficientemente largas."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Un 'buffer overflow' ocurre cuando un programa intenta almacenar más datos en un buffer de los que puede manejar, lo que puede corromper datos adyacentes y permitir a los atacantes ejecutar código arbitrario."
+    },
+    {
+      "id": "experto12",
+      "text": "¿Qué es un ataque de 'watering hole'?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un ataque dirigido a un sitio web frecuentado por los usuarios de una organización específica para infectar a sus visitantes con malware."
+        },
+        {
+          "value": "2",
+          "text": "Una técnica que consiste en enviar correos electrónicos masivos con enlaces maliciosos."
+        },
+        {
+          "value": "3",
+          "text": "Un método para interceptar comunicaciones entre dos dispositivos en una red Wi-Fi."
+        }
+      ],
+      "correctAnswer": "1",
+      "explanation": "Un ataque de 'watering hole' implica comprometer un sitio web que es frecuentado por los miembros de una organización o grupo específico, infectando a sus visitantes con malware para obtener acceso a sus sistemas."
+    },
+    {
+      "id": "experto13",
+      "text": "El cifrado de datos protege contra la eliminación accidental de archivos.",
+      "options": [
+        {
+          "value": "1",
+          "text": "Verdadero"
+        },
+        {
+          "value": "2",
+          "text": "Falso"
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "El cifrado de datos protege la confidencialidad y la integridad de los datos, pero no previene la eliminación accidental de archivos. Para protegerse contra la pérdida de datos, se deben utilizar copias de seguridad."
+    },
+    {
+      "id": "experto14",
+      "text": "¿Qué es la 'tokenización' en el contexto de la ciberseguridad?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un proceso para cifrar mensajes instantáneos."
+        },
+        {
+          "value": "2",
+          "text": "La sustitución de datos sensibles por identificadores únicos llamados 'tokens', que no tienen significado fuera del sistema."
+        },
+        {
+          "value": "3",
+          "text": "Un método para crear contraseñas seguras."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "La tokenización reemplaza datos sensibles con tokens que son inútiles fuera del sistema específico, reduciendo el riesgo de exposición de información confidencial."
+    },
+    {
+      "id": "experto15",
+      "text": "¿Qué es un ataque de 'ransomware dirigido' (targeted ransomware)?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un ataque que infecta aleatoriamente computadoras personales en todo el mundo."
+        },
+        {
+          "value": "2",
+          "text": "Un ataque ransomware que se dirige a una organización específica, a menudo con un rescate mucho mayor demandado."
+        },
+        {
+          "value": "3",
+          "text": "Una técnica para eliminar ransomware de sistemas infectados."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "El ransomware dirigido se enfoca en una organización o empresa específica, generalmente después de una investigación previa, y demanda un rescate mayor, explotando la dependencia crítica de la víctima en sus datos."
+    },
+    {
+      "id": "experto16",
+      "text": "¿Qué es el principio de 'defensa en profundidad'?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Una estrategia de ciberseguridad que depende de una única capa fuerte de defensa."
+        },
+        {
+          "value": "2",
+          "text": "Un enfoque de ciberseguridad que emplea múltiples capas de defensa para proteger los sistemas y datos."
+        },
+        {
+          "value": "3",
+          "text": "Un método para mejorar la velocidad de respuesta de los sistemas de seguridad."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "La defensa en profundidad es una estrategia que utiliza múltiples capas de seguridad para proteger los sistemas y datos, de manera que si una capa es comprometida, las otras aún pueden ofrecer protección."
+    },
+    {
+      "id": "experto17",
+      "text": "¿Qué es una 'sandbox' en el contexto de la ciberseguridad?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Un tipo de firewall avanzado."
+        },
+        {
+          "value": "2",
+          "text": "Un entorno aislado donde se puede ejecutar código sospechoso sin riesgo de dañar el sistema principal."
+        },
+        {
+          "value": "3",
+          "text": "Una técnica para cifrar datos en tránsito."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Una 'sandbox' es un entorno de prueba aislado que permite ejecutar y analizar programas sospechosos de manera segura, sin que estos puedan afectar el sistema operativo principal o la red."
+    },
+    {
+      "id": "experto18",
+      "text": "La biometría es infalible y no puede ser falsificada.",
+      "options": [
+        {
+          "value": "1",
+          "text": "Verdadero"
+        },
+        {
+          "value": "2",
+          "text": "Falso"
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "Aunque la biometría (como huellas dactilares, reconocimiento facial, etc.) es una forma avanzada de autenticación, no es infalible y puede ser falsificada o engañada en ciertas circunstancias."
+    },
+    {
+      "id": "experto19",
+      "text": "¿Qué es una 'lista blanca' (whitelist) en términos de ciberseguridad?",
+      "options": [
+        {
+          "value": "1",
+          "text": "Una lista de programas y direcciones IP que tienen permiso explícito para acceder a una red o sistema."
+        },
+        {
+          "value": "2",
+          "text": "Un registro de todos los intentos de acceso fallidos a un sistema."
+        },
+        {
+          "value": "3",
+          "text": "Un tipo de ataque donde se bloquean todos los accesos no autorizados."
+        }
+      ],
+      "correctAnswer": "1",
+      "explanation": "Una 'whitelist' es una lista de entidades aprobadas y confiables que tienen permiso para acceder a ciertos recursos, mientras que todo lo que no esté en la lista es bloqueado o monitoreado."
+    },
+    {
+      "id": "experto20",
+      "text": "¿Qué es la 'ofuscación de código'?",
+      "options": [
+        {
+          "value": "1",
+          "text": "El proceso de escribir código de manera clara y comprensible."
+        },
+        {
+          "value": "2",
+          "text": "Una técnica para hacer que el código sea difícil de entender y analizar por terceros."
+        },
+        {
+          "value": "3",
+          "text": "Un método para optimizar la ejecución del código en sistemas embebidos."
+        }
+      ],
+      "correctAnswer": "2",
+      "explanation": "La ofuscación de código implica modificar el código fuente para que sea difícil de leer y entender, dificultando así la ingeniería inversa y la explotación por parte de atacantes."
     }
   ]
 }
