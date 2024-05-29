@@ -36,12 +36,23 @@ function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
+function showLoadingIndicator() {
+  document.getElementById('loading-indicator').style.display = 'flex';
+}
+
+function hideLoadingIndicator() {
+  document.getElementById('loading-indicator').style.display = 'none';
+}
+
 async function loadQuestions(difficulty) {
   try {
+    showLoadingIndicator();
     const response = await fetch(`${baseURL}/api/questions/${difficulty}`);
     const data = await response.json();
+    hideLoadingIndicator();
     return shuffle(data);
   } catch (error) {
+    hideLoadingIndicator();
     console.error('Error loading questions:', error);
   }
 }
@@ -188,6 +199,7 @@ async function showResults() {
   resultsContainer.style.display = 'block';
 
   try {
+    showLoadingIndicator();
     const response = await fetch(`${baseURL}/api/validate`, {
       method: 'POST',
       headers: {
@@ -201,6 +213,7 @@ async function showResults() {
     }
 
     const resultData = await response.json();
+    hideLoadingIndicator();
     const { score, explanations, correctQuestions, incorrectQuestions } = resultData;
 
     document.getElementById('score-display').innerText = `Puntaje total: ${score} / ${questions.length}`;
@@ -274,6 +287,7 @@ async function showResults() {
     });
 
   } catch (error) {
+    hideLoadingIndicator();
     console.error('Error validating answers:', error);
     alert('No se pudieron cargar las preguntas, intentalo de nuevo.');
   }
