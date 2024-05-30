@@ -28,7 +28,7 @@
 
 <main>
     <!--Información de Contacto a través de WhatsApp-->
-    <section class="contact-whatsapp">
+    <section class="contact-whatsapp section" data-section="contacto-info">
         <div class="container">
             <h1>Contacto</h1>
             <div class="contact-box">
@@ -51,18 +51,24 @@
 <button class="feedback-button" onclick="openFeedbackModal()">
     <i class="fas fa-comment-alt"></i>
   </button>
-  
-  
+
+
   <div class="feedback-modal" id="feedbackModal">
     <div class="feedback-modal-content">
       <span class="feedback-close" onclick="closeFeedbackModal()">&times;</span>
       <h2>Feedback</h2>
       <form id="feedback-form" onsubmit="sendFeedback(event)">
+        <button type="button" onclick="startSectionSelection()">Seleccionar Seccion</button>
+        <input type="hidden" id="feedback-section" name="section">
+        <p id="selected-section-name"></p>
         <textarea id="feedback-text" required placeholder="Escribe tu feedback aquí..."></textarea>
         <button type="submit">Enviar</button>
       </form>
     </div>
   </div>
+
+  <!--Indicador de Seccion-->
+  <div id="section-indicator" class="section-indicator"></div>
 
 <!--Footer-->
 <div id="footer" class="mt-auto"></div>

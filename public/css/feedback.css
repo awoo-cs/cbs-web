@@ -88,3 +88,38 @@
     color: black;
     border-color: #03EA82;
   }  
+
+  body.selection-mode{
+    opacity: 0.5;
+  }
+
+  body.selection-mode .section{
+    position: relative;
+  }
+
+  body.selection-mode .section:hover{
+    background-color: rgba(3, 234, 130, 0.2);
+    border: 2px solid #03EA82;
+  }
+
+  .section-indicator{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform : translateX(-50%);
+    background-color: #03EA82;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1001;
+  }
+
+  body.selection-mode .section-indicator{
+    display: block;
+  }
+
+  .section.selected{
+    border: 2px solid #03EA82;
+    background-color: rgba(3, 234, 130, 0.1);
+  }

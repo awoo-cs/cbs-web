@@ -40,7 +40,7 @@ app.post("/api/validate", (req, res) => {
 });
 
 app.post("/api/feedback", async (req, res) => {
-  const { feedback } = req.body;
+  const { section, feedback } = req.body;
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -53,7 +53,7 @@ app.post("/api/feedback", async (req, res) => {
   const mailOptions = {
     from: process.env.EMAIL,
     to: process.env.FEEDBACK_EMAIL,
-    subject: "Nuevo Feedback del Usuario",
+    subject: `Nuevo Feedback del Usuario para la Seccion ${section}`,
     text: feedback,
   };
 
@@ -72,5 +72,5 @@ app.use((req, res, next) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Servidor en http://localhost:${port}`);
 });

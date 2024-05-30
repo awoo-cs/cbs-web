@@ -39,7 +39,7 @@
     <!-- Navbar -->
     <div id="navbar"></div>
     <!-- Sección de Video -->
-    <div class="video-container" id="video-section">
+    <div class="video-container section" id="video-section" data-section="index-video"> 
       <div class="video-overlay"></div>
       <div class="content-wrapper">
         <h1>
@@ -65,7 +65,7 @@
     </div>
 
     <!-- Sección de Bienvenida -->
-    <div class="welcome-section section" id="welcome-section">
+    <div class="welcome-section section" id="welcome-section" data-section="index-bienvenida">
       <div class="welcome-content">
         <h1>Bienvenido a<br /><span class="highlight-green">NutSec</span></h1>
         <p>
@@ -95,7 +95,7 @@
     </div>
 
     <!-- Sección de Glosario de Términos -->
-    <section class="glosario-terminos my-5 section">
+    <section class="glosario-terminos my-5 section" data-section="index-glosario">
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
@@ -153,7 +153,7 @@
     </section>
 
     <!-- Sección de Navegación -->
-    <div class="navigation-section section" id="navigation-section">
+    <div class="navigation-section section" id="navigation-section" data-section="index-switcher">
       <div class="container">
         <div class="toggle-switch">
           <label for="toggle" class="toggle-text"></label>
@@ -252,7 +252,7 @@
     </div>
 
     <!-- Casos de Estudio Section -->
-    <section id="casos-de-estudio" class="my-5 section">
+    <section id="casos-de-estudio" class="my-5 section" data-section="index-studycases">
       <div class="container">
         <!-- Título a la derecha -->
         <div class="row">
@@ -393,7 +393,7 @@
     </section>
 
     <!-- Sección de Sliders -->
-    <div class="sliders-section section" id="sliders-section">
+    <div class="sliders-section section" id="sliders-section" data-section="index-slider">
       <div class="slider-title"><h2>Antivirus Recomendados</h2></div>
       <p class="slider-description">
         Un antivirus te ayudará a mantener tus dispositivos seguros.
@@ -436,7 +436,7 @@
     </div>
 
     <!-- Sección de Mapa de Amenazas Globales -->
-    <section class="mapa-amenazas-globales my-5 section">
+    <section class="mapa-amenazas-globales my-5 section" data-section="index-mapa">
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
@@ -463,7 +463,7 @@
     </section>
 
     <!-- Historia de la Ciberseguridad Section -->
-    <section class="historia-ciberseguridad my-5">
+    <section class="historia-ciberseguridad my-5 section" data-section="index-timeline">
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
@@ -664,6 +664,7 @@
     <div
       class="additional-resources-section section"
       id="additional-resources-section"
+      data-section="index-recursos"
     >
       <div class="container additional-resources-container">
         <div class="left-content">
@@ -708,26 +709,27 @@
     </div>
 
     <!--Feedback-->
-    <button class="feedback-button" onclick="openFeedbackModal()">
-      <i class="fas fa-comment-alt"></i>
-    </button>
+  <button class="feedback-button" onclick="openFeedbackModal()">
+    <i class="fas fa-comment-alt"></i>
+  </button>
 
-    <div class="feedback-modal" id="feedbackModal">
-      <div class="feedback-modal-content">
-        <span class="feedback-close" onclick="closeFeedbackModal()"
-          >&times;</span
-        >
-        <h2>Feedback</h2>
-        <form id="feedback-form" onsubmit="sendFeedback(event)">
-          <textarea
-            id="feedback-text"
-            required
-            placeholder="Escribe tu feedback aquí..."
-          ></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
+
+  <div class="feedback-modal" id="feedbackModal">
+    <div class="feedback-modal-content">
+      <span class="feedback-close" onclick="closeFeedbackModal()">&times;</span>
+      <h2>Feedback</h2>
+      <form id="feedback-form" onsubmit="sendFeedback(event)">
+        <button type="button" onclick="startSectionSelection()">Seleccionar Seccion</button>
+        <input type="hidden" id="feedback-section" name="section">
+        <p id="selected-section-name"></p>
+        <textarea id="feedback-text" required placeholder="Escribe tu feedback aquí..."></textarea>
+        <button type="submit">Enviar</button>
+      </form>
     </div>
+  </div>
+
+  <!--Indicador de Seccion-->
+  <div id="section-indicator" class="section-indicator"></div>
 
     <!-- Footer -->
     <div id="footer"></div>
