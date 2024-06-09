@@ -78,30 +78,17 @@ function startTestFromInstructions() {
 
   isTimerEnabled = document.getElementById('timer').checked;
 
+  if(isTimerEnabled){
+    document.getElementById('timer-container').style.display = 'inline-block';
+    startTimer();
+  }else{
+    document.getElementById('timer-container').style.display = 'none';
+  }
+
   loadQuestions(selectedDifficulty).then(data => {
     questions = data;
-    if (isTimerEnabled) {
-      document.getElementById('timer-container').style.display = 'block';
-      startTimer();
-    }
     showQuestion();
   });
-}
-
-function startTimer() {
-  const timerDisplay = document.getElementById('timer-display');
-  timer = setInterval(() => {
-    if (timeRemaining <= 0) {
-      clearInterval(timer);
-      alert('Tiempo agotado');
-      showResults();
-    } else {
-      timeRemaining--;
-      const minutes = Math.floor(timeRemaining / 60);
-      const seconds = timeRemaining % 60;
-      timerDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-    }
-  }, 1000);
 }
 
 function showQuestion() {
@@ -116,7 +103,7 @@ function showQuestion() {
 
   questionTitle.innerText = `Pregunta ${currentQuestionIndex + 1}`;
   formLabel.innerText = question.text;
-  document.getElementById('progress-indicator').innerText = `Pregunta ${currentQuestionIndex + 1} de ${questions.length}`;
+  document.getElementById('progress-indicator').innerText = `${currentQuestionIndex + 1} de ${questions.length}`;
 
   const optionsContainer = document.querySelector('.options-container');
   optionsContainer.innerHTML = '';
@@ -128,15 +115,12 @@ function showQuestion() {
     optionCard.classList.add('option-card');
     optionCard.setAttribute('data-value', option.value);
     optionCard.innerHTML = `
-      <span class="option-icon">${index + 1}</span>
+      <div class="option-icon">${String.fromCharCode(65 + index)}</div>
       <span class="option-text">${option.text}</span>
     `;
     optionCard.onclick = () => selectOption(optionCard);
     optionsContainer.appendChild(optionCard);
   });
-
-  const nextButton = document.querySelector('.next-button');
-  nextButton.style.top = `${optionsContainer.clientHeight / 2}px`;
 
   document.querySelector('.prev-button').style.display = currentQuestionIndex > 0 ? 'block' : 'none';
 }
@@ -355,4 +339,31 @@ function getFeedback(score) {
   } else {
     return 'Necesitas mejorar. Estás en el nivel Novato.';
   }
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  const timerDisplay = document.getElementById("timer-display");
+  const timeParts = timerDisplay.textContent.split(":");
+  timerDisplay.innerHTML = `<span>${timeParts[0]}</span>:<span>${timeParts[1]}</span>`;
+});
+
+function updateTimerDisplay(minutes, seconds){
+  const timerDisplay = document.getElementById('timer-display');
+  timerDisplay.innerHTML = `<span>${minutes}</span>:<span>${seconds < 10 ? '0' : ''}${seconds}</span>`;
+}
+
+function startTimer() {
+  const timerDisplay = document.getElementById('timer-display');
+  timer = setInterval(() => {
+    if (timeRemaining <= 0) {
+      clearInterval(timer);
+      alert('Tiempo agotado');
+      showResults();
+    } else {
+      timeRemaining--;
+      const minutes = Math.floor(timeRemaining / 60);
+      const seconds = timeRemaining % 60;
+      updateTimerDisplay(minutes, seconds);
+    }
+  }, 1000);
 }

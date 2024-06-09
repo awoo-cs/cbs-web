@@ -112,27 +112,32 @@
       <p>Paso 3 de 3</p>
     </div>
   </div>
+
   <div class="container mt-5" id="question-container" style="display: none; position: relative" data-section="test-preguntas">
     <div class="d-flex justify-content-between align-items-center">
       <h2 id="question-title" class="text-left">Pregunta 1</h2>
-      <span id="progress-indicator" class="text-right">Pregunta 1 de 20</span>
+      <span id="progress-indicator" class="text-right">1 de 20</span>
     </div>
-    <form id="question-form">
-      <label class="form-label text-center">Pregunta</label>
-      <div class="options-container">
-        <!-- Opciones -->
-      </div>
-    </form>
+    <div class="question-content">
+      <form id="question-form">
+        <label class="form-label text-center">Pregunta</label>
+        <div class="options-container">
+          <!-- Opciones -->
+        </div>
+      </form>
+    </div>
     <div id="timer-container" style="display: none">
-      <p>Tiempo restante: <span id="timer-display">20:00</span></p>
+      <p>Tiempo restante</p>
+      <p id="timer-display">20:00</p>
     </div>
-    <button type="button" class="btn btn-primary next-button" onclick="nextQuestion()">
-      <i class="fas fa-arrow-right"></i>
-    </button>
     <button type="button" class="btn btn-secondary prev-button" onclick="prevQuestion()" style="display: none">
       <i class="fas fa-arrow-left"></i>
     </button>
-  </div>
+    <button type="button" class="btn btn-primary next-button" onclick="nextQuestion()">
+      <i class="fas fa-arrow-right"></i>
+    </button>
+  </div>  
+   
   <div class="container mt-5" id="results-container" style="display: none" data-section="test-resultados">
     <h3 class="text-center">Resultados del Test</h3>
     <p id="score-display" class="text-center"></p>
